@@ -393,6 +393,7 @@ System Components:
 - **Pre-Release Workflow:** `todos/pre-release-workflow-todo.md`
 - **Changelog:** `CHANGELOG.md`
 - **GitHub Setup Guide:** `docs/setup/github-setup.md`
+- **Quality Control Report:** `docs/quality-control-report.md`
 
 
 For detailed information about the PDF conversion and metrics tracking system, see: `docs/pdf-conversion-and-metrics-system.md`
