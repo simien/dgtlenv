@@ -1,10 +1,10 @@
 # GitHub Repository Setup Guide
 
-This guide provides step-by-step instructions for setting up the DigitalEnv project on GitHub with all best practices implemented.
+This guide provides step-by-step instructions for setting up the DgtlEnv project on GitHub with all best practices implemented.
 
 ## 🎯 Overview
 
-DigitalEnv is now ready for GitHub with comprehensive best practices including:
+DgtlEnv is now ready for GitHub with comprehensive best practices including:
 - ✅ Complete project structure with documentation
 - ✅ GitHub Actions CI/CD workflow
 - ✅ Issue and PR templates
@@ -37,8 +37,8 @@ Before setting up the GitHub repository, ensure you have:
 ### Step 2: Run Setup Script
 
 ```bash
-# Navigate to your DigitalEnv project directory
-cd /path/to/DigitalEnv
+# Navigate to your DgtlEnv project directory
+cd /path/to/DgtlEnv
 
 # Run the GitHub setup script
 ./scripts/setup-github.sh -r https://github.com/YOUR_USERNAME/DgtlEnv.git
@@ -64,7 +64,7 @@ git push origin main
 The setup creates a comprehensive repository structure:
 
 ```
-DigitalEnv/
+DgtlEnv/
 ├── .github/                          # GitHub-specific files
 │   ├── workflows/                    # GitHub Actions
 │   │   └── ci.yml                   # CI/CD workflow
@@ -194,7 +194,7 @@ Create the following labels:
 
 Create project boards:
 
-1. **DigitalEnv Roadmap**
+1. **DgtlEnv Roadmap**
    - Track feature development
    - Plan releases
    - Manage milestones
@@ -383,7 +383,7 @@ For distributing packages:
 - **GitHub Help:** [help.github.com](https://help.github.com)
 - **GitHub Actions:** [docs.github.com/actions](https://docs.github.com/actions)
 - **GitHub Security:** [docs.github.com/security](https://docs.github.com/security)
-- **DigitalEnv Issues:** Use repository issues for project-specific help
+- **DgtlEnv Issues:** Use repository issues for project-specific help
 
 ## 🎉 Success Metrics
 
@@ -406,4 +406,4 @@ Track repository success with:
 
 **Last Updated:** 2025-07-25
 **Version:** 1.0.0
-**Maintainer:** DigitalEnv Contributors
+**Maintainer:** DgtlEnv Contributors

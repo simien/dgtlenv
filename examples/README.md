@@ -1,6 +1,6 @@
 # Examples and Demos
 
-This directory contains example configurations, usage demonstrations, and sample implementations for the DigitalEnv project.
+This directory contains example configurations, usage demonstrations, and sample implementations for the DgtlEnv project.
 
 ## Contents
 

@@ -1,6 +1,6 @@
 # Configuration Files
 
-This directory contains configuration files and templates for the DigitalEnv project.
+This directory contains configuration files and templates for the DgtlEnv project.
 
 ## Contents
 

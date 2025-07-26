@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for DigitalEnv
+about: Suggest an idea for DgtlEnv
 title: '[FEATURE] '
 labels: 'enhancement'
 assignees: ''

@@ -1,6 +1,6 @@
 # Tests and Validation
 
-This directory contains test scripts, validation tools, and quality assurance procedures for the DigitalEnv project.
+This directory contains test scripts, validation tools, and quality assurance procedures for the DgtlEnv project.
 
 ## Contents
 

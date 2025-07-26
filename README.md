@@ -1,5 +1,9 @@
 # DgtlEnv - Digital Environment Management
 
+> **📋 Project Name Source of Truth:** This README.md file serves as the authoritative source for the project name "DgtlEnv". All documentation and scripts should reference this file for consistent naming.
+
+> **⚙️ Configuration:** Project configuration is centralized in `config/project-config.json` for programmatic access.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
 [![System Status](https://img.shields.io/badge/System%20Status-Optimized-brightgreen.svg)](https://github.com/simien/DgtlEnv)
@@ -13,6 +17,11 @@
 **Repository Created:** July 25, 2025
 **Last Updated:** July 26, 2025
 
+---
+
+## 🎯 Project Overview
+
+🚀 **DgtlEnv** is a sophisticated macOS development environment optimization toolkit that transforms your MacBook into a high-performance development machine. Features automated system monitoring, PDF document management, performance metrics tracking, and intelligent resource optimization.
 ---
 
 ## 🎯 Project Overview

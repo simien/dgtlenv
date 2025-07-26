@@ -148,7 +148,7 @@ This creates placeholder files that can be manually edited.
 
 ## Integration with Optimization System
 
-This workflow integrates with the DigitalEnv optimization system:
+This workflow integrates with the DgtlEnv optimization system:
 
 - **Resource monitoring**: Uses `ops/monitoring/top-hogs.sh` to track conversion impact
 - **Cleanup integration**: Works with `ops/cleanup/` scripts for maintenance

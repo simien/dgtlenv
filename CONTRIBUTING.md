@@ -105,7 +105,7 @@ cd DgtlEnv
 ## 📁 Directory Structure
 
 ```
-DigitalEnv/
+DgtlEnv/
 ├── docs/                           # Documentation
 │   ├── converted/                  # Converted PDF files
 │   │   └── README.md              # Conversion status and metadata

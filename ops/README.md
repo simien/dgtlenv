@@ -3,7 +3,7 @@
 This directory contains automation scripts, monitoring tools, and configuration templates for system optimization, development, and maintenance.
 
 ## Structure
-- `backup/` — Backup scripts for DigitalEnv project
+- `backup/` — Backup scripts for DgtlEnv project
 - `cleanup/` — Cleanup scripts (Homebrew, Docker, system)
 - `monitoring/` — Monitoring and resource tracking scripts
 - `docker/` — Docker-specific utility scripts and Colima setup

@@ -1,6 +1,6 @@
 # Security Directory
 
-This directory contains all security-related documentation, policies, and audit reports for the DigitalEnv project.
+This directory contains all security-related documentation, policies, and audit reports for the DgtlEnv project.
 
 ## Directory Structure
 

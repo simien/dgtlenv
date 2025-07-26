@@ -13,7 +13,7 @@ Scripts for creating backups of the DgtlEnv project and optimization configurati
 See `docs/pdf-incoming-workflow.md` for full details.
 
 ## Scripts
-- `create-digitalenv-backup.sh` — Creates a timestamped zip archive of the entire DigitalEnv project
+- `create-digitalenv-backup.sh` — Creates a timestamped zip archive of the entire DgtlEnv project
 - `pdf-to-markdown-converter.sh` — Converts all PDFs in `docs/incoming/` to markdown in `docs/`
 - `pdf-watcher.sh` — Watches `docs/incoming/` for new PDFs and auto-converts
 - `simple-pdf-converter.sh` — Fallback/manual converter for PDFs

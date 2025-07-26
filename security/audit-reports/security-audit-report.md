@@ -1,7 +1,7 @@
 # Security Audit Report
 
 **Date:** 2025-07-25  
-**Auditor:** DigitalEnv Security Team  
+**Auditor:** DgtlEnv Security Team  
 **Scope:** Complete repository scan for sensitive information  
 **Status:** ⚠️ **ISSUES FOUND - REQUIRES ATTENTION**
 
@@ -57,8 +57,8 @@ The security audit identified several areas of concern that need to be addressed
 - Backup documentation
 
 **Issues:**
-- Absolute paths like `/Users/sap/Dropbox/Admin/DigitalEnv/`
-- Backup paths like `/Users/sap/Downloads/DigitalEnv-Backups/`
+- Absolute paths like `/Users/sap/Dropbox/Admin/DgtlEnv/`
+- Backup paths like `/Users/sap/Downloads/DgtlEnv-Backups/`
 
 **Recommendation:** Use relative paths or generic placeholders
 
@@ -131,7 +131,7 @@ The security audit identified several areas of concern that need to be addressed
 2. **Update File References**
    ```bash
    # Replace absolute paths with relative paths
-   sed -i '' 's|/Users/sap/Dropbox/Admin/DigitalEnv/|./|g' docs/converted/*.md
+   sed -i '' 's|/Users/sap/Dropbox/Admin/DgtlEnv/|./|g' docs/converted/*.md
    ```
 
 3. **Review Generated Files**
