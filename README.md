@@ -262,11 +262,10 @@ The system provides comprehensive before/after comparison tracking:
 - **PDF Conversion System:** `docs/pdf-conversion-and-metrics-system.md`
 - **Cursor IDE Optimization:** `docs/cursor-ide-disable-extensions.md`
 - **Contributing Guidelines:** `CONTRIBUTING.md`
-- **Security Policy:** `security.md`
+- **Security Directory:** `security/` - Policies, audits, and guidelines
 - **Changelog:** `CHANGELOG.md`
 - **GitHub Setup Guide:** `github-setup.md`
-- **Security Audit Report:** `security-audit-report.md`
-- **Security Verification:** `security-verification-complete.md`
+
 
 For detailed information about the PDF conversion and metrics tracking system, see: `docs/pdf-conversion-and-metrics-system.md`
 
@@ -281,7 +280,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 🔒 Security
 
-If you discover a security vulnerability, please report it privately. See our [Security Policy](SECURITY.md) for details.
+If you discover a security vulnerability, please report it privately. See our [Security Policy](security/policies/security.md) for details.
 
 ## 📄 License
 
