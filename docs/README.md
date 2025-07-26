@@ -1,6 +1,6 @@
 # docs/
 
-This directory contains comprehensive documentation for the DigitalEnv project, including optimization guides, PDF conversion documentation, and setup instructions.
+This directory contains comprehensive documentation for the DgtlEnv project, including optimization guides, PDF conversion documentation, and setup instructions.
 
 ## Structure
 - `guides/` — Step-by-step guides and tutorials
@@ -110,4 +110,4 @@ git diff docs/
 ---
 
 **Last Updated:** 2025-07-25
-**Maintainer:** DigitalEnv Contributors
+**Maintainer:** DgtlEnv Contributors

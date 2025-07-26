@@ -89,4 +89,4 @@ The sanitizer can be integrated into CI/CD pipelines or run manually before rele
 ---
 
 **Last Updated:** 2025-07-25
-**Maintainer:** DigitalEnv Contributors
+**Maintainer:** DgtlEnv Contributors

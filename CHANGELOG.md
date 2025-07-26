@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to DigitalEnv will be documented in this file.
+All notable changes to DgtlEnv will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -127,7 +127,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Release Notes
 
 ### Version 1.0.0
-This is the first stable release of DigitalEnv, providing a comprehensive digital environment management system for macOS development environments. The system includes automated optimization, monitoring, and maintenance tools specifically designed for MacBook Pro (Retina, 15-inch, Mid 2015) running macOS 12.7.6 Monterey.
+This is the first stable release of DgtlEnv, providing a comprehensive digital environment management system for macOS development environments. The system includes automated optimization, monitoring, and maintenance tools specifically designed for MacBook Pro (Retina, 15-inch, Mid 2015) running macOS 12.7.6 Monterey.
 
 **Key Features:**
 - Complete system optimization suite
@@ -187,4 +187,4 @@ When adding entries to the changelog, please follow these guidelines:
 ---
 
 **Last Updated:** 2025-07-25
-**Maintainer:** DigitalEnv Contributors
+**Maintainer:** DgtlEnv Contributors

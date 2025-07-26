@@ -1,10 +1,10 @@
-# Contributing to DigitalEnv
+# Contributing to DgtlEnv
 
-Thank you for your interest in contributing to DigitalEnv! This document provides guidelines and best practices for contributing to this digital environment management system.
+Thank you for your interest in contributing to DgtlEnv! This document provides guidelines and best practices for contributing to this digital environment management system.
 
 ## 🎯 Project Overview
 
-DigitalEnv is a comprehensive digital environment management system designed for macOS development environments, specifically optimized for MacBook Pro (Retina, 15-inch, Mid 2015) running macOS 12.7.6 Monterey.
+DgtlEnv is a comprehensive digital environment management system designed for macOS development environments, specifically optimized for MacBook Pro (Retina, 15-inch, Mid 2015) running macOS 12.7.6 Monterey.
 
 ## 📋 Table of Contents
 
@@ -424,11 +424,11 @@ Every directory should have a `README.md` file that includes:
 
 ## 📄 License
 
-By contributing to DigitalEnv, you agree that your contributions will be licensed under the same license as the project.
+By contributing to DgtlEnv, you agree that your contributions will be licensed under the same license as the project.
 
 ## 🙏 Acknowledgments
 
-Thank you for contributing to DigitalEnv! Your contributions help make digital environment management more efficient and accessible for developers worldwide.
+Thank you for contributing to DgtlEnv! Your contributions help make digital environment management more efficient and accessible for developers worldwide.
 
 ---
 

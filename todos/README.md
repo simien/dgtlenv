@@ -1,6 +1,6 @@
 # todos/
 
-This directory contains task management files, project planning, and workflow documentation for the DigitalEnv project.
+This directory contains task management files, project planning, and workflow documentation for the DgtlEnv project.
 
 ## Structure
 - `master-todo.md` — Main project task list and priorities
@@ -169,4 +169,4 @@ What actually happens
 ---
 
 **Last Updated:** 2025-07-25
-**Maintainer:** DigitalEnv Contributors
+**Maintainer:** DgtlEnv Contributors

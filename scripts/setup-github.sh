@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # Script Name: setup-github.sh
-# Description: Initialize DigitalEnv GitHub repository with best practices
-# Author: DigitalEnv Contributors
+# Description: Initialize DgtlEnv GitHub repository with best practices
+# Author: DgtlEnv Contributors
 # Date: 2025-01-25
 # Version: 1.0.0
 #
@@ -54,9 +54,9 @@ print_status() {
 # Function to show help
 show_help() {
     cat << EOF
-DigitalEnv GitHub Setup Script
+DgtlEnv GitHub Setup Script
 
-This script initializes the DigitalEnv project for GitHub with best practices including:
+This script initializes the DgtlEnv project for GitHub with best practices including:
 - Git repository initialization
 - Remote repository setup
 - Branch protection configuration
@@ -130,9 +130,9 @@ init_git() {
     fi
 
     git init
-    git config user.name "DigitalEnv Bot"
-    git config user.email "bot@digitalenv.org"
-    
+    git config user.name "DgtlEnv Bot"
+git config user.email "bot@dgtlenv.org"
+
     print_status "$GREEN" "✓ Git repository initialized"
 }
 
@@ -153,7 +153,7 @@ setup_remote() {
     fi
 
     git remote add origin "$REMOTE_URL"
-    
+
     # Test remote connection
     if ! git ls-remote --exit-code origin &> /dev/null; then
         print_status "$RED" "Error: Cannot connect to remote repository"
@@ -172,7 +172,7 @@ create_initial_commit() {
     git add .
 
     # Create initial commit
-    git commit -m "feat: initial DigitalEnv project setup
+    git commit -m "feat: initial DgtlEnv project setup
 
 - Add comprehensive project structure
 - Include system optimization scripts
@@ -181,7 +181,7 @@ create_initial_commit() {
 - Add GitHub best practices setup
 - Include documentation and templates
 
-This is the initial commit for the DigitalEnv project, providing
+This is the initial commit for the DgtlEnv project, providing
 a comprehensive digital environment management system for macOS
 development environments."
 
@@ -240,7 +240,7 @@ verify_setup() {
 # Function to display next steps
 show_next_steps() {
     print_status "$GREEN" "🎉 GitHub setup completed successfully!"
-    
+
     cat << EOF
 
 Next Steps:
@@ -284,8 +284,8 @@ handle_error() {
 
 # Main function
 main() {
-    print_status "$BLUE" "🚀 Starting DigitalEnv GitHub Setup"
-    
+    print_status "$BLUE" "🚀 Starting DgtlEnv GitHub Setup"
+
     # Parse command line arguments
     while [[ $# -gt 0 ]]; do
         case $1 in
@@ -342,4 +342,4 @@ main() {
 trap 'handle_error "An error occurred during setup"' ERR
 
 # Run main function
-main "$@" 
+main "$@"
