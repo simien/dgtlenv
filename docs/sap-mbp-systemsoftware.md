@@ -1,8 +1,8 @@
 # sap-mbp-systemsoftware
 
-**Source:** sap-mbp-systemsoftware.pdf  
-**Original Size:**  20K  
-**Converted:** 2025-07-26 09:46:39  
+**Source:** sap-mbp-systemsoftware.pdf
+**Original Size:**  20K
+**Converted:** 2025-07-26 09:46:39
 **Status:** ⚠️ Manual conversion required
 
 ---
@@ -14,7 +14,7 @@ This PDF has been identified for conversion but requires manual processing due t
 ### File Information:
 - **Filename:** sap-mbp-systemsoftware.pdf
 - **Size:**  20K
-- **Location:** /Users/sap/Dropbox/Admin/DigitalEnv/docs/incoming/sap-mbp-systemsoftware.pdf
+- **Location:** ./docs/incoming/sap-mbp-systemsoftware.pdf
 - **Conversion Date:** 2025-07-26 09:46:39
 
 ### Manual Conversion Steps:

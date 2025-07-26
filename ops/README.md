@@ -122,8 +122,14 @@ See `docker/README.md` for complete setup and optimization guide.
 - Project backup: `./backup/create-digitalenv-backup.sh`
 - Review log files in `~/Library/Logs/`
 
+### Pre-Release
+- Security sanitization: `./scripts/pre-release-sanitizer.sh --fix`
+- Verify sanitization: `./scripts/pre-release-sanitizer.sh --dry-run`
+- Review generated report: `cat logs/sanitization-report-*.md`
+
 ### Quarterly
 - Review and update optimization scripts
 - Check for new versions of monitoring tools
 - Assess SSD health trends
-- Adjust resource limits based on usage patterns 
+- Adjust resource limits based on usage patterns
+- Update security patterns in sanitizer

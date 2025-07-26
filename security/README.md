@@ -33,7 +33,10 @@ security/
 ## Quick Security Checks
 
 ```bash
-# Check for hardcoded secrets
+# Automated pre-release sanitization
+./scripts/pre-release-sanitizer.sh --dry-run
+
+# Manual security checks
 grep -r "api_key\|password\|token\|secret" . --exclude-dir=.git
 
 # Check for dangerous commands
@@ -48,8 +51,10 @@ grep -r "sap\|@gmail\|@yahoo" . --exclude-dir=.git
 - Never commit API keys, passwords, or tokens
 - Document all sudo usage in scripts
 - Use relative paths instead of absolute paths
+- Run pre-release sanitizer before all releases
 - Regular security audits before releases
 - Follow responsible disclosure for vulnerabilities
+- Use automated sanitization tools
 
 ## Related Files
 
@@ -58,4 +63,4 @@ grep -r "sap\|@gmail\|@yahoo" . --exclude-dir=.git
 - `README.md`: Security section with quick links
 
 ---
-*Last Updated: 2025-07-25* 
+*Last Updated: 2025-07-25*

@@ -70,7 +70,7 @@ DigitalEnv is a comprehensive digital environment management system designed for
    ```bash
    # Install Homebrew if not already installed
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   
+
    # Install required tools
    brew install jq htop stats
    ```
@@ -93,7 +93,7 @@ DigitalEnv is a comprehensive digital environment management system designed for
    ```bash
    # Run system health check
    ./ops/monitoring/swap-ssd-health.sh
-   
+
    # Generate metrics dashboard
    ./metrics/comprehensive-dashboard.sh dashboard
    ```
@@ -289,6 +289,13 @@ Any additional information or context for the reviewers.
    ./ops/backup/simple-pdf-converter.sh convert docs/test.pdf
    ```
 
+4. **Pre-Release Security Testing:**
+   ```bash
+   ./scripts/pre-release-sanitizer.sh --dry-run
+   ./scripts/pre-release-sanitizer.sh --fix
+   ./scripts/pre-release-sanitizer.sh --dry-run
+   ```
+
 ### Automated Testing
 
 - All scripts should include error handling
@@ -300,6 +307,8 @@ Any additional information or context for the reviewers.
 - **Shell scripts:** Test with different input scenarios
 - **Documentation:** Verify all links and code examples work
 - **Performance:** Ensure no regression in system performance
+- **Security:** Run pre-release sanitizer before commits
+- **Personal Information:** Verify no personal data in releases
 
 ## 📚 Documentation Standards
 
@@ -391,6 +400,13 @@ Every directory should have a `README.md` file that includes:
 - **Logging:** Avoid logging sensitive information
 - **File permissions:** Use appropriate file permissions for sensitive files
 
+### Pre-Release Security
+
+- **Run sanitizer:** Always run pre-release sanitizer before commits
+- **Personal information:** Ensure no personal data in public releases
+- **Security scanning:** Use automated security checks
+- **Documentation review:** Verify all documentation is sanitized
+
 ## 🤝 Getting Help
 
 ### Communication Channels
@@ -416,5 +432,5 @@ Thank you for contributing to DigitalEnv! Your contributions help make digital e
 
 ---
 
-**Last Updated:** 2025-07-25  
-**Version:** 1.0.0 
+**Last Updated:** 2025-07-25
+**Version:** 1.0.0

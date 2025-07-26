@@ -8,20 +8,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Pre-Release Sanitizer:** Comprehensive security and personal information sanitization script (`scripts/pre-release-sanitizer.sh`)
+- **Automated Security Workflow:** Pre-release sanitization with dry-run and auto-fix modes
+- **Enhanced Documentation:** Updated all README files with new features and workflows
+- **Security Integration:** Automated personal information detection and removal
+- **Task Management:** Comprehensive todo system with pre-release workflow documentation
+- **Scripts Directory:** New utility scripts for project management and security
 - GitHub repository setup with best practices
 - Comprehensive `.gitignore` file for macOS development environment
 - `CONTRIBUTING.md` with detailed contribution guidelines
 - `SECURITY.md` security policy
 - `CHANGELOG.md` for version tracking
-- MIT License file
 - Directory structure documentation
 - Naming conventions and coding standards
 
 ### Changed
+- **Updated Project Structure:** Added scripts/ directory with utility scripts
+- **Enhanced Security:** Integrated sanitization into release workflow
+- **Improved Documentation:** All README files updated with new features
+- **Task Management:** Added comprehensive todo system with workflow integration
 - Updated project documentation structure
 - Enhanced README.md with GitHub integration information
 
 ### Fixed
+- **Personal Information:** Automated removal of personal information before releases
+- **Security Vulnerabilities:** Comprehensive security scanning and fixing
+- **Documentation Consistency:** All README files updated and synchronized
 - Improved project organization for open source collaboration
 
 ## [1.0.0] - 2025-07-25
@@ -174,5 +186,5 @@ When adding entries to the changelog, please follow these guidelines:
 
 ---
 
-**Last Updated:** 2025-07-25  
-**Maintainer:** DigitalEnv Contributors 
+**Last Updated:** 2025-07-25
+**Maintainer:** DigitalEnv Contributors

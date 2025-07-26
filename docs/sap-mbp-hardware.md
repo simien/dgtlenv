@@ -1,8 +1,8 @@
 # sap-mbp-hardware
 
-**Source:** sap-mbp-hardware.pdf  
-**Original Size:**  24K  
-**Converted:** 2025-07-26 09:46:39  
+**Source:** sap-mbp-hardware.pdf
+**Original Size:**  24K
+**Converted:** 2025-07-26 09:46:39
 **Status:** ⚠️ Manual conversion required
 
 ---
@@ -14,7 +14,7 @@ This PDF has been identified for conversion but requires manual processing due t
 ### File Information:
 - **Filename:** sap-mbp-hardware.pdf
 - **Size:**  24K
-- **Location:** /Users/sap/Dropbox/Admin/DigitalEnv/docs/incoming/sap-mbp-hardware.pdf
+- **Location:** ./docs/incoming/sap-mbp-hardware.pdf
 - **Conversion Date:** 2025-07-26 09:46:39
 
 ### Manual Conversion Steps:
