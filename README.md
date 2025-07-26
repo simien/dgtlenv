@@ -2,10 +2,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
-[![System Status](https://img.shields.io/badge/System%20Status-Optimized-brightgreen.svg)](https://github.com/simien/dgtlenv)
-[![PDF Conversion](https://img.shields.io/badge/PDF%20Conversion-100%25-success.svg)](https://github.com/simien/dgtlenv)
-[![Memory Usage](https://img.shields.io/badge/Memory%20Usage-34%25-green.svg)](https://github.com/simien/dgtlenv)
-[![CPU Usage](https://img.shields.io/badge/CPU%20Usage-14%25-green.svg)](https://github.com/simien/dgtlenv)
+[![System Status](https://img.shields.io/badge/System%20Status-Optimized-brightgreen.svg)](https://github.com/simien/DgtlEnv)
+[![PDF Conversion](https://img.shields.io/badge/PDF%20Conversion-100%25-success.svg)](https://github.com/simien/DgtlEnv)
+[![Memory Usage](https://img.shields.io/badge/Memory%20Usage-34%25-green.svg)](https://github.com/simien/DgtlEnv)
+[![CPU Usage](https://img.shields.io/badge/CPU%20Usage-14%25-green.svg)](https://github.com/simien/DgtlEnv)
 
 **Device:** MacBook Pro (Retina, 15-inch, Mid 2015)
 **OS:** macOS 12.7.6 Monterey
@@ -370,4 +370,4 @@ This project follows consistent naming conventions for maintainability and clari
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=simien/dgtlenv&type=Date)](https://star-history.com/#simien/dgtlenv&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=simien/DgtlEnv&type=Date)](https://star-history.com/#simien/DgtlEnv&Date)

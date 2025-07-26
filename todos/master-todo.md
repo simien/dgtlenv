@@ -128,7 +128,7 @@
 ### Immediate (Ready Now)
 ```bash
 # Create GitHub repository
-./scripts/setup-github.sh -r https://github.com/simien/dgtlenv.git
+./scripts/setup-github.sh -r https://github.com/simien/DgtlEnv.git
 
 # Push to GitHub
 git push origin main

@@ -49,12 +49,12 @@ DgtlEnv is a comprehensive digital environment management system designed for ma
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/dgtlenv.git
-   cd dgtlenv
+   git clone https://github.com/YOUR_USERNAME/DgtlEnv.git
+cd DgtlEnv
    ```
 3. Add the upstream repository:
    ```bash
-   git remote add upstream https://github.com/simien/dgtlenv.git
+   git remote add upstream https://github.com/simien/DgtlEnv.git
    ```
 
 ## 🛠️ Development Setup

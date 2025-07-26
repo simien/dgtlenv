@@ -29,7 +29,7 @@ Before setting up the GitHub repository, ensure you have:
 2. Click the "+" icon in the top right corner
 3. Select "New repository"
 4. Configure the repository:
-   - **Repository name:** `dgtlenv`
+   - **Repository name:** `DgtlEnv`
    - **Description:** `Digital Environment Management System for macOS - Optimized for MacBook Pro (Retina, 15-inch, Mid 2015) running macOS 12.7.6 Monterey`
    - **Visibility:** Public (recommended) or Private
    - **Initialize with:** Don't initialize (we'll use our setup script)
@@ -41,7 +41,7 @@ Before setting up the GitHub repository, ensure you have:
 cd /path/to/DigitalEnv
 
 # Run the GitHub setup script
-./scripts/setup-github.sh -r https://github.com/YOUR_USERNAME/dgtlenv.git
+./scripts/setup-github.sh -r https://github.com/YOUR_USERNAME/DgtlEnv.git
 ```
 
 ### Step 3: Verify Setup
@@ -217,7 +217,7 @@ Create project boards:
    ```bash
    # Run system health check
    ./ops/monitoring/swap-ssd-health.sh
-   
+
    # Generate metrics dashboard
    ./metrics/comprehensive-dashboard.sh dashboard
    ```
@@ -249,7 +249,7 @@ The GitHub Actions workflow automatically:
 The repository includes a star history chart in the README:
 
 ```markdown
-[![Star History Chart](https://api.star-history.com/svg?repos=simien/dgtlenv&type=Date)](https://star-history.com/#simien/dgtlenv&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=simien/DgtlEnv&type=Date)](https://star-history.com/#simien/DgtlEnv&Date)
 ```
 
 ### Traffic Analytics
@@ -404,6 +404,6 @@ Track repository success with:
 
 ---
 
-**Last Updated:** 2025-07-25  
-**Version:** 1.0.0  
-**Maintainer:** DigitalEnv Contributors 
+**Last Updated:** 2025-07-25
+**Version:** 1.0.0
+**Maintainer:** DigitalEnv Contributors

@@ -6,7 +6,7 @@
 
 ### High Priority
 - [ ] **Git Repository Initialization**
-  - [ ] Run setup script: `./scripts/setup-github.sh -r https://github.com/simien/dgtlenv.git`
+  - [ ] Run setup script: `./scripts/setup-github.sh -r https://github.com/simien/DgtlEnv.git`
   - [ ] Verify all files are properly tracked
   - [ ] Test GitHub Actions workflow
   - [ ] Confirm issue templates work
@@ -37,8 +37,8 @@
 
 ---
 
-**Last Updated:** 2025-07-25  
-**Priority:** High  
+**Last Updated:** 2025-07-25
+**Priority:** High
 **Status:** In Progress
 
 ---
@@ -47,4 +47,4 @@
 > - Funding setup → `funding-todo.md`
 > - Documentation enhancements → `documentation-todo.md`
 > - Community setup → `community-todo.md` (if needed)
-> - Timestamp verification → `timestamp-verification-todo.md` (optional/last) 
+> - Timestamp verification → `timestamp-verification-todo.md` (optional/last)

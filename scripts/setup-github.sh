@@ -16,8 +16,8 @@
 #   -h, --help      Show this help message
 #
 # Examples:
-#   ./scripts/setup-github.sh -r https://github.com/simien/dgtlenv.git
-#   ./scripts/setup-github.sh -r https://github.com/simien/dgtlenv.git -b develop
+#   ./scripts/setup-github.sh -r https://github.com/simien/DgtlEnv.git
+#   ./scripts/setup-github.sh -r https://github.com/simien/DgtlEnv.git -b develop
 #
 # Dependencies:
 #   - git
@@ -73,8 +73,8 @@ Options:
     -h, --help          Show this help message
 
 Examples:
-    $0 -r https://github.com/simien/dgtlenv.git
-    $0 -r https://github.com/simien/dgtlenv.git -b develop
+    $0 -r https://github.com/simien/DgtlEnv.git
+$0 -r https://github.com/simien/DgtlEnv.git -b develop
 
 Requirements:
     - Git must be installed
