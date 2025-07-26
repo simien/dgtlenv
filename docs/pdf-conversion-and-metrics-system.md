@@ -4,6 +4,7 @@
 **Status:** ✅ **ACTIVE**  
 **Device:** MacBook Pro (Retina, 15-inch, Mid 2015)  
 **OS:** macOS 12.7.6 Monterey  
+**Project:** DgtlEnv  
 
 ---
 
@@ -23,12 +24,12 @@ This system provides automated PDF to markdown conversion with comprehensive met
 ## 📁 File Structure
 
 ```
-DigitalEnv/
+DgtlEnv/
 ├── docs/
-│   ├── converted/                    # Converted markdown files
-│   │   ├── sap-mbp-hardware.md
-│   │   ├── sap-mbp-systemsoftware.md
-│   │   └── MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.md
+│   ├── incoming/                     # PDF drop zone
+│   │   ├── README.md                # Instructions
+│   │   └── *.pdf                    # Original PDFs (backup)
+│   ├── *.md                         # Converted markdown files
 │   └── pdf-conversion-and-metrics-system.md  # This file
 ├── metrics/
 │   ├── dashboards/                   # Visual dashboards

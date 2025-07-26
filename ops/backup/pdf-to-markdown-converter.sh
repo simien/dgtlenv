@@ -8,7 +8,7 @@ set -e
 # Configuration
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 DOCS_DIR="$PROJECT_ROOT/docs"
-CONVERTED_DIR="$DOCS_DIR/converted"
+INCOMING_DIR="$DOCS_DIR/incoming"
 METRICS_DIR="$PROJECT_ROOT/metrics"
 
 # Colors for output
@@ -27,14 +27,14 @@ if ! command -v pdftotext &> /dev/null; then
 fi
 
 # Create directories if they don't exist
-mkdir -p "$CONVERTED_DIR"
+mkdir -p "$INCOMING_DIR"
 mkdir -p "$METRICS_DIR"
 
 # Function to convert PDF to Markdown
 convert_pdf_to_markdown() {
     local pdf_file="$1"
     local pdf_name=$(basename "$pdf_file" .pdf)
-    local md_file="$CONVERTED_DIR/${pdf_name}.md"
+    local md_file="$DOCS_DIR/${pdf_name}.md"
     
     echo -e "${BLUE}Converting: ${pdf_name}.pdf${NC}"
     
@@ -68,18 +68,18 @@ EOF
     return 0
 }
 
-# Function to process all PDFs in docs directory
+# Function to process all PDFs in incoming directory
 process_all_pdfs() {
-    echo -e "${BLUE}Processing all PDFs in docs directory...${NC}"
+    echo -e "${BLUE}Processing all PDFs in incoming directory...${NC}"
     
     local converted_count=0
     local total_pdfs=0
     
-    for pdf_file in "$DOCS_DIR"/*.pdf; do
+    for pdf_file in "$INCOMING_DIR"/*.pdf; do
         if [ -f "$pdf_file" ]; then
             total_pdfs=$((total_pdfs + 1))
             local pdf_name=$(basename "$pdf_file" .pdf)
-            local md_file="$CONVERTED_DIR/${pdf_name}.md"
+            local md_file="$DOCS_DIR/${pdf_name}.md"
             
             # Check if markdown already exists and is newer
             if [ -f "$md_file" ] && [ "$md_file" -nt "$pdf_file" ]; then
@@ -179,16 +179,14 @@ create_metrics_dashboard() {
 EOF
     
     # List all converted files
-    if [ -d "$CONVERTED_DIR" ]; then
-        for md_file in "$CONVERTED_DIR"/*.md; do
-            if [ -f "$md_file" ]; then
-                local filename=$(basename "$md_file")
-                local size=$(du -h "$md_file" | cut -f1)
-                local modified=$(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$md_file")
-                echo "- **${filename}** (${size}, modified: ${modified})" >> "$dashboard_file"
-            fi
-        done
-    fi
+    for md_file in "$DOCS_DIR"/*.md; do
+        if [ -f "$md_file" ]; then
+            local filename=$(basename "$md_file")
+            local size=$(du -h "$md_file" | cut -f1)
+            local modified=$(stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$md_file")
+            echo "- **${filename}** (${size}, modified: ${modified})" >> "$dashboard_file"
+        fi
+    done
     
     echo "" >> "$dashboard_file"
     echo "## 🔄 Recent Activity" >> "$dashboard_file"

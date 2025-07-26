@@ -1,4 +1,4 @@
-# DigitalEnv - Digital Environment Management
+# DgtlEnv - Digital Environment Management
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
@@ -12,7 +12,7 @@
 
 ## 🎯 Project Overview
 
-DigitalEnv is a comprehensive digital environment management system that optimizes development workflows, monitors system performance, and provides automated tools for document management and metrics tracking.
+DgtlEnv is a comprehensive digital environment management system that optimizes development workflows, monitors system performance, and provides automated tools for document management and metrics tracking.
 
 ### Key Features:
 - ✅ **System Optimization:** Cursor IDE, Docker, and system performance tuning
@@ -73,9 +73,9 @@ DigitalEnv is a comprehensive digital environment management system that optimiz
 ## 📁 Project Structure
 
 ```
-DigitalEnv/
+DgtlEnv/
 ├── docs/                           # Documentation
-│   ├── converted/                  # Converted PDF files
+│   ├── incoming/                   # PDF drop zone
 │   ├── optimization-summary.md     # System optimization guide
 │   └── pdf-conversion-and-metrics-system.md
 ├── metrics/                        # Performance tracking

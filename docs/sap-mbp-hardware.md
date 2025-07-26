@@ -1,8 +1,8 @@
-# MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport
+# sap-mbp-hardware
 
-**Source:** MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.pdf  
-**Original Size:** 324K  
-**Converted:** 2025-07-25 23:10:59  
+**Source:** sap-mbp-hardware.pdf  
+**Original Size:**  24K  
+**Converted:** 2025-07-26 09:46:39  
 **Status:** ⚠️ Manual conversion required
 
 ---
@@ -12,10 +12,10 @@
 This PDF has been identified for conversion but requires manual processing due to system limitations.
 
 ### File Information:
-- **Filename:** MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.pdf
-- **Size:** 324K
-- **Location:** ./docs/MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.pdf
-- **Conversion Date:** 2025-07-25 23:10:59
+- **Filename:** sap-mbp-hardware.pdf
+- **Size:**  24K
+- **Location:** /Users/sap/Dropbox/Admin/DigitalEnv/docs/incoming/sap-mbp-hardware.pdf
+- **Conversion Date:** 2025-07-26 09:46:39
 
 ### Manual Conversion Steps:
 1. Open the PDF in Preview or Adobe Reader

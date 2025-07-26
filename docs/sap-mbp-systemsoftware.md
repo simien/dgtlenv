@@ -1,8 +1,8 @@
-# sap-mbp-hardware
+# sap-mbp-systemsoftware
 
-**Source:** sap-mbp-hardware.pdf  
-**Original Size:**  24K  
-**Converted:** 2025-07-25 23:10:59  
+**Source:** sap-mbp-systemsoftware.pdf  
+**Original Size:**  20K  
+**Converted:** 2025-07-26 09:46:39  
 **Status:** ⚠️ Manual conversion required
 
 ---
@@ -12,10 +12,10 @@
 This PDF has been identified for conversion but requires manual processing due to system limitations.
 
 ### File Information:
-- **Filename:** sap-mbp-hardware.pdf
-- **Size:**  24K
-- **Location:** ./docs/sap-mbp-hardware.pdf
-- **Conversion Date:** 2025-07-25 23:10:59
+- **Filename:** sap-mbp-systemsoftware.pdf
+- **Size:**  20K
+- **Location:** /Users/sap/Dropbox/Admin/DigitalEnv/docs/incoming/sap-mbp-systemsoftware.pdf
+- **Conversion Date:** 2025-07-26 09:46:39
 
 ### Manual Conversion Steps:
 1. Open the PDF in Preview or Adobe Reader

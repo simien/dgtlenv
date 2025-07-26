@@ -1,8 +1,8 @@
-# sap-mbp-systemsoftware
+# MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport
 
-**Source:** sap-mbp-systemsoftware.pdf  
-**Original Size:**  20K  
-**Converted:** 2025-07-25 23:10:59  
+**Source:** MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.pdf  
+**Original Size:** 324K  
+**Converted:** 2025-07-26 09:46:39  
 **Status:** ⚠️ Manual conversion required
 
 ---
@@ -12,10 +12,10 @@
 This PDF has been identified for conversion but requires manual processing due to system limitations.
 
 ### File Information:
-- **Filename:** sap-mbp-systemsoftware.pdf
-- **Size:**  20K
-- **Location:** ./docs/sap-mbp-systemsoftware.pdf
-- **Conversion Date:** 2025-07-25 23:10:59
+- **Filename:** MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.pdf
+- **Size:** 324K
+- **Location:** /Users/sap/Dropbox/Admin/DigitalEnv/docs/incoming/MacBookPro-Retina-15-inch-Mid2015-Technical Specifications-AppleSupport.pdf
+- **Conversion Date:** 2025-07-26 09:46:39
 
 ### Manual Conversion Steps:
 1. Open the PDF in Preview or Adobe Reader

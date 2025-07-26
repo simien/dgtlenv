@@ -1,9 +1,23 @@
 # backup/
 
-Scripts for creating backups of the DigitalEnv project and optimization configurations.
+Scripts for creating backups of the DgtlEnv project and optimization configurations.
+
+## PDF Conversion Workflow (Updated)
+
+- **Drop PDFs in:** `docs/incoming/`
+- **Converted Markdown output:** `docs/`
+- **Original PDFs remain in:** `docs/incoming/`
+- **No longer used:** `docs/converted/` (folder removed)
+- **Migration:** Use `move-converted-files.sh` to move any old markdown files from `docs/converted/` to `docs/`
+
+See `docs/pdf-incoming-workflow.md` for full details.
 
 ## Scripts
 - `create-digitalenv-backup.sh` — Creates a timestamped zip archive of the entire DigitalEnv project
+- `pdf-to-markdown-converter.sh` — Converts all PDFs in `docs/incoming/` to markdown in `docs/`
+- `pdf-watcher.sh` — Watches `docs/incoming/` for new PDFs and auto-converts
+- `simple-pdf-converter.sh` — Fallback/manual converter for PDFs
+- `move-converted-files.sh` — Moves markdown files from old `docs/converted/` to `docs/`
 
 ## Usage
 - Make scripts executable: `chmod +x scriptname.sh`
@@ -12,8 +26,8 @@ Scripts for creating backups of the DigitalEnv project and optimization configur
 ## Backup Features
 
 ### Automatic Timestamping
-- Creates backups with format: `DigitalEnv_Backup_YYYYMMDD_HHMMSS.zip`
-- Example: `DigitalEnv_Backup_20250725_143022.zip`
+- Creates backups with format: `DgtlEnv_Backup_YYYYMMDD_HHMMSS.zip`
+- Example: `DgtlEnv_Backup_20250725_143022.zip`
 
 ### Smart Exclusions
 The backup script automatically excludes unnecessary files:
@@ -25,9 +39,10 @@ The backup script automatically excludes unnecessary files:
 - `*.swp`, `*.swo`, `*~` — Editor temporary files
 - `.vscode/settings.json`, `.cursor/settings.json` — IDE settings (personal)
 - `*.zip`, `*.tar.gz`, `*.backup` — Existing backup files
+- `docs/converted/` — (no longer used)
 
 ### Backup Location
-- **Default**: `~/Downloads/DigitalEnv-Backups/`
+- **Default**: `~/Downloads/DgtlEnv-Backups/`
 - **Format**: Timestamped zip files
 - **Access**: Script can open backup location in Finder
 
@@ -55,19 +70,19 @@ The backup script automatically excludes unnecessary files:
 
 ### Sample Output
 ```bash
-=== DigitalEnv Backup Script ===
-Project Root: ./DigitalEnv
-Backup Name: DigitalEnv_Backup_20250725_143022.zip
-Backup Path: ~/Downloads/DigitalEnv-Backups/DigitalEnv_Backup_20250725_143022.zip
+=== DgtlEnv Backup Script ===
+Project Root: ./DgtlEnv
+Backup Name: DgtlEnv_Backup_20250725_143022.zip
+Backup Path: ~/Downloads/DgtlEnv-Backups/DgtlEnv_Backup_20250725_143022.zip
 
 Creating backup...
 ✅ Backup created successfully!
-File: ~/Downloads/DigitalEnv-Backups/DigitalEnv_Backup_20250725_143022.zip
+File: ~/Downloads/DgtlEnv-Backups/DgtlEnv_Backup_20250725_143022.zip
 Size: 2.1M
 
-Recent backups in ~/Downloads/DigitalEnv-Backups:
--rw-r--r--  1 user  staff   2.1M Jul 25 14:30 DigitalEnv_Backup_20250725_143022.zip
--rw-r--r--  1 user  staff   2.0M Jul 15 10:15 DigitalEnv_Backup_20250715_101500.zip
+Recent backups in ~/Downloads/DgtlEnv-Backups:
+-rw-r--r--  1 user  staff   2.1M Jul 25 14:30 DgtlEnv_Backup_20250725_143022.zip
+-rw-r--r--  1 user  staff   2.0M Jul 15 10:15 DgtlEnv_Backup_20250725_101500.zip
 
 Open backup location in Finder? (y/n): y
 
@@ -91,6 +106,7 @@ Backup completed at Thu Jul 25 14:30:22 PDT 2025
 - ❌ IDE settings (personal configurations)
 - ❌ Dependencies (`node_modules/`)
 - ❌ Existing backup files
+- ❌ `docs/converted/` (no longer used)
 
 ## Best Practices
 
