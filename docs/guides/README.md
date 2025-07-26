@@ -4,7 +4,7 @@ This directory contains step-by-step tutorials and guides for using the DigitalE
 
 ## Available Guides
 
-*No guides created yet - this is where step-by-step tutorials will be placed*
+- **`cursor-vscode-settings-sync.md`** - How to sync VS Code project settings with Cursor IDE
 
 ## Guide Categories
 
