@@ -31,8 +31,7 @@ security/
 4. **Regular Audits**: Schedule periodic security reviews
 5. **CI/CD Integration**: Automated security checks in GitHub Actions
 6. **Release Sanitization**: Automatic personal information removal before releases
-5. **CI/CD Integration**: Automated security checks in GitHub Actions
-6. **Release Sanitization**: Automatic personal information removal before releases
+7. **Organization Standards**: Automated directory organization enforcement
 
 ## Quick Security Checks
 
@@ -66,8 +65,10 @@ grep -r "sap\|@gmail\|@yahoo" . --exclude-dir=.git
 - `.github/workflows/release.yml`: Release workflow with security sanitization
 - `scripts/pre-release-sanitizer.sh`: Automated security sanitization
 - `scripts/create-release.sh`: Release management with security checks
+- `scripts/enforce-organization-standards.sh`: Directory organization enforcement
+- `docs/workflows/cleanup-and-reorganization-standards.md`: Organization standards
 - `CONTRIBUTING.md`: Security guidelines for contributors
 - `README.md`: Security section with quick links
 
 ---
-*Last Updated: 2025-07-25*
+*Last Updated: 2025-07-27*

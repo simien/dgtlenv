@@ -1,6 +1,6 @@
 # scripts/
 
-This directory contains utility scripts for project management, setup, and maintenance.
+This directory contains utility scripts for project management, setup, maintenance, and organization standards enforcement.
 
 ## Scripts
 
@@ -15,6 +15,15 @@ This directory contains utility scripts for project management, setup, and maint
 
 ### Cursor Settings Sync
 - **`sync-cursor-settings.sh`** - Synchronize Cursor IDE settings across environments
+
+### Organization Standards Enforcement
+- **`enforce-organization-standards.sh`** - Check and enforce directory organization standards
+
+### ASCII Style Converter
+- **`ascii-style-converter.sh`** - Convert and generate ASCII art and visual elements
+
+### Project Name Management
+- **`update-project-name.sh`** - Update project naming references and validate consistency
 
 ## Usage
 
@@ -76,6 +85,58 @@ The sanitizer automatically checks for and fixes personal information, credentia
 ./scripts/sync-cursor-settings.sh
 ```
 
+### Organization Standards Enforcement
+
+Check and enforce directory organization standards across the project:
+
+```bash
+# Check for violations
+./scripts/enforce-organization-standards.sh
+
+# Attempt automatic fixes
+./scripts/enforce-organization-standards.sh --fix
+
+# The script checks for:
+# - Backup files (.bak, .backup)
+# - System files (.DS_Store)
+# - Scattered files in root directories
+# - Missing README files
+# - Required directory structure
+```
+
+### ASCII Style Converter
+
+Generate ASCII art and visual elements for documentation:
+
+```bash
+# Show examples
+./scripts/ascii-style-converter.sh examples
+
+# Generate styled logo
+./scripts/ascii-style-converter.sh logo styled
+
+# Create system dashboard
+./scripts/ascii-style-converter.sh dashboard
+
+# Create performance chart
+./scripts/ascii-style-converter.sh chart
+```
+
+### Project Name Management
+
+Update and validate project naming consistency:
+
+```bash
+# Show current configuration
+./scripts/update-project-name.sh config
+
+# Validate naming consistency
+./scripts/update-project-name.sh validate
+
+# Create naming guidelines
+./scripts/update-project-name.sh guidelines
+```
+
 ## Pre-Release Workflow
 
 Before any public release, run the sanitizer:
@@ -94,19 +155,42 @@ Before any public release, run the sanitizer:
 cat logs/sanitization-report-*.md
 ```
 
+## Organization Standards Workflow
+
+Regular maintenance to ensure clean organization:
+
+```bash
+# 1. Check for violations
+./scripts/enforce-organization-standards.sh
+
+# 2. Fix violations automatically
+./scripts/enforce-organization-standards.sh --fix
+
+# 3. Verify clean state
+./scripts/enforce-organization-standards.sh
+```
+
 ## Security Features
 
 - **Automated Detection:** Scans for common personal information patterns
 - **Safe Fixes:** Uses dry-run mode to preview changes
-- **Comprehensive Reports:** Generates detailed sanitization reports
-- **File Permissions:** Ensures proper file permissions for security
-- **Credential Scanning:** Detects potential credential leaks
+- **Comprehensive Coverage:** Checks all file types and locations
+- **Detailed Reporting:** Generates detailed sanitization reports
 
-## Integration
+## Organization Features
 
-The sanitizer can be integrated into CI/CD pipelines or run manually before releases. It's designed to be safe and non-destructive, with comprehensive reporting.
+- **Standards Enforcement:** Automated checking of directory organization
+- **Clean Structure:** Ensures files are in appropriate directories
+- **Backup Management:** Removes unnecessary backup files
+- **README Validation:** Ensures all directories have proper documentation
+
+## Related Documentation
+
+- See `../docs/workflows/cleanup-and-reorganization-standards.md` for detailed standards
+- See `../docs/workflows/release-management-guide.md` for release process
+- See `../docs/style/` for ASCII style system documentation
 
 ---
 
-**Last Updated:** 2025-07-25
+**Last Updated:** 2025-07-27
 **Maintainer:** Simien Antonis-Parr

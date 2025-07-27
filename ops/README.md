@@ -31,7 +31,9 @@ This directory contains automation scripts, monitoring tools, and configuration 
 - `docker/README.md` — Complete Docker/Colima optimization guide
 
 ### Backup Scripts
-- `backup/create-digitalenv-backup.sh` — Creates timestamped zip backup of entire project
+- `backup/create-dgtlenv-backup.sh` — Creates timestamped zip backup of entire project
+- `backup/simple-pdf-converter.sh` — PDF to markdown conversion with file watching
+- `backup/pdf-watcher.sh` — Automatic PDF conversion monitoring
 - `backup/README.md` — Backup procedures and best practices
 
 ### Cleanup Scripts

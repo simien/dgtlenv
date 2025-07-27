@@ -13,6 +13,7 @@ This directory contains project reports, assessments, and analysis documents tha
 - **`folder-structure-assessment.md`** - Directory structure analysis and evaluation
 - **`folder-structure-improvements-summary.md`** - Structure improvement implementation
 - **`root-directory-cleanup-report.md`** - Root directory organization report
+- **`reorganization-summary.md`** - Documentation reorganization process and results
 
 ## 🎯 Purpose
 

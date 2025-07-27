@@ -29,6 +29,7 @@ This directory contains task management files, project planning, and workflow do
 - **`funding-todo.md`** — Funding platform setup and configuration
 - **`release-todo.md`** — Release management and version control
 - **`ci-test-failure-todo.md`** — CI/CD pipeline issue resolution
+- **`docs-reorganization-todo.md`** — Documentation reorganization and cleanup
 
 ## Workflow Integration
 
@@ -66,6 +67,9 @@ grep -r "\[ \]" todos/
 - Documentation sanitization
 - GitHub setup preparation
 - System optimization implementation
+- Documentation reorganization (Option 1 - Comprehensive)
+- Organization standards enforcement
+- Development history preservation system
 
 ### In Progress 🔄
 - GitHub repository setup
