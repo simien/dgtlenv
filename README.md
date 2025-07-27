@@ -99,22 +99,6 @@ PDF Conversion: 100% ✅ (3/3 files converted)
 ## 🛠️ Quick Start
 
 ### Essential Commands
-```
-Available Commands:
-├── 🏥 System Health
-│   └── ./ops/monitoring/swap-ssd-health.sh
-├── 📄 PDF Management
-│   ├── ./ops/backup/simple-pdf-converter.sh all
-│   └── ./ops/backup/pdf-watcher.sh watch
-├── 📊 Metrics & Monitoring
-│   ├── ./metrics/comprehensive-dashboard.sh dashboard
-│   ├── ./metrics/system-metrics-tracker.sh baseline
-│   ├── ./metrics/system-metrics-tracker.sh current
-│   └── ./metrics/system-metrics-tracker.sh compare
-└── 🔒 Security
-    └── ./scripts/pre-release-sanitizer.sh --dry-run
-```
-
 ```bash
 # System health check
 ./ops/monitoring/swap-ssd-health.sh
@@ -150,37 +134,56 @@ Available Commands:
 DgtlEnv/
 ├── docs/                           # Documentation
 │   ├── incoming/                   # PDF drop zone
-│   ├── optimization-summary.md     # System optimization guide
-│   └── pdf-conversion-and-metrics-system.md
+│   ├── setup/                      # Setup guides
+│   └── guides/                     # Step-by-step tutorials
 ├── metrics/                        # Performance tracking
 │   ├── dashboards/                 # Visual dashboards
-│   ├── system-metrics-tracker.sh   # Metrics collection
-│   └── comprehensive-dashboard.sh  # Main dashboard
+│   ├── data/                       # Raw metrics storage
+│   └── reports/                    # Generated reports
 ├── ops/                           # Operations scripts
 │   ├── backup/                    # Backup and conversion
 │   ├── cleanup/                   # System cleanup
 │   ├── docker/                    # Docker optimization
 │   └── monitoring/                # Health monitoring
 ├── scripts/                        # Utility scripts
-│   ├── pre-release-sanitizer.sh   # Security sanitization
-│   ├── setup-github.sh            # GitHub setup
-│   └── sync-cursor-settings.sh    # Cursor settings sync
 ├── security/                       # Security policies
-│   ├── audit-reports/             # Security audits
-│   └── policies/                  # Security policies
-└── todos/                         # Task management
+├── config/                         # Configuration files
+├── tests/                          # Test scripts
+├── examples/                       # Usage examples
+├── todos/                          # Task management
+└── logs/                          # Application logs
 ```
+
+**📖 See [docs/README.md](docs/README.md) for detailed documentation structure**
 
 ---
 
-## 📈 Live Status Dashboard
+## 📋 Available Scripts
 
-For real-time system metrics and visual dashboards, run:
-```bash
-./metrics/comprehensive-dashboard.sh dashboard
-```
+### System Monitoring
+- **`./ops/monitoring/swap-ssd-health.sh`** - System health check
+- **`./ops/monitoring/top-hogs.sh`** - Resource monitoring
 
-This provides detailed performance charts, resource usage graphs, and conversion progress tracking.
+### PDF Management
+- **`./ops/backup/simple-pdf-converter.sh`** - PDF to markdown conversion
+- **`./ops/backup/pdf-watcher.sh`** - Automatic file watching
+- **`./ops/backup/create-digitalenv-backup.sh`** - Project backup
+
+### Metrics Tracking
+- **`./metrics/system-metrics-tracker.sh`** - Performance tracking
+- **`./metrics/comprehensive-dashboard.sh`** - Visual dashboards
+
+### System Optimization
+- **`./ops/docker/docker-optimize.sh`** - Docker resource management
+- **`./ops/cleanup/brew-cleanup.sh`** - Homebrew cleanup
+- **`./ops/cleanup/docker-cleanup.sh`** - Docker cleanup
+
+### Security & Release Management
+- **`./scripts/pre-release-sanitizer.sh`** - Pre-release security sanitization
+- **`./scripts/setup-github.sh`** - GitHub repository setup
+- **`./scripts/sync-cursor-settings.sh`** - Cursor IDE settings sync
+
+**📖 See [ops/README.md](ops/README.md) for detailed operations documentation**
 
 ---
 
@@ -219,54 +222,7 @@ This provides detailed performance charts, resource usage graphs, and conversion
 ./ops/backup/simple-pdf-converter.sh dashboard
 ```
 
----
-
-## 📋 Available Scripts
-
-```
-Script Categories:
-├── 🏥 System Monitoring
-│   ├── swap-ssd-health.sh (Health check)
-│   └── top-hogs.sh (Resource monitoring)
-├── 📄 PDF Management
-│   ├── simple-pdf-converter.sh (Conversion)
-│   ├── pdf-watcher.sh (File watching)
-│   └── create-digitalenv-backup.sh (Backup)
-├── 📊 Metrics Tracking
-│   ├── system-metrics-tracker.sh (Performance)
-│   └── comprehensive-dashboard.sh (Dashboards)
-├── ⚡ System Optimization
-│   ├── docker-optimize.sh (Docker management)
-│   ├── brew-cleanup.sh (Homebrew cleanup)
-│   └── docker-cleanup.sh (Docker cleanup)
-└── 🔒 Security & Release
-    ├── pre-release-sanitizer.sh (Security)
-    ├── setup-github.sh (GitHub setup)
-    └── sync-cursor-settings.sh (Cursor sync)
-```
-
-### System Monitoring
-- **`./ops/monitoring/swap-ssd-health.sh`** - System health check
-- **`./ops/monitoring/top-hogs.sh`** - Resource monitoring
-
-### PDF Management
-- **`./ops/backup/simple-pdf-converter.sh`** - PDF to markdown conversion
-- **`./ops/backup/pdf-watcher.sh`** - Automatic file watching
-- **`./ops/backup/create-digitalenv-backup.sh`** - Project backup
-
-### Metrics Tracking
-- **`./metrics/system-metrics-tracker.sh`** - Performance tracking
-- **`./metrics/comprehensive-dashboard.sh`** - Visual dashboards
-
-### System Optimization
-- **`./ops/docker/docker-optimize.sh`** - Docker resource management
-- **`./ops/cleanup/brew-cleanup.sh`** - Homebrew cleanup
-- **`./ops/cleanup/docker-cleanup.sh`** - Docker cleanup
-
-### Security & Release Management
-- **`./scripts/pre-release-sanitizer.sh`** - Pre-release security sanitization
-- **`./scripts/setup-github.sh`** - GitHub repository setup
-- **`./scripts/sync-cursor-settings.sh`** - Cursor IDE settings sync
+**📖 See [docs/pdf-conversion-and-metrics-system.md](docs/pdf-conversion-and-metrics-system.md) for detailed workflow documentation**
 
 ---
 
@@ -306,6 +262,8 @@ Error Rate: 0% ✅ (Target: < 5%)
 ✅ Target Status: Perfect
 ```
 
+**📖 See [metrics/README.md](metrics/README.md) for detailed performance tracking**
+
 ---
 
 ## 📊 Dashboard Locations
@@ -314,6 +272,8 @@ Error Rate: 0% ✅ (Target: < 5%)
 - **PDF Processing Dashboard:** `metrics/pdf-processing-dashboard.md`
 - **Before/After Comparison:** `metrics/dashboards/before-after-comparison.md`
 - **Progress Chart:** `metrics/dashboards/progress-chart.md`
+
+**📖 See [metrics/dashboards/README.md](metrics/dashboards/README.md) for dashboard documentation**
 
 ---
 
@@ -342,6 +302,8 @@ sudo ./metrics/system-metrics-tracker.sh current
 4. Paste into corresponding .md file
 5. Format as markdown
 
+**📖 See [docs/guides/README.md](docs/guides/README.md) for detailed troubleshooting guides**
+
 ---
 
 ## 📈 Improvement Tracking
@@ -361,6 +323,8 @@ The system provides comprehensive before/after comparison tracking:
 - ✅ Docker resource management
 - ✅ SSD health monitoring
 - ✅ PDF conversion automation
+
+**📖 See [docs/optimization-summary.md](docs/optimization-summary.md) for detailed improvement tracking**
 
 ---
 
@@ -385,18 +349,28 @@ System Components:
 
 ## 📚 Documentation
 
-- **System Optimization:** `docs/optimization-summary.md`
-- **PDF Conversion System:** `docs/pdf-conversion-and-metrics-system.md`
-- **Cursor IDE Optimization:** `docs/cursor-ide-disable-extensions.md`
-- **Contributing Guidelines:** `CONTRIBUTING.md`
+### Core Documentation
+- **System Optimization:** [`docs/optimization-summary.md`](docs/optimization-summary.md)
+- **PDF Conversion System:** [`docs/pdf-conversion-and-metrics-system.md`](docs/pdf-conversion-and-metrics-system.md)
+- **Cursor IDE Optimization:** [`docs/cursor-ide-disable-extensions.md`](docs/cursor-ide-disable-extensions.md)
+- **Contributing Guidelines:** [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- **GitHub Setup Guide:** [`docs/setup/github-setup.md`](docs/setup/github-setup.md)
+- **Quality Control Report:** [`docs/quality-control-report.md`](docs/quality-control-report.md)
+
+### Directory Documentation
+- **Documentation:** [`docs/README.md`](docs/README.md)
+- **Metrics & Monitoring:** [`metrics/README.md`](metrics/README.md)
+- **Operations:** [`ops/README.md`](ops/README.md)
+- **Security:** [`security/README.md`](security/README.md)
+- **Configuration:** [`config/README.md`](config/README.md)
+- **Testing:** [`tests/README.md`](tests/README.md)
+
+### Workflows & Guides
+- **Pre-Release Workflow:** [`todos/pre-release-workflow-todo.md`](todos/pre-release-workflow-todo.md)
 - **Security Directory:** `security/` - Policies, audits, and guidelines
-- **Pre-Release Workflow:** `todos/pre-release-workflow-todo.md`
-- **Changelog:** `CHANGELOG.md`
-- **GitHub Setup Guide:** `docs/setup/github-setup.md`
-- **Quality Control Report:** `docs/quality-control-report.md`
+- **Changelog:** [`CHANGELOG.md`](CHANGELOG.md)
 
-
-For detailed information about the PDF conversion and metrics tracking system, see: `docs/pdf-conversion-and-metrics-system.md`
+---
 
 ## 🤝 Contributing
 
@@ -440,6 +414,10 @@ This project follows consistent naming conventions for maintainability and clari
 - **Shell variables:** UPPER_SNAKE_CASE (e.g., `SYSTEM_STATUS`, `PDF_COUNT`)
 - **Shell functions:** snake_case (e.g., `check_system_health()`, `convert_pdf_to_markdown()`)
 - **Configuration keys:** kebab-case (e.g., `system-status`, `pdf-count`)
+
+**📖 See [docs/naming-guidelines.md](docs/naming-guidelines.md) for detailed naming conventions**
+
+---
 
 ## 🌟 Star History
 
