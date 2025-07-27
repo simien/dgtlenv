@@ -366,6 +366,7 @@ System Components:
 - **Contributing Guidelines:** [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - **GitHub Setup Guide:** [`docs/setup/github-setup.md`](docs/setup/github-setup.md)
 - **Quality Control Report:** [`docs/quality-control-report.md`](docs/quality-control-report.md)
+- **Release Management:** [`docs/release-management-guide.md`](docs/release-management-guide.md)
 
 ### Directory Documentation
 - **Documentation:** [`docs/README.md`](docs/README.md)
@@ -393,7 +394,27 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 🔒 Security
 
-If you discover a security vulnerability, please report it privately. See our [Security Policy](security/policies/security.md) for details.
+If you discover a security vulnerability, please report it privately. See our [Security Policy](SECURITY.md) for details.
+
+## 🚀 CI/CD & Release System
+
+### Automated Release Pipeline
+- **GitHub Actions:** Automated CI/CD with comprehensive testing
+- **Release Management:** `./scripts/create-release.sh` for version management
+- **Security Sanitization:** Pre-release personal information removal
+- **Asset Generation:** Automatic zip files and changelog creation
+
+### Release Process
+```bash
+# Create a new release
+./scripts/create-release.sh 1.1.0 "Add new features"
+
+# GitHub Actions automatically:
+# - Creates GitHub release
+# - Generates release assets
+# - Uploads changelog
+# - Runs security checks
+```
 
 ## 📄 License
 

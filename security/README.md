@@ -29,6 +29,8 @@ security/
 2. **Policy Review**: Ensure all security policies are up to date
 3. **Vulnerability Reporting**: Follow the process in `policies/security.md`
 4. **Regular Audits**: Schedule periodic security reviews
+5. **CI/CD Integration**: Automated security checks in GitHub Actions
+6. **Release Sanitization**: Automatic personal information removal before releases
 
 ## Quick Security Checks
 
@@ -59,6 +61,9 @@ grep -r "sap\|@gmail\|@yahoo" . --exclude-dir=.git
 ## Related Files
 
 - `.github/workflows/ci.yml`: Automated security checks in CI/CD
+- `.github/workflows/release.yml`: Release workflow with security sanitization
+- `scripts/pre-release-sanitizer.sh`: Automated security sanitization
+- `scripts/create-release.sh`: Release management with security checks
 - `CONTRIBUTING.md`: Security guidelines for contributors
 - `README.md`: Security section with quick links
 

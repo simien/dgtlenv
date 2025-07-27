@@ -10,6 +10,9 @@ This directory contains utility scripts for project management, setup, and maint
 ### GitHub Setup
 - **`setup-github.sh`** - Automated GitHub repository setup and configuration
 
+### Release Management
+- **`create-release.sh`** - Automated release creation with version management and CI/CD integration
+
 ### Cursor Settings Sync
 - **`sync-cursor-settings.sh`** - Synchronize Cursor IDE settings across environments
 
@@ -47,6 +50,23 @@ The sanitizer automatically checks for and fixes personal information, credentia
 ```bash
 # Setup GitHub repository with best practices
 ./scripts/setup-github.sh -r https://github.com/username/repository.git
+```
+
+### Release Management
+
+```bash
+# Create a new release
+./scripts/create-release.sh 1.1.0 "Add new features"
+
+# Show help
+./scripts/create-release.sh
+
+# The script will:
+# - Validate version format
+# - Run pre-release security checks
+# - Update CHANGELOG.md
+# - Create and push git tag
+# - Trigger GitHub Actions release workflow
 ```
 
 ### Cursor Settings Sync

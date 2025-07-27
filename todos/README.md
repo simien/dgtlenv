@@ -27,6 +27,8 @@ This directory contains task management files, project planning, and workflow do
 ### Release Management
 - **`pre-release-workflow-todo.md`** — Security sanitization and release process
 - **`funding-todo.md`** — Funding platform setup and configuration
+- **`release-todo.md`** — Release management and version control
+- **`ci-test-failure-todo.md`** — CI/CD pipeline issue resolution
 
 ## Workflow Integration
 
@@ -98,6 +100,7 @@ grep -r "\[ \]" todos/
 - `scripts/pre-release-sanitizer.sh` — Automated security checks
 - `scripts/setup-github.sh` — GitHub setup automation
 - `scripts/sync-cursor-settings.sh` — Settings synchronization
+- `scripts/create-release.sh` — Release management and CI/CD integration
 
 ### Documentation
 - `docs/` — Related documentation updates
