@@ -1,10 +1,10 @@
 # **DgtlEnv** - Digital Environment Management
 
-> **📋 Project Name Source of Truth:** This README.md file serves as the authoritative source for the project name "DgtlEnv". All documentation and scripts should reference this file for consistent naming.
+> **📋 Project Name Source of Truth:** `README.md` - Authoritative source for project name "DgtlEnv"
 
-> **👤 Contact Information Source of Truth:** This README.md file serves as the authoritative source for contact information. All documentation and scripts should reference this file for consistent contact details.
+> **👤 Contact Information Source of Truth:** `README.md` - Authoritative source for contact details
 
-> **⚙️ Configuration:** Project configuration is centralized in `config/project-config.json` for programmatic access.
+> **⚙️ Configuration:** `config/project-config.json` - Centralized project configuration
 
 ### 📞 Contact Information
 **Name:** Simien Antonis-Parr
