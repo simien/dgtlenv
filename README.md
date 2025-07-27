@@ -432,3 +432,17 @@ This project follows consistent naming conventions for maintainability and clari
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=simien/DgtlEnv&type=Date)](https://star-history.com/#simien/DgtlEnv&Date)
+
+---
+
+## 💖 Support This Project
+
+If you find DgtlEnv helpful, consider supporting its development:
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support%20Me-red?style=for-the-badge&logo=github)](https://github.com/sponsors/simien)
+
+**Why Support?**
+- 🚀 Accelerate feature development
+- 🛠️ Priority support and custom solutions
+- 📚 Early access to new features
+- 💡 Direct consultation for your specific needs
