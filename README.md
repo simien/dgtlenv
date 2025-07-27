@@ -12,6 +12,17 @@
 **Website:** [simienap.com](https://www.simienap.com/)
 **GitHub:** [simien](https://github.com/simien)
 
+### 💖 Support This Project
+If you find DgtlEnv helpful, consider supporting its development:
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support%20Me-red?style=for-the-badge&logo=github)](https://github.com/sponsors/simien)
+
+**Why Support?**
+- 🚀 Accelerate feature development
+- 🛠️ Priority support and custom solutions
+- 📚 Early access to new features
+- 💡 Direct consultation for your specific needs
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
 [![System Status](https://img.shields.io/badge/System%20Status-Optimized-brightgreen.svg)](https://github.com/simien/DgtlEnv)
