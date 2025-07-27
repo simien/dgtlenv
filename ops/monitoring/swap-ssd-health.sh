@@ -2,6 +2,14 @@
 
 # Swap & SSD Health Check Script for MacBook Pro 2015
 # Run this script periodically to monitor system health
+#
+# 🎯 PERFORMANCE IMPACT:
+# - Prevents system slowdowns by detecting high swap usage
+# - Identifies SSD health issues before data loss
+# - Monitors memory pressure and provides early warnings
+# - Helps maintain optimal system performance
+# - BEFORE: System lag, high swap activity, potential data loss
+# - AFTER: Proactive monitoring, early warning system, optimal performance
 
 LOG_FILE="$HOME/Library/Logs/swap-ssd-health.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
@@ -54,10 +62,10 @@ fi
 # Detailed SSD health (if smartctl is available)
 if command -v smartctl &> /dev/null; then
     echo "--- Detailed SSD Health ---" | tee -a "$LOG_FILE"
-    
+
     # Get SSD wear indicators
     SMART_OUTPUT=$(sudo smartctl -a disk0 2>/dev/null)
-    
+
     # Check for wear leveling count
     WEAR_COUNT=$(echo "$SMART_OUTPUT" | grep 'Wear_Leveling_Count' | awk '{print $10}')
     if [ ! -z "$WEAR_COUNT" ]; then
@@ -66,13 +74,13 @@ if command -v smartctl &> /dev/null; then
             echo "⚠️  WARNING: SSD wear leveling count is low" | tee -a "$LOG_FILE"
         fi
     fi
-    
+
     # Check for reallocated sectors
     REALLOCATED=$(echo "$SMART_OUTPUT" | grep 'Reallocated_Sector_Ct' | awk '{print $10}')
     if [ ! -z "$REALLOCATED" ] && [ $REALLOCATED -gt 0 ]; then
         echo "⚠️  WARNING: Reallocated sectors detected ($REALLOCATED)" | tee -a "$LOG_FILE"
     fi
-    
+
     # Check media wearout indicator
     MEDIA_WEAR=$(echo "$SMART_OUTPUT" | grep 'Media_Wearout_Indicator' | awk '{print $10}')
     if [ ! -z "$MEDIA_WEAR" ]; then
@@ -92,4 +100,4 @@ echo "" | tee -a "$LOG_FILE"
 if grep -q "WARNING" "$LOG_FILE"; then
     # Send macOS notification
     osascript -e 'display notification "System health issues detected. Check logs for details." with title "Swap & SSD Health Check"'
-fi 
+fi

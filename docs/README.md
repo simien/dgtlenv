@@ -1,6 +1,6 @@
 # docs/
 
-This directory contains comprehensive documentation for the DgtlEnv project, organized by category for easy navigation and maintenance.
+This directory contains comprehensive documentation for the DgtlEnv project, organized by category for easy navigation and maintenance. Documentation focuses on **environment optimization** and **environment management** tools.
 
 ## 📁 Directory Structure
 
@@ -50,7 +50,7 @@ docs/
 
 ### 🎯 Guides (`guides/`)
 Step-by-step tutorials and practical guides:
-- **System Optimization** - Comprehensive optimization strategies
+- **Environment Optimization** - Comprehensive optimization strategies for your Mac
 - **Cursor/VS Code Settings** - IDE configuration and sync
 - **Development Workflows** - Best practices and procedures
 
@@ -77,7 +77,7 @@ Process documentation and operational procedures:
 - **PDF Management** - Conversion and processing workflows
 - **Release Management** - Version control and distribution
 - **Operational Procedures** - Day-to-day processes
-- **Quality Control** - Organization standards and todo quality validation
+- **Environment Management** - Organization standards and todo quality validation
 - **Todo Migration** - Automated migration of non-completed todo items
 
 ### 📚 Development History (`development-history/`)
@@ -89,7 +89,7 @@ Project evolution and decision tracking:
 ## 🚀 Quick Navigation
 
 ### For New Users
-1. **Start with** `guides/system-optimization.md` for setup
+1. **Start with** `guides/computer-optimization-quick-reference.md` for environment optimization
 2. **Review** `setup/hardware-specs/` for system requirements
 3. **Follow** `workflows/` for operational procedures
 

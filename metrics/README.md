@@ -1,6 +1,6 @@
 # metrics/
 
-This directory contains performance tracking, metrics collection, and dashboard generation tools for monitoring system optimization and PDF conversion progress.
+This directory contains performance tracking, metrics collection, and dashboard generation tools for monitoring environment optimization and PDF conversion progress.
 
 ## Structure
 - `dashboards/` — Visual dashboard files and templates

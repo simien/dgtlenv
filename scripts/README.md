@@ -1,32 +1,27 @@
 # scripts/
 
-This directory contains utility scripts for project management, setup, maintenance, and organization standards enforcement.
+This directory contains utility scripts for environment management, setup, maintenance, and organization standards enforcement.
 
-## Scripts
+## 🎯 Script Categorization
 
-### Pre-Release Sanitizer
-- **`pre-release-sanitizer.sh`** - Comprehensive security and personal information sanitization before public releases
+### 🖥️ Environment Optimization Scripts
+**Tools that directly improve your Mac's performance:**
 
-### GitHub Setup
-- **`setup-github.sh`** - Automated GitHub repository setup and configuration
+- **`sync-cursor-settings.sh`** - 💻 Cursor IDE optimization (Faster performance, reduced memory usage)
 
-### Release Management
-- **`create-release.sh`** - Automated release creation with version management and CI/CD integration
+### 📁 Environment Management Scripts
+**Tools that help manage the development environment:**
 
-### Cursor Settings Sync
-- **`sync-cursor-settings.sh`** - Synchronize Cursor IDE settings across environments
+- **`pre-release-sanitizer.sh`** - 🔒 Security sanitization
+- **`enforce-organization-standards.sh`** - 📋 Organization standards enforcement
+- **`migrate-todo-items.sh`** - ✅ **FIXED** - Todo migration with comprehensive reporting
+- **`create-release.sh`** - 🚀 Release management
+- **`setup-github.sh`** - 📦 GitHub repository setup
+- **`export-chat-history.sh`** - 📝 Development history export
+- **`update-project-name.sh`** - 🏷️ Project naming management
+- **`ascii-style-converter.sh`** - 🎨 Documentation styling
 
-### Organization Standards Enforcement
-- **`enforce-organization-standards.sh`** - Check and enforce directory organization standards and todo quality control with smart migration detection
-
-### Todo Migration
-- **`migrate-todo-items.sh`** - ✅ **FIXED** - Migrate non-completed todo items from completed files to appropriate active/planning todo files with comprehensive reporting
-
-### ASCII Style Converter
-- **`ascii-style-converter.sh`** - Convert and generate ASCII art and visual elements
-
-### Project Name Management
-- **`update-project-name.sh`** - Update project naming references and validate consistency
+## Scripts by Category
 
 ## Usage
 

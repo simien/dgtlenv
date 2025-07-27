@@ -1,6 +1,6 @@
 # todos/
 
-This directory contains task management files, project planning, and workflow documentation for the DgtlEnv project.
+This directory contains task management files, project planning, and workflow documentation for the DgtlEnv environment management system.
 
 ## 📁 Directory Structure
 

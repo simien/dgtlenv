@@ -2,6 +2,14 @@
 
 # Docker Optimization Script for MacBook Pro 2015
 # Handles cleanup, resource monitoring, and Colima setup
+#
+# 🎯 PERFORMANCE IMPACT:
+# - Prevents Docker from consuming all system resources
+# - Sets up Colima with optimal resource limits
+# - Monitors Docker resource usage and provides warnings
+# - Optimizes container performance for development
+# - BEFORE: Docker resource hogging, slow system performance
+# - AFTER: Controlled Docker resources, optimal system performance
 
 LOG_FILE="$HOME/Library/Logs/docker-optimize.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
@@ -21,15 +29,15 @@ check_docker() {
 # Function to check Docker resource usage
 check_docker_usage() {
     echo "--- Docker Resource Usage ---" | tee -a "$LOG_FILE"
-    
+
     # Check disk usage
     echo "Disk Usage:" | tee -a "$LOG_FILE"
     docker system df | tee -a "$LOG_FILE"
-    
+
     # Check running containers
     RUNNING_CONTAINERS=$(docker ps -q | wc -l)
     echo "Running containers: $RUNNING_CONTAINERS" | tee -a "$LOG_FILE"
-    
+
     if [ $RUNNING_CONTAINERS -gt 3 ]; then
         echo "⚠️  WARNING: Many containers running ($RUNNING_CONTAINERS)" | tee -a "$LOG_FILE"
         echo "   Consider stopping unused containers" | tee -a "$LOG_FILE"
@@ -39,35 +47,35 @@ check_docker_usage() {
 # Function to perform Docker cleanup
 cleanup_docker() {
     echo "--- Docker Cleanup ---" | tee -a "$LOG_FILE"
-    
+
     # Remove stopped containers
     STOPPED_CONTAINERS=$(docker container ls -a -q -f status=exited | wc -l)
     if [ $STOPPED_CONTAINERS -gt 0 ]; then
         echo "Removing $STOPPED_CONTAINERS stopped containers..." | tee -a "$LOG_FILE"
         docker container prune -f | tee -a "$LOG_FILE"
     fi
-    
+
     # Remove unused images
     UNUSED_IMAGES=$(docker images -q -f dangling=true | wc -l)
     if [ $UNUSED_IMAGES -gt 0 ]; then
         echo "Removing $UNUSED_IMAGES unused images..." | tee -a "$LOG_FILE"
         docker image prune -f | tee -a "$LOG_FILE"
     fi
-    
+
     # Remove unused volumes
     UNUSED_VOLUMES=$(docker volume ls -q -f dangling=true | wc -l)
     if [ $UNUSED_VOLUMES -gt 0 ]; then
         echo "Removing $UNUSED_VOLUMES unused volumes..." | tee -a "$LOG_FILE"
         docker volume prune -f | tee -a "$LOG_FILE"
     fi
-    
+
     # Remove unused networks
     UNUSED_NETWORKS=$(docker network ls -q -f dangling=true | wc -l)
     if [ $UNUSED_NETWORKS -gt 0 ]; then
         echo "Removing $UNUSED_NETWORKS unused networks..." | tee -a "$LOG_FILE"
         docker network prune -f | tee -a "$LOG_FILE"
     fi
-    
+
     echo "✅ Docker cleanup completed" | tee -a "$LOG_FILE"
 }
 
@@ -86,7 +94,7 @@ check_colima() {
 setup_colima() {
     if command -v colima &> /dev/null; then
         echo "--- Setting up Colima ---" | tee -a "$LOG_FILE"
-        
+
         # Check if Colima is already running
         if colima status | grep -q "RUNNING"; then
             echo "✅ Colima is already running" | tee -a "$LOG_FILE"
@@ -107,13 +115,13 @@ echo "Starting Docker optimization..." | tee -a "$LOG_FILE"
 if check_docker; then
     # Check current usage
     check_docker_usage
-    
+
     # Perform cleanup
     cleanup_docker
-    
+
     # Check Colima
     check_colima
-    
+
     # Ask about Colima setup
     echo ""
     read -p "Would you like to setup Colima for lighter Docker usage? (y/n): " -n 1 -r
@@ -126,4 +134,4 @@ else
 fi
 
 echo "--- End of Docker Optimization ---" | tee -a "$LOG_FILE"
-echo "" | tee -a "$LOG_FILE" 
+echo "" | tee -a "$LOG_FILE"

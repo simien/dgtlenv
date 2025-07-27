@@ -2,6 +2,14 @@
 
 # System Metrics Tracker
 # Tracks system performance improvements and creates visual dashboards
+#
+# 🎯 PERFORMANCE IMPACT:
+# - Tracks before/after optimization metrics
+# - Provides visual proof of performance improvements
+# - Helps identify optimization opportunities
+# - Creates dashboards showing real performance gains
+# - BEFORE: No visibility into system performance trends
+# - AFTER: Clear metrics showing optimization effectiveness
 
 set -e
 
@@ -27,7 +35,7 @@ mkdir -p "$DASHBOARD_DIR"
 # Function to get current system metrics
 get_system_metrics() {
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-    
+
     # Memory usage
     local memory_info=$(vm_stat | grep -E "(Pages free|Pages active|Pages inactive|Pages wired down|Pages occupied by compressor)")
     local total_memory=$(sysctl -n hw.memsize | awk '{print $0/1024/1024/1024}')
@@ -35,7 +43,7 @@ get_system_metrics() {
     local active_memory=$(echo "$memory_info" | grep "Pages active" | awk '{print $3}' | sed 's/\.//')
     local inactive_memory=$(echo "$memory_info" | grep "Pages inactive" | awk '{print $3}' | sed 's/\.//')
     local wired_memory=$(echo "$memory_info" | grep "Pages wired down" | awk '{print $4}' | sed 's/\.//')
-    
+
     # Convert to MB
     local page_size=4096
     local free_mb=$((free_memory * page_size / 1024 / 1024))
@@ -44,20 +52,20 @@ get_system_metrics() {
     local wired_mb=$((wired_memory * page_size / 1024 / 1024))
     local used_mb=$((active_mb + wired_mb))
     local total_mb=$(echo "$total_memory * 1024" | bc -l | cut -d. -f1)
-    
+
     # CPU usage
     local cpu_usage=$(top -l 1 | grep "CPU usage" | awk '{print $3}' | sed 's/%//')
-    
+
     # Swap usage
     local swap_info=$(vm_stat | grep "Swapouts")
     local swapouts=$(echo "$swap_info" | awk '{print $2}' | sed 's/\.//')
-    
+
     # Disk usage
     local disk_usage=$(df -h / | tail -1 | awk '{print $5}' | sed 's/%//')
-    
+
     # Temperature (if available)
     local temperature=$(sudo powermetrics -n 1 -i 1000 | grep "CPU die temperature" | awk '{print $4}' | head -1 || echo "N/A")
-    
+
     # Create metrics JSON
     cat > "$METRICS_DIR/current-metrics.json" << EOF
 {
@@ -83,7 +91,7 @@ get_system_metrics() {
   "temperature": "$temperature"
 }
 EOF
-    
+
     echo "$METRICS_DIR/current-metrics.json"
 }
 
@@ -92,15 +100,15 @@ create_comparison() {
     local before_file="$1"
     local after_file="$2"
     local comparison_file="$DASHBOARD_DIR/before-after-comparison.md"
-    
+
     if [ ! -f "$before_file" ] || [ ! -f "$after_file" ]; then
         echo -e "${RED}Error: Before and after metrics files not found${NC}"
         return 1
     fi
-    
+
     local before_timestamp=$(jq -r '.timestamp' "$before_file")
     local after_timestamp=$(jq -r '.timestamp' "$after_file")
-    
+
     # Extract metrics
     local before_memory_usage=$(jq -r '.memory.usage_percent' "$before_file")
     local after_memory_usage=$(jq -r '.memory.usage_percent' "$after_file")
@@ -110,19 +118,19 @@ create_comparison() {
     local after_swapouts=$(jq -r '.swap.swapouts' "$after_file")
     local before_disk_usage=$(jq -r '.disk.usage_percent' "$before_file")
     local after_disk_usage=$(jq -r '.disk.usage_percent' "$after_file")
-    
+
     # Calculate improvements
     local memory_improvement=$((before_memory_usage - after_memory_usage))
     local cpu_improvement=$((before_cpu_usage - after_cpu_usage))
     local swap_improvement=$((before_swapouts - after_swapouts))
     local disk_improvement=$((before_disk_usage - after_disk_usage))
-    
+
     # Create comparison dashboard
     cat > "$comparison_file" << EOF
 # System Performance Comparison
 
-**Before Optimization:** ${before_timestamp}  
-**After Optimization:** ${after_timestamp}  
+**Before Optimization:** ${before_timestamp}
+**After Optimization:** ${after_timestamp}
 **Analysis Date:** $(date '+%Y-%m-%d %H:%M:%S')
 
 ---
@@ -202,7 +210,7 @@ $(cat "$before_file")
 $(cat "$after_file")
 \`\`\`
 EOF
-    
+
     echo -e "${GREEN}📊 Comparison dashboard created: $comparison_file${NC}"
 }
 
@@ -210,21 +218,21 @@ EOF
 create_progress_chart() {
     local metrics_file="$1"
     local chart_file="$DASHBOARD_DIR/progress-chart.md"
-    
+
     if [ ! -f "$metrics_file" ]; then
         echo -e "${RED}Error: Metrics file not found${NC}"
         return 1
     fi
-    
+
     local memory_usage=$(jq -r '.memory.usage_percent' "$metrics_file")
     local cpu_usage=$(jq -r '.cpu.usage_percent' "$metrics_file")
     local disk_usage=$(jq -r '.disk.usage_percent' "$metrics_file")
-    
+
     # Create visual progress bars
     local memory_bar=$(create_progress_bar $memory_usage)
     local cpu_bar=$(create_progress_bar $cpu_usage)
     local disk_bar=$(create_progress_bar $disk_usage)
-    
+
     cat > "$chart_file" << EOF
 # System Performance Progress Chart
 
@@ -273,7 +281,7 @@ elif [ $memory_usage -ge 80 ] || [ $cpu_usage -ge 70 ] || [ $disk_usage -ge 85 ]
     [ $disk_usage -ge 85 ] && echo "- Disk usage is high. Clean up unnecessary files."
 fi)
 EOF
-    
+
     echo -e "${GREEN}📈 Progress chart created: $chart_file${NC}"
 }
 
@@ -283,7 +291,7 @@ create_progress_bar() {
     local width=50
     local filled=$((percentage * width / 100))
     local empty=$((width - filled))
-    
+
     printf "%${filled}s" | tr ' ' '█'
     printf "%${empty}s" | tr ' ' '░'
 }
@@ -307,15 +315,15 @@ capture_current() {
 # Function to generate all reports
 generate_reports() {
     echo -e "${BLUE}Generating performance reports...${NC}"
-    
+
     if [ -f "$METRICS_DIR/baseline-metrics.json" ] && [ -f "$METRICS_DIR/current-metrics.json" ]; then
         create_comparison "$METRICS_DIR/baseline-metrics.json" "$METRICS_DIR/current-metrics.json"
     fi
-    
+
     if [ -f "$METRICS_DIR/current-metrics.json" ]; then
         create_progress_chart "$METRICS_DIR/current-metrics.json"
     fi
-    
+
     echo -e "${GREEN}✅ All reports generated in $DASHBOARD_DIR${NC}"
 }
 
@@ -360,4 +368,4 @@ case "${1:-help}" in
         echo "  4. $0 compare     # Generate comparison report"
         exit 1
         ;;
-esac 
+esac

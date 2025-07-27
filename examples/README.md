@@ -1,6 +1,6 @@
 # Examples and Demos
 
-This directory contains example configurations, usage demonstrations, and sample implementations for the DgtlEnv project.
+This directory contains example configurations, usage demonstrations, and sample implementations for the DgtlEnv environment optimization system.
 
 ## Contents
 

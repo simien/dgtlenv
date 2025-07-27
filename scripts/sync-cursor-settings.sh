@@ -2,6 +2,14 @@
 
 # Sync VS Code Project Settings with Cursor IDE
 # This script copies project-specific VS Code settings to Cursor IDE
+#
+# 🎯 PERFORMANCE IMPACT:
+# - Optimizes Cursor IDE for faster performance
+# - Reduces memory usage through optimized settings
+# - Improves file watching and TypeScript server performance
+# - Disables unused extensions to save resources
+# - BEFORE: Cursor IDE lag, high memory usage, slow file operations
+# - AFTER: Optimized IDE performance, reduced memory usage, faster operations
 
 set -e
 
