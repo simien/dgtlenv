@@ -31,6 +31,8 @@ security/
 4. **Regular Audits**: Schedule periodic security reviews
 5. **CI/CD Integration**: Automated security checks in GitHub Actions
 6. **Release Sanitization**: Automatic personal information removal before releases
+5. **CI/CD Integration**: Automated security checks in GitHub Actions
+6. **Release Sanitization**: Automatic personal information removal before releases
 
 ## Quick Security Checks
 
