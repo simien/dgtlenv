@@ -11,6 +11,10 @@ This directory contains documentation for key workflows, processes, and operatio
 ### Release Management
 - **`release-management-guide.md`** - Release process documentation and procedures
 
+### Quality Control & Organization
+- **`cleanup-and-reorganization-standards.md`** - Organization standards and quality control procedures
+- **`todo-migration-workflow.md`** - Automated migration of non-completed todo items
+
 ## 🎯 Purpose
 
 These workflows ensure:
@@ -34,6 +38,13 @@ Software release and distribution processes:
 - Release preparation
 - Quality assurance
 - Distribution procedures
+
+### Quality Control & Organization
+Todo management and organization standards:
+- Organization standards enforcement
+- Todo quality control validation
+- Automated migration workflows
+- Dynamic symbol management
 
 ## 📋 Usage
 
@@ -68,6 +79,15 @@ cp document.pdf docs/incoming/
 ```bash
 # Create new release
 ./scripts/create-release.sh 1.1.0 "Add new features"
+```
+
+### Todo Migration
+```bash
+# Migrate non-completed todo items
+./scripts/migrate-todo-items.sh
+
+# Check organization standards
+./scripts/enforce-organization-standards.sh
 ```
 
 ---

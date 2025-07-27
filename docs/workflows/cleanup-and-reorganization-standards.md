@@ -98,6 +98,56 @@ docs/
 - ❌ **Scattered documentation** (should be in appropriate subdirectories)
 - ❌ **Process summaries** (should be in `docs/reports/`)
 
+### **Todo Quality Control Standards**
+- ✅ **Completed todos** must have ALL checkboxes marked `[x]`
+- ✅ **Completed todos** must show "✅ COMPLETED" status
+- ✅ **Completed todos** must include completion date
+- ✅ **No completed todo** can have unchecked `[ ]` boxes
+- ✅ **Dynamic symbols** with required outcome communication:
+  - `[x]` - Completed
+  - `[-]` - Future/Optional → Must append: `[-] Original task - Future/Optional: [reason or target todo]`
+  - `[~]` - In Progress → Must append: `[~] Original task - In Progress: [current status]`
+  - `[>]` - Deferred/Moved → Must append: `[>] Original task - Deferred to: [target todo file]` or `[>] Original task - Moved to: [target todo file]`
+  - `[!]` - Blocked → Must append: `[!] Original task - Blocked: [reason or dependency]`
+  - `[?]` - Cancelled → Must append: `[?] Original task - Cancelled: [reason]`
+
+### **Todo Migration Workflow**
+- ✅ **Future/Optional tasks** must be moved to `todos/planning/` or `todos/active/`
+- ✅ **In Progress tasks** must be moved to `todos/active/`
+- ✅ **Deferred tasks** must be moved to the specified target todo file
+- ✅ **Blocked tasks** must be moved to `todos/active/` with blocker documentation
+- ✅ **Cancelled tasks** can remain in completed with cancellation reason
+- ✅ **Migration must include timestamps** and source file reference
+- ✅ **Target todo files** must follow naming conventions: `[category]-[purpose]-todo.md`
+
+### **Migration Process**
+```bash
+# Run migration script
+./scripts/migrate-todo-items.sh
+
+# Check what would be migrated
+./scripts/migrate-todo-items.sh --dry-run
+
+# Review migration results
+cat logs/todo-migration-*.log
+
+# Check organization standards (now with smart migration detection)
+./scripts/enforce-organization-standards.sh
+```
+
+### **Migration Rules**
+- **[-] Future/Optional** → Moved to `todos/planning/[category]-todo.md`
+- **[~] In Progress** → Moved to `todos/active/[category]-todo.md`
+- **[>] Deferred** → Moved to `todos/active/[category]-todo.md`
+- **[!] Blocked** → Moved to `todos/active/[category]-todo.md`
+- **[?] Cancelled** → Remains in completed with migration note
+
+### **Smart Migration Detection**
+The enforcement script now intelligently detects migration status:
+- **Items with migration notes** → Recognized as already migrated (PASS)
+- **Items without migration notes** → Flagged for migration (WARNING)
+- **Maintains audit trail** → Migration notes preserve historical context
+
 ---
 
 ## 🔧 **Implementation Standards**

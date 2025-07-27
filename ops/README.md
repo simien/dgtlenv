@@ -128,6 +128,8 @@ See `docker/README.md` for complete setup and optimization guide.
 - Security sanitization: `./scripts/pre-release-sanitizer.sh --fix`
 - Verify sanitization: `./scripts/pre-release-sanitizer.sh --dry-run`
 - Review generated report: `cat logs/sanitization-report-*.md`
+- Organization standards check: `./scripts/enforce-organization-standards.sh`
+- Todo quality control validation: `./scripts/enforce-organization-standards.sh` (with smart migration detection)
 
 ### Quarterly
 - Review and update optimization scripts

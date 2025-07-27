@@ -17,7 +17,10 @@ This directory contains utility scripts for project management, setup, maintenan
 - **`sync-cursor-settings.sh`** - Synchronize Cursor IDE settings across environments
 
 ### Organization Standards Enforcement
-- **`enforce-organization-standards.sh`** - Check and enforce directory organization standards
+- **`enforce-organization-standards.sh`** - Check and enforce directory organization standards and todo quality control with smart migration detection
+
+### Todo Migration
+- **`migrate-todo-items.sh`** - ✅ **FIXED** - Migrate non-completed todo items from completed files to appropriate active/planning todo files with comprehensive reporting
 
 ### ASCII Style Converter
 - **`ascii-style-converter.sh`** - Convert and generate ASCII art and visual elements
@@ -102,6 +105,35 @@ Check and enforce directory organization standards across the project:
 # - Scattered files in root directories
 # - Missing README files
 # - Required directory structure
+# - Todo quality control (completed todos must be fully checked)
+# - Dynamic symbol usage with proper outcome communication
+
+### Todo Migration
+
+Migrates non-completed todo items from completed files to appropriate active/planning todo files:
+
+```bash
+# Test migration without making changes (dry run)
+./scripts/migrate-todo-items.sh --dry-run
+
+# Run actual migration
+./scripts/migrate-todo-items.sh
+
+# Run with detailed output
+./scripts/migrate-todo-items.sh --verbose
+```
+
+**What it does:**
+- Scans completed todo files for dynamic symbols
+- Categorizes items based on content keywords
+- Creates appropriate target todo files
+- Migrates items to active/ or planning/ directories
+- Updates README files with new counts
+- Maintains timestamps and source references
+- Adds migration notes to completed files for audit trail
+- Generates comprehensive migration reports in `logs/` directory
+- Provides real-time progress tracking
+- Handles errors gracefully with clean execution
 ```
 
 ### ASCII Style Converter
@@ -183,6 +215,9 @@ Regular maintenance to ensure clean organization:
 - **Clean Structure:** Ensures files are in appropriate directories
 - **Backup Management:** Removes unnecessary backup files
 - **README Validation:** Ensures all directories have proper documentation
+- **Todo Quality Control:** Validates completed todos and dynamic symbol usage
+- **Smart Migration Detection:** Recognizes already-migrated items vs items needing migration
+- **Outcome Communication:** Ensures non-completed tasks have proper status communication
 
 ## Related Documentation
 
@@ -192,5 +227,5 @@ Regular maintenance to ensure clean organization:
 
 ---
 
-**Last Updated:** 2025-07-27
+**Last Updated:** 2025-07-27 (Migration Script Fixed)
 **Maintainer:** Simien Antonis-Parr

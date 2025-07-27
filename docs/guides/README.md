@@ -22,6 +22,7 @@ This directory contains step-by-step tutorials and guides for using the DigitalE
 - GitHub repository management
 - Security best practices
 - Automation script usage
+- Todo management and quality control
 
 ## Creating New Guides
 

@@ -66,6 +66,75 @@ check_readme_files() {
     fi
 }
 
+# Function to check todo quality standards
+check_todo_quality() {
+    local completed_dir="$PROJECT_ROOT/todos/completed"
+
+    if [[ -d "$completed_dir" ]]; then
+        echo -e "\n${BLUE}📋 Checking Todo Quality Standards${NC}"
+        echo "----------------------------------------"
+
+        # Check each completed todo file
+        for todo_file in "$completed_dir"/*.md; do
+            if [[ -f "$todo_file" && "$(basename "$todo_file")" != "README.md" ]]; then
+                local filename=$(basename "$todo_file")
+
+                # Check for unchecked boxes (only [ ] is a violation, [-] is allowed for future tasks)
+                if grep -q "\[ \]" "$todo_file"; then
+                    echo -e "${RED}❌ VIOLATION: $filename has unchecked boxes in completed directory${NC}"
+                    ((VIOLATIONS++))
+                else
+                    echo -e "${GREEN}✅ PASS: $filename has all boxes properly marked${NC}"
+                fi
+
+                # Check for proper outcome communication in non-completed tasks
+                if grep -q "\[-\]" "$todo_file" && ! grep -q "\[-\].*:" "$todo_file"; then
+                    echo -e "${YELLOW}⚠️  WARNING: $filename has [-] tasks without outcome communication${NC}"
+                    ((WARNINGS++))
+                fi
+
+                if grep -q "\[~\]" "$todo_file" && ! grep -q "\[~\].*:" "$todo_file"; then
+                    echo -e "${YELLOW}⚠️  WARNING: $filename has [~] tasks without outcome communication${NC}"
+                    ((WARNINGS++))
+                fi
+
+                        if grep -q "\[>\]" "$todo_file" && ! grep -q "\[>\].*:" "$todo_file"; then
+            echo -e "${YELLOW}⚠️  WARNING: $filename has [>] tasks without outcome communication${NC}"
+            ((WARNINGS++))
+        fi
+
+        # Check for proper "Moved to" communication
+        if grep -q "\[>\]" "$todo_file" && ! grep -q "\[>\].*Moved to:" "$todo_file" && ! grep -q "\[>\].*Deferred to:" "$todo_file"; then
+            echo -e "${YELLOW}⚠️  WARNING: $filename has [>] tasks without proper 'Moved to' or 'Deferred to' communication${NC}"
+            ((WARNINGS++))
+        fi
+
+        # Check for items that should be migrated (but exclude items that already have migration notes)
+        if grep -q "\[[-~>!?]\]" "$todo_file" && ! grep -q "MIGRATED:" "$todo_file"; then
+            echo -e "${YELLOW}⚠️  WARNING: $filename has dynamic symbol items that should be migrated to appropriate todo files${NC}"
+            echo -e "${BLUE}💡 Suggestion: Run ./scripts/migrate-todo-items.sh to migrate these items${NC}"
+            ((WARNINGS++))
+        elif grep -q "\[[-~>!?]\]" "$todo_file" && grep -q "MIGRATED:" "$todo_file"; then
+            echo -e "${GREEN}✅ PASS: $filename has dynamic symbol items that have already been migrated${NC}"
+        fi
+
+                if grep -q "\[!\]" "$todo_file" && ! grep -q "\[!\].*:" "$todo_file"; then
+                    echo -e "${YELLOW}⚠️  WARNING: $filename has [!] tasks without outcome communication${NC}"
+                    ((WARNINGS++))
+                fi
+
+                # Check for COMPLETED status
+                if grep -q "✅ COMPLETED" "$todo_file"; then
+                    echo -e "${GREEN}✅ PASS: $filename shows COMPLETED status${NC}"
+                else
+                    echo -e "${RED}❌ VIOLATION: $filename missing COMPLETED status${NC}"
+                    ((VIOLATIONS++))
+                fi
+            fi
+        done
+    fi
+}
+
 echo -e "\n${BLUE}📁 Checking for Prohibited Files${NC}"
 echo "----------------------------------------"
 
@@ -116,6 +185,9 @@ if find "$PROJECT_ROOT/docs" -maxdepth 1 -name "*.md" | grep -v "README.md" | gr
 else
     echo -e "${GREEN}✅ PASS: No scattered files in docs root${NC}"
 fi
+
+# Check todo quality standards
+check_todo_quality
 
 echo -e "\n${BLUE}📊 Summary${NC}"
 echo "----------------------------------------"

@@ -2,178 +2,184 @@
 
 This directory contains task management files, project planning, and workflow documentation for the DgtlEnv project.
 
-## Structure
-- `master-todo.md` — Main project task list and priorities
-- `optimization-todo.md` — System optimization tasks and progress
-- `github-setup-todo.md` — GitHub repository setup tasks
-- `funding-todo.md` — Funding and sponsorship setup
-- `folder-structure-improvements-todo.md` — Project structure improvements
-- `documentation-todo.md` — Documentation updates and improvements
-- `timestamp-verification-todo.md` — Timestamp and verification tasks
-- `pre-release-workflow-todo.md` — Pre-release sanitization workflow
+## 📁 Directory Structure
 
-## Task Categories
+```
+todos/
+├── README.md                                    # This file - main todos overview
+├── active/                                      # Currently active tasks
+│   ├── README.md                               # Active tasks overview
+│   ├── github-setup-todo.md                    # GitHub repository setup
+│   ├── funding-todo.md                         # Funding and sponsorship
+│   ├── documentation-todo.md                   # Documentation updates
+│   └── timestamp-verification-todo.md          # Timestamp verification
+├── completed/                                   # Completed tasks
+│   ├── README.md                               # Completed tasks overview
+│   ├── optimization-todo.md                    # System optimization (completed)
+│   ├── pre-release-workflow-todo.md           # Pre-release workflow (completed)
+│   ├── typography-rhythm-todo.md              # Typography improvements (completed)
+│   ├── ci-test-failure-todo.md                # CI test failure (resolved)
+│   ├── docs-reorganization-todo.md            # Docs reorganization (completed)
+│   └── folder-structure-improvements-todo.md  # Folder structure (completed)
+├── planning/                                    # Future planning and strategy
+│   ├── README.md                               # Planning overview
+│   ├── master-todo.md                          # Master project todo
+│   └── release-todo.md                         # Release management planning
+└── templates/                                   # Todo templates and standards
+    ├── README.md                               # Templates overview
+    ├── todo-template.md                        # Standard todo template
+    └── completed-todo-template.md              # Completed todo template
+```
 
-### Project Management
-- **`master-todo.md`** — Overall project priorities and milestones
-- **`folder-structure-improvements-todo.md`** — Project organization improvements
-- **`documentation-todo.md`** — Documentation updates and maintenance
+## 🎯 Task Categories
 
-### Technical Implementation
-- **`optimization-todo.md`** — System optimization and performance tasks
-- **`github-setup-todo.md`** — GitHub repository configuration
-- **`timestamp-verification-todo.md`** — Data verification and validation
+### Active Development
+- **`active/`** — Currently active tasks and ongoing work
+- **`planning/`** — Strategic planning and future initiatives
+- **`completed/`** — Successfully completed tasks and resolved issues
+- **`templates/`** — Standards and templates for consistent todos
 
-### Release Management
-- **`pre-release-workflow-todo.md`** — Security sanitization and release process
-- **`funding-todo.md`** — Funding platform setup and configuration
-- **`release-todo.md`** — Release management and version control
-- **`ci-test-failure-todo.md`** — CI/CD pipeline issue resolution
-- **`docs-reorganization-todo.md`** — Documentation reorganization and cleanup
+## 📋 Quick Navigation
 
-## Workflow Integration
+### Current Tasks
+- **GitHub Setup** → `active/github-setup-todo.md`
+- **Funding Platform** → `active/funding-todo.md`
+- **Documentation Updates** → `active/documentation-todo.md`
+- **Timestamp Verification** → `active/timestamp-verification-todo.md`
 
-### Pre-Release Process
-The todos integrate with the pre-release sanitizer:
+### Project Planning
+- **Master Todo** → `planning/master-todo.md`
+- **Release Management** → `planning/release-todo.md`
+
+### Completed Work
+- **System Optimization** → `completed/optimization-todo.md`
+- **Pre-release Workflow** → `completed/pre-release-workflow-todo.md`
+- **Typography Improvements** → `completed/typography-rhythm-todo.md`
+- **CI Test Resolution** → `completed/ci-test-failure-todo.md`
+- **Docs Reorganization** → `completed/docs-reorganization-todo.md`
+- **Folder Structure** → `completed/folder-structure-improvements-todo.md`
+- **Todos Reorganization** → `completed/todos-reorganization-todo.md`
+
+### Templates
+- **New Todo Template** → `templates/todo-template.md`
+- **Completed Todo Template** → `templates/completed-todo-template.md`
+
+## 🔄 Workflow Integration
+
+### Creating New Todos
 ```bash
-# Review pre-release workflow
-cat todos/pre-release-workflow-todo.md
+# Copy the template
+cp todos/templates/todo-template.md todos/active/new-task-todo.md
 
-# Run sanitization process
-./scripts/pre-release-sanitizer.sh --fix
+# Edit the new todo
+edit_file todos/active/new-task-todo.md
 
-# Update task status
-git add todos/
-git commit -m "chore: update task status after sanitization"
+# Update the active README
+edit_file todos/active/README.md
+```
+
+### Completing Todos
+```bash
+# Move to completed directory
+mv todos/active/task-todo.md todos/completed/
+
+# Update completed README
+edit_file todos/completed/README.md
+
+# Update main README if needed
+edit_file todos/README.md
+```
+
+### Migrating Non-Completed Items
+```bash
+# Check what would be migrated (dry run)
+./scripts/migrate-todo-items.sh --dry-run
+
+# Run migration script to move dynamic symbol items
+./scripts/migrate-todo-items.sh
+
+# Review migration reports and logs
+cat logs/migration-report-*.md              # Comprehensive reports
+cat logs/todo-migration-*.log              # Detailed logs
+
+# Check organization standards (with smart migration detection)
+./scripts/enforce-organization-standards.sh
 ```
 
 ### Task Management
 ```bash
-# Review all tasks
-find todos/ -name "*.md" -exec echo "=== {} ===" \; -exec cat {} \;
+# Review all active tasks
+find todos/active/ -name "*.md" -exec echo "=== {} ===" \; -exec cat {} \;
 
 # Check completed tasks
-grep -r "✅" todos/
+find todos/completed/ -name "*.md" | wc -l
 
 # Find pending tasks
-grep -r "\[ \]" todos/
+grep -r "\[ \]" todos/active/
 ```
 
-## Task Status Tracking
+## 📊 Task Status Tracking
 
-### Completed Tasks ✅
-- Pre-release sanitizer implementation
-- Security audit and verification
-- Documentation sanitization
-- GitHub setup preparation
-- System optimization implementation
-- Documentation reorganization (Option 1 - Comprehensive)
-- Organization standards enforcement
-- Development history preservation system
+### Active Tasks (       4)
+- 🔄 **GitHub Setup** - Repository configuration and security
+- ⏸️ **Funding Platform** - Sponsorship setup (on hold)
+- 🔄 **Documentation Updates** - README and guide improvements
+- ⏳ **Timestamp Verification** - Optional consistency check
 
-### In Progress 🔄
-- GitHub repository setup
-- Funding platform configuration
-- Advanced security features
-- CI/CD integration
+### Completed Tasks (       7)
+- ✅ **System Optimization** - Performance tuning and monitoring
+- ✅ **Pre-release Workflow** - Security sanitization system
+- ✅ **Typography Improvements** - Visual hierarchy enhancements
+- ✅ **CI Test Resolution** - GitHub Actions workflow fixes
+- ✅ **Docs Reorganization** - Comprehensive documentation structure
+- ✅ **Folder Structure** - Project organization improvements
+- ✅ **Todos Reorganization** - Task management organization
 
-### Planned 📋
-- Git hooks implementation
-- Advanced pattern matching
-- Real-time monitoring
-- Automated compliance checking
+### Planning Tasks (       4)
+- 📋 **Master Todo** - Overall project planning and coordination
+- 📋 **Release Management** - Release strategy and planning
 
-## Maintenance
+## 🎯 Best Practices
 
-### Regular Reviews
-- **Weekly:** Review master todo and priorities
-- **Monthly:** Update optimization tasks
-- **Quarterly:** Review and update all task files
-- **Pre-release:** Update workflow documentation
-
-### Task Standards
+### Todo Standards
 - Use clear, actionable language
 - Include completion criteria
 - Add timestamps for tracking
 - Link to related documentation
 - Include dependencies and blockers
 
-## Integration
+### Quality Control Standards
+- **Completed todos** must have ALL checkboxes marked `[x]`
+- **Completed todos** must show "✅ COMPLETED" status
+- **Non-completed tasks** must use dynamic symbols with outcome communication:
+  - `[-]` - Future/Optional → Must append: `[-] Original task - Future/Optional: [reason]`
+  - `[~]` - In Progress → Must append: `[~] Original task - In Progress: [status]`
+  - `[>]` - Deferred/Moved → Must append: `[>] Original task - Moved to: [target file]`
+  - `[!]` - Blocked → Must append: `[!] Original task - Blocked: [reason]`
+  - `[?]` - Cancelled → Must append: `[?] Original task - Cancelled: [reason]`
+- **Smart migration detection** - Enforcement script recognizes already-migrated items
 
-### Scripts
-- `scripts/pre-release-sanitizer.sh` — Automated security checks
-- `scripts/setup-github.sh` — GitHub setup automation
-- `scripts/sync-cursor-settings.sh` — Settings synchronization
-- `scripts/create-release.sh` — Release management and CI/CD integration
+### Organization Standards
+- **Active todos** → `active/` directory
+- **Completed todos** → `completed/` directory (must be fully completed)
+- **Planning todos** → `planning/` directory
+- **Templates** → `templates/` directory
 
-### Documentation
-- `docs/` — Related documentation updates
-- `security/` — Security policy updates
-- `CONTRIBUTING.md` — Contribution guidelines
+### Maintenance
+- **Weekly:** Review active todos and priorities
+- **Monthly:** Move completed todos to completed/
+- **Quarterly:** Review and update all todo files
+- **Pre-release:** Update workflow documentation
 
-### Metrics
-- `metrics/` — Performance tracking integration
-- `ops/` — Operations and maintenance tasks
+## 🔗 Related Documentation
 
-## Task Templates
-
-### New Feature Task
-```markdown
-# Feature Name
-
-**Status:** [ ] In Progress
-**Priority:** High/Medium/Low
-**Date:** YYYY-MM-DD
-**Assignee:** Name
-
-## Description
-Brief description of the feature
-
-## Requirements
-- [ ] Requirement 1
-- [ ] Requirement 2
-
-## Dependencies
-- Dependency 1
-- Dependency 2
-
-## Completion Criteria
-- [ ] Criterion 1
-- [ ] Criterion 2
-
-## Notes
-Additional notes and context
-```
-
-### Bug Fix Task
-```markdown
-# Bug Description
-
-**Status:** [ ] Open
-**Priority:** High/Medium/Low
-**Date:** YYYY-MM-DD
-**Reporter:** Name
-
-## Issue
-Description of the bug
-
-## Steps to Reproduce
-1. Step 1
-2. Step 2
-
-## Expected Behavior
-What should happen
-
-## Actual Behavior
-What actually happens
-
-## Fix
-- [ ] Fix implementation
-- [ ] Test fix
-- [ ] Update documentation
-```
+- See `../docs/` for project documentation
+- See `../scripts/` for automation tools
+- See `../ops/` for operational procedures
+- See `../security/` for security policies
 
 ---
 
-**Last Updated:** 2025-07-25
+**Last Updated:** 2025-07-27 (Migration Script Fixed)
 **Maintainer:** Simien Antonis-Parr
+**Status:** ✅ Organized and maintained with automated migration

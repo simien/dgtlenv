@@ -99,7 +99,7 @@ The metrics system integrates with the pre-release sanitizer:
 - **Weekly:** System health checks
 - **Monthly:** Performance dashboard generation
 - **Pre-release:** Security validation
-- **Ongoing:** Organization standards compliance
+- **Ongoing:** Organization standards compliance and todo quality control with smart migration detection
 
 ## Troubleshooting
 

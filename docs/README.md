@@ -77,6 +77,8 @@ Process documentation and operational procedures:
 - **PDF Management** - Conversion and processing workflows
 - **Release Management** - Version control and distribution
 - **Operational Procedures** - Day-to-day processes
+- **Quality Control** - Organization standards and todo quality validation
+- **Todo Migration** - Automated migration of non-completed todo items
 
 ### 📚 Development History (`development-history/`)
 Project evolution and decision tracking:
