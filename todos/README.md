@@ -169,4 +169,4 @@ What actually happens
 ---
 
 **Last Updated:** 2025-07-25
-**Maintainer:** DgtlEnv Contributors
+**Maintainer:** Simien Antonis-Parr

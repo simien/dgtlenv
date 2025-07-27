@@ -220,4 +220,4 @@ cat logs/sanitization-report-*.md
 
 **Status:** ✅ **IMPLEMENTATION COMPLETE**
 **Next Review:** 2025-10-25
-**Maintainer:** DgtlEnv Contributors
+**Maintainer:** Simien Antonis-Parr

@@ -2,7 +2,15 @@
 
 > **📋 Project Name Source of Truth:** This README.md file serves as the authoritative source for the project name "DgtlEnv". All documentation and scripts should reference this file for consistent naming.
 
+> **👤 Contact Information Source of Truth:** This README.md file serves as the authoritative source for contact information. All documentation and scripts should reference this file for consistent contact details.
+
 > **⚙️ Configuration:** Project configuration is centralized in `config/project-config.json` for programmatic access.
+
+### 📞 Contact Information
+**Name:** Simien Antonis-Parr
+**Email:** simienap@gmail.com
+**Website:** [simienap.com](https://www.simienap.com/)
+**GitHub:** [simien](https://github.com/simien)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)

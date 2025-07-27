@@ -2,7 +2,7 @@
 #
 # Script Name: setup-github.sh
 # Description: Initialize DgtlEnv GitHub repository with best practices
-# Author: DgtlEnv Contributors
+# Author: Simien Antonis-Parr
 # Date: 2025-01-25
 # Version: 1.0.0
 #
@@ -131,7 +131,7 @@ init_git() {
 
     git init
     git config user.name "DgtlEnv Bot"
-git config user.email "bot@dgtlenv.org"
+git config user.email "simienap@gmail.com"
 
     print_status "$GREEN" "✓ Git repository initialized"
 }

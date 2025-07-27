@@ -16,7 +16,7 @@ We take the security of DgtlEnv seriously. If you believe you have found a secur
 ### Reporting Process
 
 1. **DO NOT** create a public GitHub issue for the security vulnerability.
-2. **DO** email your findings to [security@digitalenv.org](mailto:security@digitalenv.org) (if available) or create a private security advisory.
+2. **DO** email your findings to [simienap@gmail.com](mailto:simienap@gmail.com) or create a private security advisory.
 3. **DO** provide a detailed description of the vulnerability, including:
    - Type of issue (buffer overflow, SQL injection, cross-site scripting, etc.)
    - Full paths of source file(s) related to the vulnerability
@@ -94,7 +94,7 @@ DgtlEnv includes several security-focused features:
 
 ### Security Contact
 
-- **Email:** [security@digitalenv.org](mailto:security@digitalenv.org) (if available)
+- **Email:** [simienap@gmail.com](mailto:simienap@gmail.com)
 - **GitHub Security Advisories:** Use GitHub's built-in security advisory feature
 - **PGP Key:** Available upon request for encrypted communications
 
@@ -108,5 +108,5 @@ We thank all security researchers and contributors who help keep DgtlEnv secure 
 
 ---
 
-**Last Updated:** 2025-07-25  
-**Version:** 1.0.0 
+**Last Updated:** 2025-07-25
+**Version:** 1.0.0

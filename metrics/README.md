@@ -136,4 +136,4 @@ The metrics system works with the pre-release sanitizer to ensure:
 ---
 
 **Last Updated:** 2025-07-25
-**Maintainer:** DgtlEnv Contributors
+**Maintainer:** Simien Antonis-Parr

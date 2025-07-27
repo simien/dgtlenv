@@ -335,8 +335,8 @@ Every directory should have a `README.md` file that includes:
 #
 # Script Name: system-health-check.sh
 # Description: Performs comprehensive system health check including memory, CPU, disk, and swap usage
-# Author: [Your Name]
-# Date: [Date]
+# Author: Simien Antonis-Parr
+# Date: 2025-01-25
 # Version: 1.0.0
 #
 # Usage:

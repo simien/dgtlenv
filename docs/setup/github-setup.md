@@ -406,4 +406,4 @@ Track repository success with:
 
 **Last Updated:** 2025-07-25
 **Version:** 1.0.0
-**Maintainer:** DgtlEnv Contributors
+**Maintainer:** Simien Antonis-Parr

@@ -1,8 +1,8 @@
 # Security Audit Report
 
-**Date:** 2025-07-25  
-**Auditor:** DgtlEnv Security Team  
-**Scope:** Complete repository scan for sensitive information  
+**Date:** 2025-07-25
+**Auditor:** Simien Antonis-Parr
+**Scope:** Complete repository scan for sensitive information
 **Status:** ⚠️ **ISSUES FOUND - REQUIRES ATTENTION**
 
 ---
@@ -29,7 +29,7 @@ The security audit identified several areas of concern that need to be addressed
 
 ### 1. Personal Information Exposure
 
-**Severity:** Medium  
+**Severity:** Medium
 **Status:** Needs Fixing
 
 **Files Affected:**
@@ -48,7 +48,7 @@ The security audit identified several areas of concern that need to be addressed
 
 ### 2. System Path References
 
-**Severity:** Low  
+**Severity:** Low
 **Status:** Needs Fixing
 
 **Files Affected:**
@@ -64,7 +64,7 @@ The security audit identified several areas of concern that need to be addressed
 
 ### 3. Sudo Command Usage
 
-**Severity:** Low  
+**Severity:** Low
 **Status:** Acceptable (Documented)
 
 **Files Affected:**
@@ -233,7 +233,7 @@ find . -name "*.md" -exec grep -l "sap\|/Users/" {} \;
 
 ---
 
-**Audit Status:** ⚠️ **REQUIRES FIXES**  
-**Recommendation:** Fix personal information issues before pushing to GitHub  
-**Priority:** High  
-**Estimated Fix Time:** 30 minutes 
+**Audit Status:** ⚠️ **REQUIRES FIXES**
+**Recommendation:** Fix personal information issues before pushing to GitHub
+**Priority:** High
+**Estimated Fix Time:** 30 minutes

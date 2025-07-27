@@ -4,7 +4,7 @@
 repository:
   name: dgtlenv
   description: "Digital Environment Management System for macOS - Optimized for MacBook Pro (Retina, 15-inch, Mid 2015) running macOS 12.7.6 Monterey"
-  homepage: "https://github.com/simien/dgtlenv"
+  homepage: "https://www.simienap.com/"
   topics:
     - macos
     - system-optimization
@@ -117,4 +117,4 @@ automation:
 
 collaborators:
   - username: "simien"
-    permission: "admin" 
+    permission: "admin"

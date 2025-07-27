@@ -6,9 +6,9 @@
     "version": "1.0.0",
     "repository": "simien/DgtlEnv",
     "license": "MIT",
-    "author": "DgtlEnv Contributors",
-    "maintainer": "DgtlEnv Security Team",
-    "website": "https://github.com/simien/DgtlEnv",
+    "author": "Simien Antonis-Parr",
+    "maintainer": "Simien Antonis-Parr",
+    "website": "https://www.simienap.com/",
     "documentation": "https://github.com/simien/DgtlEnv#readme"
   },
   "system": {

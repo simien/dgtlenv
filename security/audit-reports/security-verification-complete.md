@@ -200,5 +200,5 @@ The DgtlEnv repository has been thoroughly scanned and sanitized. All personal i
 ---
 
 **Verification Date:** 2025-07-25
-**Auditor:** DgtlEnv Security Team
+**Auditor:** Simien Antonis-Parr
 **Status:** ✅ **APPROVED FOR GITHUB**
