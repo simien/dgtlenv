@@ -319,6 +319,37 @@ This document ensures that all future cleanup and reorganization processes:
 - ✅ **Preserve functionality** during reorganization
 - ✅ **Create proper documentation** for all changes
 - ✅ **Use appropriate file locations** for different content types
+- ✅ **Include todo metrics validation** in environment checks
+- ✅ **Maintain ASCII progress charts** in todo documentation
+
+## 🎯 **Issue Resolution Approach**
+
+### **For All Infrastructure Improvements**
+**Always start by creating a todo item for any infrastructure improvements, process enhancements, system organization, quality control issues, or documentation gaps.**
+
+#### **The Correct Process:**
+1. **Create a todo** - Document the issue in `todos/active/`
+2. **Define the problem** - Clearly describe current state and issues
+3. **Plan the solution** - Break down into phases with success criteria
+4. **Follow project standards** - Integrate with existing validation frameworks
+5. **Schedule implementation** - Allow proper resource allocation and prioritization
+
+#### **Why This Approach:**
+- ✅ **Maintains consistency** with existing workflow
+- ✅ **Ensures proper documentation** and tracking
+- ✅ **Enables structured planning** and quality control
+- ✅ **Integrates with migration** and validation systems
+- ✅ **Allows for proper resource management** and scheduling
+
+#### **Examples of Issues That Require Todos:**
+- Logging system organization
+- Directory structure improvements
+- Script path updates
+- Documentation gaps
+- Quality control enhancements
+- Process workflow improvements
+- Todo metrics dashboard updates
+- ASCII progress chart maintenance
 
 **Next Review:** Monthly standards review and update as needed
 

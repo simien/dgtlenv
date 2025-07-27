@@ -154,7 +154,20 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 # Todo quality control and migration
 ./scripts/enforce-organization-standards.sh
 ./scripts/migrate-todo-items.sh
+
+# View todo metrics dashboard
+cat docs/reports/todo-metrics-dashboard.md
 ```
+
+### Issue Resolution Process
+**For all infrastructure improvements, process enhancements, or system organization:**
+1. **Create a todo** in `todos/active/` to document the issue
+2. **Define the problem** and current state clearly
+3. **Plan the solution** in phases with success criteria
+4. **Follow project standards** and validation frameworks
+5. **Schedule implementation** for proper resource allocation
+
+*This ensures consistent workflow and quality control across all improvements.*
 
 ### Real-time Status
 ```bash

@@ -69,6 +69,79 @@ print_header() {
     echo
 }
 
+# Function to check todo metrics and dashboard
+check_todo_metrics() {
+    local master_todo="$PROJECT_ROOT/todos/planning/master-todo.md"
+    local todo_dashboard="$PROJECT_ROOT/docs/reports/todo-metrics-dashboard.md"
+
+    print_section "Checking Todo Metrics and Dashboard"
+
+    # Check master todo exists and is current
+    if [[ -f "$master_todo" ]]; then
+        local last_updated=$(grep "Last Updated:" "$master_todo" | head -1 | awk '{print $3}')
+        local current_date=$(date '+%Y-%m-%d')
+
+        if [[ "$last_updated" == "$current_date" ]]; then
+            print_success "Master todo is current (updated today)"
+        else
+            print_warning "Master todo may be outdated (last updated: $last_updated)"
+        fi
+
+        # Check for ASCII progress bars
+        if grep -q "████" "$master_todo"; then
+            print_success "Master todo contains ASCII progress charts"
+        else
+            print_warning "Master todo missing ASCII progress charts"
+        fi
+    else
+        print_error "Master todo file missing"
+        return 1
+    fi
+
+    # Check todo metrics dashboard exists
+    if [[ -f "$todo_dashboard" ]]; then
+        print_success "Todo metrics dashboard exists"
+
+        # Check for ASCII charts in dashboard
+        if grep -q "████" "$todo_dashboard"; then
+            print_success "Todo dashboard contains ASCII progress charts"
+        else
+            print_warning "Todo dashboard missing ASCII progress charts"
+        fi
+
+        # Check dashboard is current
+        local dashboard_date=$(grep "Last Updated:" "$todo_dashboard" | head -1 | awk '{print $3}')
+        if [[ "$dashboard_date" == "$current_date" ]]; then
+            print_success "Todo dashboard is current (updated today)"
+        else
+            print_warning "Todo dashboard may be outdated (last updated: $dashboard_date)"
+        fi
+    else
+        print_error "Todo metrics dashboard missing"
+        return 1
+    fi
+
+    # Check active todos directory structure
+    local active_todos_dir="$PROJECT_ROOT/todos/active"
+    if [[ -d "$active_todos_dir" ]]; then
+        local active_todo_count=$(find "$active_todos_dir" -name "*.md" | wc -l | tr -d ' ')
+        print_success "Active todos directory exists with $active_todo_count todo files"
+
+        # Check for completed todos that should be moved
+        for todo_file in "$active_todos_dir"/*.md; do
+            if [[ -f "$todo_file" ]]; then
+                local filename=$(basename "$todo_file")
+                if grep -q "Status.*Completed" "$todo_file" || grep -q "Status.*\[x\]" "$todo_file"; then
+                    print_warning "$filename appears completed but still in active directory"
+                fi
+            fi
+        done
+    else
+        print_error "Active todos directory missing"
+        return 1
+    fi
+}
+
 print_section() {
     echo -e "${YELLOW}$1${NC}"
     echo "----------------------------------------"
@@ -323,15 +396,18 @@ generate_report() {
 - Personal information check: $([[ $1 -eq 0 ]] && echo "✅ PASS" || echo "❌ FAIL")
 - Credentials check: $([[ $2 -eq 0 ]] && echo "✅ PASS" || echo "❌ FAIL")
 - File permissions check: $([[ $3 -eq 0 ]] && echo "✅ PASS" || echo "❌ FAIL")
+- Todo metrics check: $([[ $4 -eq 0 ]] && echo "✅ PASS" || echo "❌ FAIL")
 
 ## Recommendations
-$(if [[ $1 -eq 1 || $2 -eq 1 || $3 -eq 1 ]]; then
+$(if [[ $1 -eq 1 || $2 -eq 1 || $3 -eq 1 || $4 -eq 1 ]]; then
     echo "- Review and fix issues before release"
     echo "- Run sanitizer with --fix flag to auto-fix issues"
     echo "- Verify all changes before pushing to repository"
+    echo "- Update todo metrics and dashboard if needed"
 else
     echo "- Repository is ready for public release"
     echo "- All security checks passed"
+    echo "- Todo metrics are current and complete"
 fi)
 
 ## Next Steps
@@ -366,6 +442,9 @@ main() {
     check_file_permissions
     local permission_issues=$?
 
+    check_todo_metrics
+    local todo_issues=$?
+
     echo
 
     # Apply fixes if requested
@@ -394,10 +473,10 @@ main() {
     echo
 
     # Generate report
-    generate_report $personal_issues $credential_issues $permission_issues
+    generate_report $personal_issues $credential_issues $permission_issues $todo_issues
 
     # Final status
-    if [[ $personal_issues -eq 0 && $credential_issues -eq 0 && $permission_issues -eq 0 ]]; then
+    if [[ $personal_issues -eq 0 && $credential_issues -eq 0 && $permission_issues -eq 0 && $todo_issues -eq 0 ]]; then
         print_success "All checks passed! Repository is ready for public release."
         exit 0
     else

@@ -50,6 +50,8 @@ The sanitizer automatically checks for and fixes personal information, credentia
 - Credentials (API keys, passwords, tokens)
 - File permissions (overly permissive files)
 - Absolute paths with personal information
+- **NEW:** Todo metrics and dashboard validation (master todo, ASCII charts, current dates)
+- **NEW:** Active todo directory structure and completion status
 
 **What it fixes:**
 - Replaces absolute paths with relative paths
@@ -107,6 +109,9 @@ Check and enforce directory organization standards across the project:
 # - Required directory structure
 # - Todo quality control (completed todos must be fully checked)
 # - Dynamic symbol usage with proper outcome communication
+# - **NEW:** Todo metrics and dashboard validation (master todo, ASCII charts, current dates)
+# - **NEW:** Log directory organization and rotation
+# - **NEW:** Active todo directory structure and completion status
 
 ### Todo Migration
 
