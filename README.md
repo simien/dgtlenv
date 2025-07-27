@@ -442,7 +442,7 @@ If you find DgtlEnv helpful, consider supporting its development:
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support%20Me-red?style=for-the-badge&logo=github)](https://github.com/sponsors/simien)
 
 **Why Support?**
-- 🚀 Accelerate feature development
-- 🛠️ Priority support and custom solutions
-- 📚 Early access to new features
-- 💡 Direct consultation for your specific needs
+- 🚀 Accelerate feature development and improvements
+- 🛠️ Help maintain and enhance the project
+- 📚 Support ongoing documentation and guides
+- 💡 Enable new features and optimizations
