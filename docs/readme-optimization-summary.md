@@ -1,4 +1,4 @@
-# README.md Optimization Summary
+# README.md **Optimization** Summary
 
 **Date:** July 26, 2025
 **Scope:** Shorten main README.md and improve documentation organization

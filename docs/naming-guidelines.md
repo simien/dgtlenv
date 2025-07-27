@@ -45,7 +45,7 @@ PROJECT_NAME=$(jq -r '.project.name' config/project-config.json)
 
 #### Documentation
 ```markdown
-# DgtlEnv - Digital Environment Management
+# **DgtlEnv** - Digital Environment Management
 ```
 
 ### Validation

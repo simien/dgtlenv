@@ -1,4 +1,4 @@
-# Quality Control Report - DgtlEnv
+# Quality Control Report - **DgtlEnv**
 
 **Date:** July 26, 2025
 **Scope:** Complete codebase review

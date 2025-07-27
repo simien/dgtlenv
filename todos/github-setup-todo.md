@@ -1,4 +1,4 @@
-# GitHub Setup Todo
+# **GitHub** Setup Todo
 
 > **Note:** This todo list is for tasks required before the initial GitHub launch. Funding, documentation, and community tasks have been moved to their own lists.
 

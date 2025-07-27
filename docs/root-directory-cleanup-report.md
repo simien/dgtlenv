@@ -1,4 +1,4 @@
-# Root Directory Cleanup Report - DgtlEnv
+# Root Directory Cleanup Report - **DgtlEnv**
 
 **Date:** July 26, 2025
 **Scope:** Root directory organization and cleanup

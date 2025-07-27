@@ -1,4 +1,4 @@
-# Funding Todo
+# **Funding** Todo
 
 **Last Updated:** 2025-07-25
 
@@ -27,4 +27,4 @@
 **Priority:** Medium
 **Status:** In Progress
 
-> For all funding and sponsorship related tasks. Not required for initial GitHub launch. 
+> For all funding and sponsorship related tasks. Not required for initial GitHub launch.

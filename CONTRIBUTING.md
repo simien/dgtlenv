@@ -1,4 +1,4 @@
-# Contributing to DgtlEnv
+# Contributing to **DgtlEnv**
 
 Thank you for your interest in contributing to DgtlEnv! This document provides guidelines and best practices for contributing to this digital environment management system.
 

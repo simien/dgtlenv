@@ -1,4 +1,4 @@
-# DgtlEnv Optimization Todo List
+# **DgtlEnv** Optimization Todo List
 
 **Device:** MacBook Pro 2015 (macOS 12.7.6 Monterey)
 

@@ -1,4 +1,4 @@
-# Master Todo List - DgtlEnv
+# Master Todo List - **DgtlEnv**
 
 **Last Updated:** 2025-07-25
 **Total Tasks:** 55

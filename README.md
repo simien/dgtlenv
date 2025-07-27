@@ -1,4 +1,4 @@
-# DgtlEnv - Digital Environment Management
+# **DgtlEnv** - Digital Environment Management
 
 > **📋 Project Name Source of Truth:** This README.md file serves as the authoritative source for the project name "DgtlEnv". All documentation and scripts should reference this file for consistent naming.
 

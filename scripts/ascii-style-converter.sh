@@ -219,7 +219,7 @@ update_readme_ascii() {
 
     # Create new README content with ASCII style
     cat > "$temp_file" << EOF
-# DgtlEnv - Digital Environment Management
+# **DgtlEnv** - Digital Environment Management
 
 $(generate_ascii_logo "styled")
 

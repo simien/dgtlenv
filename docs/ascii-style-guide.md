@@ -1,4 +1,4 @@
-# DgtlEnv ASCII Style Guide
+# **DgtlEnv** ASCII Style Guide
 
 A unified monochromatic ASCII art system for DgtlEnv documentation and outputs.
 

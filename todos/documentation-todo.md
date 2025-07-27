@@ -1,4 +1,4 @@
-# Documentation Todo
+# **Documentation** Todo
 
 **Last Updated:** 2025-07-25
 
@@ -17,4 +17,4 @@
 **Priority:** Medium
 **Status:** In Progress
 
-> For all documentation and README enhancement tasks. Not required for initial GitHub launch. 
+> For all documentation and README enhancement tasks. Not required for initial GitHub launch.

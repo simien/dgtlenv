@@ -1,4 +1,4 @@
-# Pre-Release Workflow Todo
+# Pre-Release **Workflow** Todo
 
 **Status:** ✅ **COMPLETED**
 **Date:** 2025-07-25
