@@ -33,6 +33,7 @@ Tools that help manage the development environment:
 - 🔒 **Security & Release** - Pre-release sanitization
 - 📋 **Todo Management** - Quality control and organization
 - 🤖 **AI-Powered Workflows** - Structured prompts for optimization and automation
+- 🧪 **Comprehensive Testing** - Interactive and automated validation suite
 
 ---
 
@@ -87,6 +88,10 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 # 📋 Todo Management & Quality Control
 ./scripts/enforce-organization-standards.sh
 ./scripts/migrate-todo-items.sh
+
+# 🧪 Comprehensive Testing
+./tests/quick-test.sh
+./tests/quick-test.sh --non-interactive
 ```
 
 ---
@@ -227,7 +232,7 @@ DgtlEnv/
 - **[Metrics & Monitoring](metrics/README.md)** - Performance tracking and dashboards
 - **[Operations Documentation](ops/README.md)** - Environment optimization tools
 - **[Scripts Documentation](scripts/README.md)** - Environment management tools
-- **[Test Suite](tests/README.md)** - Comprehensive validation and testing
+- **[Test Suite](tests/README.md)** - Comprehensive validation and testing with interactive and automated modes
 
 ### 🤖 AI-Powered Workflows
 - **[Prompts System](prompts/README.md)** - Structured AI prompts for system optimization, documentation, and workflow management
