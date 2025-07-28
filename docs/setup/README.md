@@ -9,7 +9,8 @@ This directory contains setup and installation documentation for the DigitalEnv 
 
 ## Usage
 
-Refer to these documents when:
+Refer to these documents when setting up and configuring your environment:
+
 - Setting up the project for the first time
 - Configuring GitHub repository settings
 - Installing dependencies and tools

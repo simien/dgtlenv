@@ -49,31 +49,36 @@ docs/
 ## 📋 Documentation Categories
 
 ### 🎯 Guides (`guides/`)
-Step-by-step tutorials and practical guides:
+Step-by-step tutorials and practical guides for environment optimization and development workflows:
+
 - **Environment Optimization** - Comprehensive optimization strategies for your Mac
 - **Cursor/VS Code Settings** - IDE configuration and sync
 - **Development Workflows** - Best practices and procedures
 
 ### ⚙️ Setup (`setup/`)
-Installation, configuration, and hardware documentation:
+Installation, configuration, and hardware documentation for proper environment setup:
+
 - **GitHub Setup** - Repository configuration and management
 - **Hardware Specifications** - System specs and capabilities
 - **Installation Guides** - Setup procedures and requirements
 
 ### 🎨 Style (`style/`)
-Visual design, branding, and formatting standards:
+Visual design, branding, and formatting standards for consistent project presentation:
+
 - **ASCII Style Guide** - Visual elements and art
 - **Naming Guidelines** - File and directory conventions
 - **Unified Style System** - Comprehensive design standards
 
 ### 📊 Reports (`reports/`)
-Project assessments, analysis, and performance tracking:
+Project assessments, analysis, and performance tracking for informed decision-making:
+
 - **Structure Assessments** - Directory organization analysis
 - **Optimization Reports** - Performance improvement tracking
 - **Quality Control** - Standards and compliance reports
 
 ### 🔄 Workflows (`workflows/`)
-Process documentation and operational procedures:
+Process documentation and operational procedures for efficient environment management:
+
 - **PDF Management** - Conversion and processing workflows
 - **Release Management** - Version control and distribution
 - **Operational Procedures** - Day-to-day processes
@@ -81,7 +86,8 @@ Process documentation and operational procedures:
 - **Todo Migration** - Automated migration of non-completed todo items
 
 ### 📚 Development History (`development-history/`)
-Project evolution and decision tracking:
+Project evolution and decision tracking for maintaining context and knowledge:
+
 - **Chat Transcripts** - Development conversations
 - **Decision Log** - Key decisions and rationale
 - **Project Evolution** - Development timeline and milestones
@@ -144,7 +150,8 @@ find docs/ -name "*.md" -type f
 ## 🔗 Integration
 
 ### Pre-Release Workflow
-Documentation is automatically sanitized during pre-release:
+Documentation is automatically sanitized during pre-release to ensure quality and security:
+
 ```bash
 # Sanitize documentation
 ./scripts/pre-release-sanitizer.sh --fix
