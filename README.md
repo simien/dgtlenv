@@ -32,6 +32,7 @@ Tools that help manage the development environment:
 - 📄 **PDF Management** - Automated document conversion
 - 🔒 **Security & Release** - Pre-release sanitization
 - 📋 **Todo Management** - Quality control and organization
+- 🤖 **AI-Powered Workflows** - Structured prompts for optimization and automation
 
 ---
 
@@ -227,6 +228,14 @@ DgtlEnv/
 - **[Operations Documentation](ops/README.md)** - Environment optimization tools
 - **[Scripts Documentation](scripts/README.md)** - Environment management tools
 - **[Test Suite](tests/README.md)** - Comprehensive validation and testing
+
+### 🤖 AI-Powered Workflows
+- **[Prompts System](prompts/README.md)** - Structured AI prompts for system optimization, documentation, and workflow management
+- **[System Optimization Prompts](prompts/categories/system-optimization/)** - Performance tuning and resource management
+- **[Documentation Generation](prompts/categories/documentation-generation/)** - Content creation and visual enhancements
+- **[Workflow Management](prompts/categories/workflow-management/)** - Task organization and quality control
+- **[Code Analysis](prompts/categories/code-analysis/)** - Script execution and verification
+- **[Meta-Prompts](prompts/categories/meta-prompts/)** - Conversation management and utilities
 
 ### 🔧 Setup & Configuration
 - **[GitHub Setup Guide](docs/setup/github-setup.md)** - Repository configuration
