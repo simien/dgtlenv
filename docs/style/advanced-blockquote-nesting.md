@@ -23,77 +23,72 @@ Content that follows the blockquote...
 
 #### **1. Nested Code Blocks**
 ```markdown
-> **Performance enhancement** - Start here to improve your Mac's performance
-
-```bash
-# 🏥 System Health Check (Prevents slowdowns & data loss)
-./ops/monitoring/swap-ssd-health.sh
-
-# 🧹 System Cleanup (Frees up disk space)
-./ops/cleanup/brew-cleanup.sh
-./ops/cleanup/docker-cleanup.sh
-
-# 🐳 Docker Optimization (Prevents resource hogging)
-./ops/docker/docker-optimize.sh
-```
+> **Performance Enhancement** - Start here to improve your Mac's performance
+> ```bash
+> # 🏥 System Health Check (Prevents slowdowns & data loss)
+> ./ops/monitoring/swap-ssd-health.sh
+>
+> # 🧹 System Cleanup (Frees up disk space)
+> ./ops/cleanup/brew-cleanup.sh
+> ./ops/cleanup/docker-cleanup.sh
+>
+> # 🐳 Docker Optimization (Prevents resource hogging)
+> ./ops/docker/docker-optimize.sh
+> ```
 ```
 
 #### **2. Nested Lists with Emojis**
 ```markdown
-> **Environment orchestration** - Tools that help manage the development environment
-
-- 📄 **PDF Management** - Automated document conversion
-- 🔒 **Security & Release** - Pre-release sanitization
-- 📋 **Todo Management** - Quality control and organization
-- 🧠 **Contextual Workflows** - Structured prompts for optimization and automation
-- 🧪 **Comprehensive Testing** - Interactive and automated validation suite
+> **Environment Management** - Tools that help manage the development environment
+> - 📄 **PDF Management** - Automated document conversion
+> - 🔒 **Security & Release** - Pre-release sanitization
+> - 📋 **Todo Management** - Quality control and organization
+> - 🧠 **Contextual Workflows** - Structured prompts for optimization and automation
+> - 🧪 **Comprehensive Testing** - Interactive and automated validation suite
 ```
 
 #### **3. Nested Headers and Sub-sections**
 ```markdown
-> **Sophisticated orchestration** - A refined workflow for comprehensive optimization
-
-### **Step 1: Baseline Capture**
-```bash
-./metrics/system-metrics-tracker.sh baseline
-```
-
-### **Step 2: Optimization Execution**
-```bash
-./ops/monitoring/swap-ssd-health.sh
-./ops/cleanup/brew-cleanup.sh
-./ops/cleanup/docker-cleanup.sh
-```
-
-### **Step 3: Performance Comparison**
-```bash
-./metrics/system-metrics-tracker.sh current
-./metrics/system-metrics-tracker.sh compare
-```
+> **Optimization Workflow** - A refined workflow for comprehensive optimization
+> ### **Step 1: Baseline Capture**
+> ```bash
+> ./metrics/system-metrics-tracker.sh baseline
+> ```
+>
+> ### **Step 2: Optimization Execution**
+> ```bash
+> ./ops/monitoring/swap-ssd-health.sh
+> ./ops/cleanup/brew-cleanup.sh
+> ./ops/cleanup/docker-cleanup.sh
+> ```
+>
+> ### **Step 3: Performance Comparison**
+> ```bash
+> ./metrics/system-metrics-tracker.sh current
+> ./metrics/system-metrics-tracker.sh compare
+> ```
 ```
 
 #### **4. Mixed Content Nesting**
 ```markdown
-> **Contextual routing** - Natural language access to structured prompts
-
-### Basic Prompt Routing
-```bash
-# Natural language input
-./ops/run-prompt.sh "diagnose ci"
-./ops/run-prompt.sh "find bugs"
-./ops/run-prompt.sh "create todo"
-```
-
-### Enhanced Router Features
-> **Advanced orchestration** - Sophisticated features for complex workflows
-
-```bash
-# Enhanced router with logging
-./ops/run-prompt-enhanced.sh diagnose-ci
-
-# Prompt chaining
-./ops/run-prompt-enhanced.sh --chain diagnose-ci generate-report
-```
+> **Prompt Routing** - Natural language access to structured prompts
+> ### Basic Prompt Routing
+> ```bash
+> # Natural language input
+> ./ops/run-prompt.sh "diagnose ci"
+> ./ops/run-prompt.sh "find bugs"
+> ./ops/run-prompt.sh "create todo"
+> ```
+>
+> ### Enhanced Router Features
+> > **Advanced Usage Examples** - Sophisticated features for complex workflows
+> > ```bash
+> > # Enhanced router with logging
+> > ./ops/run-prompt-enhanced.sh diagnose-ci
+> >
+> > # Prompt chaining
+> > ./ops/run-prompt-enhanced.sh --chain diagnose-ci generate-report
+> > ```
 ```
 
 ## 🎨 Visual Hierarchy Examples

@@ -75,9 +75,7 @@ prompts/
 - **Version Management**: 100% operational
 
 ### Category Distribution
-> **Analytics insights** - Prompt distribution across categories
->
-> ### 📊 Distribution Analysis
+> **Prompt Categories** - Distribution across system categories
 > ```
 > code-analysis               5 (20%)
 > documentation-generation    5 (20%)
@@ -95,9 +93,7 @@ prompts/
 - **Archive System**: 100% operational
 
 ### Most Complex Prompts (by line count)
-> **Complexity analysis** - Most sophisticated prompts by line count
->
-> ### 📈 Complexity Metrics
+> **Complexity Metrics** - Most sophisticated prompts by line count
 > - `generate-chat-summary-title-v1.1.0.md` - 90 lines
 > - `create-technical-tutorial-v1.0.0.md` - 82 lines
 > - `write-cleanup-script-v1.0.0.md` - 80 lines

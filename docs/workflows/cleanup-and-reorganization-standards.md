@@ -76,9 +76,7 @@
 ## 📁 **Directory Structure Standards**
 
 ### **Required Directories**
-> **Structural organization** - Comprehensive directory structure for optimal organization
->
-> ### 📁 Directory Architecture
+> **Directory Architecture** - Comprehensive directory structure for optimal organization
 > ```
 > docs/
 > ├── README.md                                    # Main docs index

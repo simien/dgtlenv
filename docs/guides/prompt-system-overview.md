@@ -66,9 +66,7 @@ The DgtlEnv Prompt System is a sophisticated contextual prompt management soluti
 - **Success Rate**: 100%
 
 ### Category Distribution
-> **Analytics insights** - Prompt distribution across categories
->
-> ### 📊 Distribution Overview
+> **Prompt Categories** - Distribution across system categories
 > ```
 > code-analysis               5 (20%)
 > documentation-generation    5 (20%)
@@ -94,9 +92,7 @@ The DgtlEnv Prompt System is a sophisticated contextual prompt management soluti
 ```
 
 ### Enhanced Router Features
-> **Advanced orchestration** - Sophisticated features for complex workflows
->
-> ### 🔧 Advanced Usage Examples
+> **Advanced Usage Examples** - Sophisticated router features
 > ```bash
 > # Enhanced router with logging
 > ./ops/run-prompt-enhanced.sh diagnose-ci
