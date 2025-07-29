@@ -53,13 +53,16 @@ Prompts for conversation summarization, development history export, and other ut
 - **Metadata Completeness**: 100% ✅
 - **Version Consistency**: 100% ✅
 - **File Naming Standards**: 100% ✅
+- **Outdated Version Management**: 100% ✅
 
 ### System Metrics
-- **Total Prompts**: 24
+- **Total Prompts**: 24 (active)
+- **Archived Prompts**: 1 (properly managed)
 - **Categories**: 5
-- **Average Lines per Prompt**: 79
-- **Total Lines**: 1,909
+- **Average Lines per Prompt**: 80
+- **Total Lines**: 1,920
 - **Success Rate**: 100%
+- **Version Management**: 100% operational
 
 ### Category Distribution
 ```
@@ -70,18 +73,26 @@ system-optimization         5 (20%)
 workflow-management         6 (25%)
 ```
 
+### Version Management
+- **Active Prompts**: 24 (clean, current versions only)
+- **Archived Prompts**: 1 (outdated version)
+- **Outdated Versions**: 0 (all handled)
+- **Archive System**: 100% operational
+
 ### Most Complex Prompts (by line count)
+- `generate-chat-summary-title-v1.1.0.md` - 90 lines
 - `create-technical-tutorial-v1.0.0.md` - 82 lines
 - `write-cleanup-script-v1.0.0.md` - 80 lines
 - `update-documentation-ascii-visuals-v1.0.0.md` - 80 lines
 - `refactor-code-v1.0.0.md` - 80 lines
-- `persona-linux-terminal-v1.0.0.md` - 80 lines
 
 ### Quality Assurance
 - **Validation Script**: `./scripts/validate-prompts.sh`
 - **Analytics Script**: `./scripts/prompt-analytics.sh`
 - **Enhanced Router**: `./ops/run-prompt-enhanced.sh`
 - **Configuration**: `config/prompt-router-config.json`
+- **Version Management**: `./scripts/check-outdated-prompts.sh`
+- **Archive System**: `prompts/archived/`
 
 ## Prompt Format
 

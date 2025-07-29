@@ -169,6 +169,10 @@ find docs/ -name "*.md" -type f
 
 # Enhanced router with logging
 ./ops/run-prompt-enhanced.sh diagnose-ci
+
+# Version management tools
+./scripts/check-outdated-prompts.sh --dry-run
+./scripts/check-outdated-prompts.sh --archive
 ```
 
 ## 🔗 Integration

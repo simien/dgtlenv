@@ -1,5 +1,5 @@
 # DgtlEnv Prompt Analytics Report
-Generated: Mon Jul 28 20:35:59 EDT 2025
+Generated: Mon Jul 28 21:18:31 EDT 2025
 
 ## Executive Summary
 
@@ -31,7 +31,8 @@ Latest versions: 0
 Outdated versions: 24
 
 Version distribution:
-  v1.0.0     24 prompts
+  v1.0.0     23 prompts
+  v1.1.0      1 prompts
 
 ```
 
@@ -39,23 +40,23 @@ Version distribution:
 ```
 🔍 Complexity Analysis
 ====================
-Average lines per prompt: 79
-Total lines: 1909
+Average lines per prompt: 80
+Total lines: 1920
 Total files: 24
 
 Most complex prompts (by line count):
+  generate-chat-summary-title-v1.1.0.md  90 lines
   create-technical-tutorial-v1.0.0.md  82 lines
   write-cleanup-script-v1.0.0.md       80 lines
   update-documentation-ascii-visuals-v1.0.0.md  80 lines
   refactor-code-v1.0.0.md              80 lines
-  persona-linux-terminal-v1.0.0.md     80 lines
 
 Simplest prompts (by line count):
   diagnose-ci-failure-v1.0.0.md        76 lines
   create-todo-list-v1.0.0.md           79 lines
   execute-script-v1.0.0.md             79 lines
   export-development-history-v1.0.0.md  79 lines
-  generate-chat-summary-title-v1.0.0.md  79 lines
+  git-commit-push-v1.0.0.md            79 lines
 
 ```
 
@@ -63,7 +64,10 @@ Simplest prompts (by line count):
 ```
 📊 Usage Pattern Analysis
 ========================
-Total prompt executions: 0
+Total prompt executions: 3
+
+Most used prompts:
+  diagnose-ci                 3 times (100%)
 
 ```
 

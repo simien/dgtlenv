@@ -197,14 +197,16 @@ DgtlEnv/
 - **Natural Language Support** - Type `"diagnose ci"` instead of remembering exact filenames
 - **Fuzzy Matching** - Intelligent prompt discovery with smart suggestions
 - **Context Injection** - Dynamic file inclusion with `{{include:path/to/file}}`
-- **Version Management** - Automatic latest version selection
+- **Version Management** - Automatic latest version selection with semantic versioning
 - **Quality Control** - Comprehensive validation and analytics
+- **Automated Version Management** - Outdated version detection and archiving
 
 ### 📊 Current Prompt Analytics (July 28, 2025)
 ```
 📊 Prompt Structure Analysis
 ==========================
-Total prompts: 24
+Total prompts: 24 (active)
+Archived prompts: 1 (properly managed)
 Total categories: 5
 
 Prompts by category:
@@ -221,6 +223,14 @@ Metadata Completeness: 100% ✅
 Version Consistency: 100% ✅
 File Naming Standards: 100% ✅
 Validation Success Rate: 100% ✅
+Outdated Version Management: 100% ✅
+
+📦 Version Management
+====================
+Active prompts: 24 (clean, current versions only)
+Archived prompts: 1 (outdated version)
+Outdated versions: 0 (all handled)
+Archive system: 100% operational
 ```
 
 ### 🚀 Quick Prompt Usage
@@ -233,6 +243,10 @@ Validation Success Rate: 100% ✅
 # Enhanced router with logging
 ./ops/run-prompt-enhanced.sh diagnose-ci
 ./ops/run-prompt-enhanced.sh --chain diagnose-ci generate-report
+
+# Version management tools
+./scripts/check-outdated-prompts.sh --dry-run
+./scripts/check-outdated-prompts.sh --archive
 
 # Analytics and validation
 ./scripts/prompt-analytics.sh
