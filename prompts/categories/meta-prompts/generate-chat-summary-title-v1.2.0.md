@@ -83,7 +83,7 @@ This prompt should be used in conjunction with:
 - Generate titles under 25 characters without project-specific terms
 
 ## Title Examples (Under 25 Characters)
-- "PromptRouter Migration Plan" (24 chars)
+- "PromptRouter Migration" (22 chars)
 - "AI Router Quality Control" (22 chars)
 - "Prompt System Validation" (20 chars)
 - "Analytics Dashboard Setup" (20 chars)
