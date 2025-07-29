@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "prompts_directory": "prompts/categories",
+  "output_methods": {
+    "clipboard": true,
+    "file": false,
+    "stdout": false
+  },
+  "aliases": {
+    "diagnose-ci": ["diagnose ci", "ci diagnose", "debug ci", "fix ci"],
+    "generate-dockerfile": ["generate docker", "create docker", "docker generate"],
+    "find-code-bugs": ["find bugs", "bug find", "debug code", "code bugs"],
+    "explain-code": ["explain code", "code explain", "document code"],
+    "create-todo-list": ["create todo", "new todo", "add todo", "todo create"],
+    "optimize-docker-settings": ["optimize docker", "docker optimize", "docker settings"],
+    "generate-git-commit-message": ["git commit", "commit message", "git message"],
+    "export-development-history": ["export history", "save history", "backup history"]
+  },
+  "categories": {
+    "system-optimization": {
+      "description": "System performance and optimization prompts",
+      "keywords": ["performance", "optimize", "system", "docker", "ci"]
+    },
+    "documentation-generation": {
+      "description": "Documentation and content creation prompts",
+      "keywords": ["document", "readme", "guide", "tutorial", "explain"]
+    },
+    "workflow-management": {
+      "description": "Task management and workflow prompts",
+      "keywords": ["todo", "task", "workflow", "git", "commit"]
+    },
+    "code-analysis": {
+      "description": "Script execution and code analysis prompts",
+      "keywords": ["code", "script", "debug", "analyze", "test"]
+    },
+    "meta-prompts": {
+      "description": "Self-referential utilities and conversation management",
+      "keywords": ["export", "history", "meta", "utility"]
+    }
+  },
+  "templates": {
+    "include_syntax": "{{include:path/to/file}}",
+    "variable_syntax": "{{var:variable_name}}",
+    "date_format": "YYYY-MM-DD"
+  },
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "file": "logs/prompt-router.log"
+  }
+}

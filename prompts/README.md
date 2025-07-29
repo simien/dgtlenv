@@ -45,6 +45,44 @@ Prompts for conversation summarization, development history export, and other ut
 4. **Documentation**: Maintain clear instructions and expected outputs
 5. **Standards**: Follow DgtlEnv naming conventions (kebab-case, ASCII style)
 
+## 📊 Current System Analytics (July 28, 2025)
+
+### Quality Control Results
+- **Validation Status**: ✅ All prompts passed validation (24/24)
+- **Template Compliance**: 100% ✅
+- **Metadata Completeness**: 100% ✅
+- **Version Consistency**: 100% ✅
+- **File Naming Standards**: 100% ✅
+
+### System Metrics
+- **Total Prompts**: 24
+- **Categories**: 5
+- **Average Lines per Prompt**: 79
+- **Total Lines**: 1,909
+- **Success Rate**: 100%
+
+### Category Distribution
+```
+code-analysis               5 (20%)
+documentation-generation    5 (20%)
+meta-prompts                3 (12%)
+system-optimization         5 (20%)
+workflow-management         6 (25%)
+```
+
+### Most Complex Prompts (by line count)
+- `create-technical-tutorial-v1.0.0.md` - 82 lines
+- `write-cleanup-script-v1.0.0.md` - 80 lines
+- `update-documentation-ascii-visuals-v1.0.0.md` - 80 lines
+- `refactor-code-v1.0.0.md` - 80 lines
+- `persona-linux-terminal-v1.0.0.md` - 80 lines
+
+### Quality Assurance
+- **Validation Script**: `./scripts/validate-prompts.sh`
+- **Analytics Script**: `./scripts/prompt-analytics.sh`
+- **Enhanced Router**: `./ops/run-prompt-enhanced.sh`
+- **Configuration**: `config/prompt-router-config.json`
+
 ## Prompt Format
 
 Each prompt includes:

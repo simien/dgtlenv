@@ -189,6 +189,62 @@ DgtlEnv/
 
 ---
 
+## 🤖 AI-Powered Prompt Management System
+
+**DgtlEnv includes a sophisticated prompt management system with intelligent routing and quality control:**
+
+### 🎯 Prompt Router Features
+- **Natural Language Support** - Type `"diagnose ci"` instead of remembering exact filenames
+- **Fuzzy Matching** - Intelligent prompt discovery with smart suggestions
+- **Context Injection** - Dynamic file inclusion with `{{include:path/to/file}}`
+- **Version Management** - Automatic latest version selection
+- **Quality Control** - Comprehensive validation and analytics
+
+### 📊 Current Prompt Analytics (July 28, 2025)
+```
+📊 Prompt Structure Analysis
+==========================
+Total prompts: 24
+Total categories: 5
+
+Prompts by category:
+  code-analysis               5 (20%)
+  documentation-generation    5 (20%)
+  meta-prompts                3 (12%)
+  system-optimization         5 (20%)
+  workflow-management         6 (25%)
+
+📈 Quality Metrics
+=================
+Template Compliance: 100% ✅
+Metadata Completeness: 100% ✅
+Version Consistency: 100% ✅
+File Naming Standards: 100% ✅
+Validation Success Rate: 100% ✅
+```
+
+### 🚀 Quick Prompt Usage
+```bash
+# Basic prompt routing
+./ops/run-prompt.sh "diagnose ci"
+./ops/run-prompt.sh "find bugs"
+./ops/run-prompt.sh "create todo"
+
+# Enhanced router with logging
+./ops/run-prompt-enhanced.sh diagnose-ci
+./ops/run-prompt-enhanced.sh --chain diagnose-ci generate-report
+
+# Analytics and validation
+./scripts/prompt-analytics.sh
+./scripts/validate-prompts.sh
+```
+
+**📖 See [prompts/README.md](prompts/README.md) for detailed prompt system documentation**
+
+**📚 See [docs/prompt-system-overview.md](docs/prompt-system-overview.md) for comprehensive system architecture and advanced features**
+
+---
+
 ## 🔄 Complete Optimization Workflow
 
 ```bash

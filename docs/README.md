@@ -84,6 +84,7 @@ Process documentation and operational procedures for efficient environment manag
 - **Operational Procedures** - Day-to-day processes
 - **Environment Management** - Organization standards and todo quality validation
 - **Todo Migration** - Automated migration of non-completed todo items
+- **Prompt Management** - AI-powered prompt routing and quality control
 
 ### 📚 Development History (`development-history/`)
 Project evolution and decision tracking for maintaining context and knowledge:
@@ -91,6 +92,13 @@ Project evolution and decision tracking for maintaining context and knowledge:
 - **Chat Transcripts** - Development conversations
 - **Decision Log** - Key decisions and rationale
 - **Project Evolution** - Development timeline and milestones
+
+### 🤖 AI-Powered Systems (`prompt-system-overview.md`)
+Advanced AI-powered prompt management and automation:
+
+- **Prompt System Overview** - Comprehensive prompt management documentation
+- **Router Architecture** - Intelligent prompt routing and discovery
+- **Quality Control** - Validation and analytics systems
 
 ## 🚀 Quick Navigation
 
@@ -108,6 +116,7 @@ Project evolution and decision tracking for maintaining context and knowledge:
 1. **Use** `workflows/` for process procedures
 2. **Monitor** `reports/` for performance metrics
 3. **Follow** `guides/` for troubleshooting
+4. **Leverage** prompt system for AI-powered automation
 
 ## 📋 Usage Examples
 
@@ -145,6 +154,21 @@ cp document.pdf docs/incoming/
 
 # Review documentation structure
 find docs/ -name "*.md" -type f
+```
+
+### Prompt System Management
+```bash
+# Run prompt analytics
+./scripts/prompt-analytics.sh
+
+# Validate all prompts
+./scripts/validate-prompts.sh
+
+# Use prompt router
+./ops/run-prompt.sh "diagnose ci"
+
+# Enhanced router with logging
+./ops/run-prompt-enhanced.sh diagnose-ci
 ```
 
 ## 🔗 Integration
