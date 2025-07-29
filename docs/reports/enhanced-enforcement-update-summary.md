@@ -40,7 +40,7 @@ fi
 
 ### **Scripts Directory**
 - **`scripts/README.md`** - Added smart migration detection description
-- **`scripts/enforce-organization-standards.sh`** - Enhanced with intelligent migration detection
+- **`scripts/enforce-organization-standards.sh`** - Enhanced with semantic migration detection
 
 ### **Documentation Directory**
 - **`docs/workflows/cleanup-and-reorganization-standards.md`** - Added smart migration detection section

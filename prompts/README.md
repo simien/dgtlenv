@@ -1,8 +1,12 @@
 # DgtlEnv Prompts
 
+> **Contextual orchestration** - Structured prompts for sophisticated project workflows
+
 This directory contains structured prompts for the DgtlEnv project, organized by category and following established standards for consistency and maintainability.
 
 ## Overview
+
+> **Sophisticated prompt management** - Standardized, reusable prompts for various project tasks and workflows
 
 The prompts system provides standardized, reusable prompts for various project tasks and workflows. Each prompt follows the established template format and includes comprehensive documentation for effective use.
 
@@ -46,6 +50,8 @@ Prompts for conversation summarization, development history export, and other ut
 5. **Standards**: Follow DgtlEnv naming conventions (kebab-case, ASCII style)
 
 ## 📊 Current System Analytics (July 28, 2025)
+
+> **Performance insights** - Comprehensive analytics for prompt system optimization
 
 ### Quality Control Results
 - **Validation Status**: ✅ All prompts passed validation (24/24)

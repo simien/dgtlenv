@@ -1,8 +1,12 @@
 # ops/
 
+> **Performance refinement** - Environment optimization tools that directly improve your Mac's performance
+
 This directory contains **environment optimization tools** that directly improve your Mac's performance. These scripts focus on system health, resource management, and performance optimization.
 
 ## 🎯 Environment Optimization Focus
+
+> **Sophisticated optimization** - The primary environment optimization area of DgtlEnv
 
 The `ops/` directory is the **primary environment optimization area** of DgtlEnv. All scripts here are designed to:
 - 🏥 **Monitor system health** and prevent slowdowns
@@ -29,6 +33,8 @@ The `ops/` directory is the **primary environment optimization area** of DgtlEnv
 - `templates/optimization-summary-template.md` — Template for documenting optimization results
 
 ## 🖥️ Environment Optimization Scripts
+
+> **Performance orchestration** - Sophisticated tools for system optimization
 
 ### System Health & Monitoring
 - **`monitoring/swap-ssd-health.sh`** — 🏥 Comprehensive system health monitoring (Prevents slowdowns & data loss)

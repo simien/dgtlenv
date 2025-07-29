@@ -233,7 +233,7 @@ $(generate_ascii_logo "styled")
 
 ## 🎯 Project Overview
 
-🚀 **DgtlEnv** is a sophisticated macOS development environment optimization toolkit that transforms your MacBook into a high-performance development machine. Features automated system monitoring, PDF document management, performance metrics tracking, and intelligent resource optimization.
+🚀 **DgtlEnv** is a sophisticated macOS development environment optimization toolkit that transforms your MacBook into a high-performance development machine. Features automated system monitoring, PDF document management, performance metrics tracking, and semantic resource optimization.
 
 ### ✨ Key Features:
 - ✅ **System Optimization:** Cursor IDE, Docker, and system performance tuning

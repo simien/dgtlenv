@@ -17,10 +17,13 @@
 
 ## 🎯 What is DgtlEnv?
 
+> **Digital Environment Optimization** - A refined toolkit that transforms your MacBook into a high-performance development machine
+
 **DgtlEnv** is a **digital environment optimization toolkit** that transforms your MacBook into a high-performance development machine. Built as a shell script toolkit for maximum simplicity and extensibility.
 
 ### 🖥️ **Primary Focus: Environment Optimization**
-Tools that directly improve your Mac's performance:
+> **Performance refinement** - Tools that directly improve your Mac's performance
+
 - 🏥 **System Health Monitoring** - Prevents slowdowns and data loss
 - 🧹 **System Cleanup** - Frees up disk space and memory
 - 🐳 **Docker Optimization** - Prevents resource hogging
@@ -28,11 +31,12 @@ Tools that directly improve your Mac's performance:
 - 📊 **Performance Tracking** - Shows real-time improvements
 
 ### 📁 **Secondary Focus: Environment Management**
-Tools that help manage the development environment:
+> **Environment orchestration** - Tools that help manage the development environment
+
 - 📄 **PDF Management** - Automated document conversion
 - 🔒 **Security & Release** - Pre-release sanitization
 - 📋 **Todo Management** - Quality control and organization
-- 🤖 **AI-Powered Workflows** - Structured prompts for optimization and automation
+- 🧠 **Contextual Workflows** - Structured prompts for optimization and automation
 - 🧪 **Comprehensive Testing** - Interactive and automated validation suite
 
 ---
@@ -48,7 +52,7 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 ```
 
 ### 🖥️ Essential Environment Optimization Commands
-**Start here to improve your Mac's performance:**
+> **Performance enhancement** - Start here to improve your Mac's performance
 
 ```bash
 # 🏥 System Health Check (Prevents slowdowns & data loss)
@@ -74,7 +78,7 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 ```
 
 ### 📁 Environment Management Commands
-**For managing the development environment:**
+> **Environment orchestration** - For managing the development environment
 
 ```bash
 # 📄 PDF Management
@@ -97,6 +101,8 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 ---
 
 ## 📊 Current System Status
+
+> **Performance metrics** - Real-time system optimization status
 
 ```
 Memory Usage: 40% ✅ (Target: < 80%)
@@ -189,13 +195,13 @@ DgtlEnv/
 
 ---
 
-## 🤖 AI-Powered Prompt Management System
+## 🧠 Contextual Prompt Management System
 
-**DgtlEnv includes a sophisticated prompt management system with intelligent routing and quality control:**
+> **Sophisticated prompt orchestration** - A refined system for contextual routing and quality control
 
 ### 🎯 Prompt Router Features
 - **Natural Language Support** - Type `"diagnose ci"` instead of remembering exact filenames
-- **Fuzzy Matching** - Intelligent prompt discovery with smart suggestions
+- **Fuzzy Matching** - Contextual prompt discovery with semantic suggestions
 - **Context Injection** - Dynamic file inclusion with `{{include:path/to/file}}`
 - **Version Management** - Automatic latest version selection with semantic versioning
 - **Quality Control** - Comprehensive validation and analytics
@@ -261,6 +267,8 @@ Archive system: 100% operational
 
 ## 🔄 Complete Optimization Workflow
 
+> **Sophisticated orchestration** - A refined workflow for comprehensive optimization
+
 ```bash
 # 1. Capture baseline metrics
 ./metrics/system-metrics-tracker.sh baseline
@@ -304,7 +312,7 @@ Archive system: 100% operational
 - **[Scripts Documentation](scripts/README.md)** - Environment management tools
 - **[Test Suite](tests/README.md)** - Comprehensive validation and testing with interactive and automated modes
 
-### 🤖 AI-Powered Workflows
+### 🧠 Contextual Workflows
 - **[Prompts System](prompts/README.md)** - Structured AI prompts for system optimization, documentation, and workflow management
 - **[System Optimization Prompts](prompts/categories/system-optimization/)** - Performance tuning and resource management
 - **[Documentation Generation](prompts/categories/documentation-generation/)** - Content creation and visual enhancements

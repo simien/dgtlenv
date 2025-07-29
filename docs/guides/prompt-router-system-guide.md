@@ -2,15 +2,17 @@
 
 ## Overview
 
-The DgtlEnv Prompt Router is a comprehensive prompt management system that provides intelligent routing, context injection, and extensible features for managing structured prompts across the project.
+The DgtlEnv Prompt Router is a comprehensive prompt management system that provides semantic routing, context injection, and extensible features for managing structured prompts across the project.
 
 ## System Architecture
+
+> **Refined orchestration** - A sophisticated architecture for contextual prompt management
 
 ### Core Components
 
 1. **Basic Router** (`ops/run-prompt.sh`)
    - Simple, fast prompt routing
-   - Fuzzy matching with natural language support
+   - Fuzzy matching with semantic language support
    - Clipboard integration
 
 2. **Enhanced Router** (`ops/run-prompt-enhanced.sh`)
@@ -40,6 +42,8 @@ The DgtlEnv Prompt Router is a comprehensive prompt management system that provi
 
 ## Usage Patterns
 
+> **Contextual patterns** - Natural language access to sophisticated prompt orchestration
+
 ### Basic Usage
 
 ```bash
@@ -54,6 +58,7 @@ The DgtlEnv Prompt Router is a comprehensive prompt management system that provi
 ```
 
 ### Advanced Features
+> **Sophisticated orchestration** - Advanced features for complex workflow management
 
 ```bash
 # Configuration management
@@ -72,6 +77,8 @@ The DgtlEnv Prompt Router is a comprehensive prompt management system that provi
 ```
 
 ## Configuration Management
+
+> **Refined configuration** - Sophisticated alias and output management
 
 ### Alias Configuration
 
@@ -254,10 +261,10 @@ For large prompt collections:
 
 ### Planned Features
 
-1. **AI-Powered Routing**
+1. **Contextual Routing**
    - Semantic prompt matching
    - Intent recognition
-   - Smart suggestions
+   - Semantic suggestions
 
 2. **Collaborative Features**
    - Multi-user prompt sharing

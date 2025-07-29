@@ -12,7 +12,7 @@ Maintain comprehensive documentation synchronization across the DgtlEnv project 
 
 ### ✅ Completed
 - [x] Updated root README.md to include new prompts system
-- [x] Added AI-Powered Workflows section to main documentation
+- [x] Added Contextual Workflows section to main documentation
 - [x] Created comprehensive prompts directory structure with README files
 - [x] Established prompt categories and organization standards
 

@@ -143,7 +143,7 @@ cat logs/todo-migration-*.log
 - **[?] Cancelled** → Remains in completed with migration note
 
 ### **Smart Migration Detection**
-The enforcement script now intelligently detects migration status:
+The enforcement script now semantically detects migration status:
 - **Items with migration notes** → Recognized as already migrated (PASS)
 - **Items without migration notes** → Flagged for migration (WARNING)
 - **Maintains audit trail** → Migration notes preserve historical context
