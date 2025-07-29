@@ -3,7 +3,7 @@
 # Script Name: setup-github.sh
 # Description: Initialize DgtlEnv GitHub repository with best practices
 # Author: Simien Antonis-Parr
-# Date: 2025-01-25
+# Date: 2025-07-28
 # Version: 1.0.0
 #
 # Usage:

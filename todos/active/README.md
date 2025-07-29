@@ -9,6 +9,7 @@ This directory contains currently active tasks and ongoing work for the DgtlEnv 
 - **`funding-todo.md`** - Funding and sponsorship platform setup (on hold)
 - **`documentation-todo.md`** - Documentation updates and improvements
 - **`timestamp-verification-todo.md`** - Timestamp verification (optional)
+- **`prompt-router-enhancement-todo.md`** - Prompt router RAG injection and context engineering
 
 *Note: Additional active tasks may be created through the todo migration workflow when non-completed items are moved from completed files.*
 

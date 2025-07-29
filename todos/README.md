@@ -41,11 +41,18 @@ todos/
 
 ## 📋 Quick Navigation
 
+### Priority Analysis
+- **📊 Todo Priority Analysis** → `todo-priority-analysis.md` *(NEW)*
+
 ### Current Tasks
-- **GitHub Setup** → `active/github-setup-todo.md`
-- **Funding Platform** → `active/funding-todo.md`
-- **Documentation Updates** → `active/documentation-todo.md`
-- **Timestamp Verification** → `active/timestamp-verification-todo.md`
+- **GitHub Setup** → `active/github-setup-todo.md` *(HIGH PRIORITY)*
+- **Timestamp Verification** → `active/timestamp-verification-todo.md` *(QUICK WIN)*
+- **Migration Script Fix** → `active/migration-script-fix-todo.md` *(IN PROGRESS)*
+- **Logging Organization** → `active/logging-organization-todo.md`
+- **Quality Control Standards** → `active/quality-control-standards-todo.md`
+- **Funding Platform** → `active/funding-todo.md` *(ON HOLD)*
+- **Documentation Updates** → `active/documentation-update-todo.md`
+- **Prompt Router Enhancement** → `active/prompt-router-enhancement-todo.md`
 
 ### Project Planning
 - **Master Todo** → `planning/master-todo.md`
@@ -120,11 +127,12 @@ grep -r "\[ \]" todos/active/
 
 ## 📊 Task Status Tracking
 
-### Active Tasks (       4)
+### Active Tasks (       5)
 - 🔄 **GitHub Setup** - Repository configuration and security
 - ⏸️ **Funding Platform** - Sponsorship setup (on hold)
 - 🔄 **Documentation Updates** - README and guide improvements
 - ⏳ **Timestamp Verification** - Optional consistency check
+- 🔄 **Prompt Router Enhancement** - RAG injection and context engineering
 
 ### Completed Tasks (       7)
 - ✅ **System Optimization** - Performance tuning and monitoring
