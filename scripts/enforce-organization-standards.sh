@@ -236,8 +236,8 @@ check_todo_quality() {
                     ((WARNINGS++))
                 fi
 
-                # Check for COMPLETED status
-                if grep -q "✅ COMPLETED" "$todo_file"; then
+                # Check for COMPLETED status (with or without bold formatting)
+                if grep -q "✅ COMPLETED" "$todo_file" || grep -q "✅ \*\*COMPLETED\*\*" "$todo_file"; then
                     echo -e "${GREEN}✅ PASS: $filename shows COMPLETED status${NC}"
                 else
                     echo -e "${RED}❌ VIOLATION: $filename missing COMPLETED status${NC}"
