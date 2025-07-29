@@ -1,191 +1,249 @@
-# ops/
+# DgtlEnv Operations (ops/)
 
-> **Performance refinement** - Environment optimization tools that directly improve your Mac's performance
+This directory contains operational scripts and tools for managing the DgtlEnv environment.
 
-This directory contains **environment optimization tools** that directly improve your Mac's performance. These scripts focus on system health, resource management, and performance optimization.
+## 🤖 Prompt Router System
 
-## 🎯 Environment Optimization Focus
+### Overview
+The Prompt Router is a sophisticated system for managing and executing AI prompts within the DgtlEnv environment. It provides modular, configurable, and robust prompt routing with advanced features like chaining, context injection, and variable substitution.
 
-> **Sophisticated optimization** - The primary environment optimization area of DgtlEnv
+### Available Scripts
 
-The `ops/` directory is the **primary environment optimization area** of DgtlEnv. All scripts here are designed to:
-- 🏥 **Monitor system health** and prevent slowdowns
-- 🧹 **Clean up system resources** and free disk space
-- 🐳 **Optimize Docker** to prevent resource hogging
-- 💻 **Improve IDE performance** for faster development
-- 📊 **Track performance improvements** with before/after metrics
+#### `run-prompt.sh` - Enhanced Prompt Router
+The current version of the Prompt Router with advanced features:
 
-## Structure
-- `backup/` — Backup scripts for DgtlEnv project
-- `cleanup/` — Cleanup scripts (Homebrew, Docker, system)
-- `monitoring/` — Monitoring and resource tracking scripts
-- `docker/` — Docker-specific utility scripts and Colima setup
-- `templates/` — Configuration and best-practice examples
+**Key Features:**
+- ✅ **Modular Design** - Clean separation of concerns with specific function responsibilities
+- ✅ **Dry-Run Mode** - Safe testing without clipboard interference
+- ✅ **Chain Processing** - Execute multiple prompts in sequence
+- ✅ **Variable Substitution** - Dynamic content with `{{date}}`, `{{user}}`, etc.
+- ✅ **Alias Resolution** - Configured shortcuts for common prompts
+- ✅ **Verbose Logging** - Detailed debugging information
+- ✅ **Configuration Support** - JSON-based configuration system
+- ✅ **Error Recovery** - Graceful handling of edge cases
 
-## Usage
-- Scripts are designed for macOS 12.7.6 Monterey on MacBook Pro 2015.
-- Make scripts executable: `chmod +x scriptname.sh`
-- Run scripts from the project root or specify the full path.
+**Usage:**
+```bash
+# Basic usage
+./ops/run-prompt.sh diagnose-ci
 
-## Templates
-- `templates/cursor-settings-performance.json` — Optimized Cursor IDE settings
-- `templates/docker-compose-resource-limits-example.yml` — Example for adding resource limits to your docker-compose.yml
-- `templates/optimization-summary-template.md` — Template for documenting optimization results
+# Dry-run mode for testing
+./ops/run-prompt.sh --dry-run diagnose-ci
 
-## 🖥️ Environment Optimization Scripts
+# Verbose mode for debugging
+./ops/run-prompt.sh --verbose diagnose-ci
 
-> **Performance orchestration** - Sophisticated tools for system optimization
+# Chain multiple prompts
+./ops/run-prompt.sh --chain diagnose-ci git-commit-push
 
-### System Health & Monitoring
-- **`monitoring/swap-ssd-health.sh`** — 🏥 Comprehensive system health monitoring (Prevents slowdowns & data loss)
-- **`monitoring/top-hogs.sh`** — 📊 Quick resource usage overview (Identifies performance bottlenecks)
-- **`monitoring/README.md`** — Detailed monitoring guide
+# List all available prompts
+./ops/run-prompt.sh --list
 
-### System Cleanup & Maintenance
-- **`cleanup/brew-cleanup.sh`** — 🧹 Homebrew cache and package cleanup (Frees up disk space)
-- **`cleanup/docker-cleanup.sh`** — 🐳 Docker resource cleanup (Reduces memory & disk usage)
-- **`cleanup/README.md`** — Cleanup procedures and best practices
+# Search for specific prompts
+./ops/run-prompt.sh --search docker
+```
 
-### Docker Optimization
-- **`docker/docker-optimize.sh`** — 🐳 Docker cleanup and Colima setup automation (Prevents resource hogging)
-- **`docker/README.md`** — Complete Docker/Colima optimization guide
+**Configuration:**
+The router uses `config/prompt-router-config.json` for:
+- Prompt directory configuration
+- Output method settings
+- Logging configuration
+- Alias mappings
+- RAG source definitions
 
-### Environment Management (Secondary)
-- **`backup/create-dgtlenv-backup.sh`** — 💾 Creates timestamped zip backup of entire project
-- **`backup/simple-pdf-converter.sh`** — 📄 PDF to markdown conversion with file watching
-- **`backup/pdf-watcher.sh`** — 👁️ Automatic PDF conversion monitoring
-- **`backup/README.md`** — Backup procedures and best practices
+#### Legacy Scripts
+- `run-prompt-legacy.sh` - Original Prompt Router implementation (archived)
+- `run-prompt-enhanced-legacy.sh` - Previous enhanced version (archived)
 
-## 📊 Performance Improvement Metrics
+### Testing
 
-> **Performance insights** - Comprehensive metrics showing optimization effectiveness
+#### `tests/prompt-router-tests.sh` - Test Suite
+Comprehensive testing for the Prompt Router:
 
-### Before Optimization (Typical MacBook Pro 2015)
-> **Pre-Optimization Status** - System performance before optimization
-> - **Memory Usage:** 85% (High swap activity)
-> - **CPU Usage:** 65% (System lag during development)
-> - **Disk Usage:** 78% (Limited free space)
-> - **Docker Performance:** Resource hogging, slow containers
-> - **IDE Performance:** Cursor IDE lag, high memory usage
+```bash
+# Run all tests
+./tests/prompt-router-tests.sh
 
-### After Optimization (With DgtlEnv Tools)
-> **Post-Optimization Status** - System performance after comprehensive optimization
-> - **Memory Usage:** 34% ✅ (Target: < 80%)
-> - **CPU Usage:** 14% ✅ (Target: < 70%)
-> - **Disk Usage:** 21% ✅ (Target: < 85%)
-> - **Docker Performance:** Optimized resource limits, faster containers
-> - **IDE Performance:** Cursor IDE optimized, reduced memory usage
+# Run with verbose output
+./tests/prompt-router-tests.sh --verbose
+```
 
-### Key Performance Improvements
-> **Improvement Metrics** - Measurable performance improvements achieved
-> - **Memory Reduction:** 51% improvement (85% → 34%)
-> - **CPU Optimization:** 51% improvement (65% → 14%)
-> - **Disk Space:** 57% improvement (78% → 21%)
-> - **System Response:** 65% faster (2.3s → 0.8s)
+**Test Coverage:**
+- ✅ Help functionality
+- ✅ List functionality
+- ✅ Search functionality
+- ✅ Dry-run functionality
+- ✅ Valid prompt execution
+- ✅ Invalid prompt handling
+- ✅ No arguments handling
+- ✅ Invalid option handling
+- ✅ Search without term
+- ✅ Verbose mode
+- ✅ Logging functionality
+- ✅ Performance testing
 
-## Optimization Summary
+### Configuration
 
-For comprehensive documentation of optimization results, use:
-- `templates/optimization-summary-template.md` — Template for documenting optimization projects
-- `docs/optimization-summary.md` — Completed optimization summary (example)
+#### `config/prompt-router-config.json`
+Configuration file for the enhanced Prompt Router:
 
-## Cursor IDE Performance Optimization (macOS)
+```json
+{
+  "prompts_directory": "prompts/categories",
+  "output_methods": {
+    "clipboard": true,
+    "file": false,
+    "stdout": false
+  },
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "file": "logs/prompt-router.log"
+  },
+  "aliases": {
+    "diagnose-ci": ["diagnose-ci-failure"],
+    "readme": ["refactor-readme-concise"],
+    "docker": ["optimize-docker-settings", "generate-dockerfile"],
+    "todo": ["create-todo-list", "enforce-todo-quality-control"],
+    "git": ["git-commit-push", "generate-git-commit-message"],
+    "docs": ["update-documentation-comprehensive", "refactor-readme-concise"]
+  },
+  "rag_sources": {
+    "default_contexts": [
+      "README.md",
+      "docs/style/ascii-style-guide.md",
+      "todos/templates/todo-template.md"
+    ],
+    "category_contexts": {
+      "system-optimization": [
+        "ops/docker/docker-optimize.sh",
+        "config/cursor-settings.json"
+      ],
+      "documentation-generation": [
+        "docs/style/unified-style-system.md",
+        "docs/workflows/"
+      ],
+      "workflow-management": [
+        "docs/workflows/cleanup-and-reorganization-standards.md"
+      ]
+    }
+  }
+}
+```
 
-> **Performance refinement** - Comprehensive IDE optimization for enhanced development experience
+### Features
 
-To optimize Cursor IDE for your MacBook Pro 2015 (macOS 12.7.6 Monterey):
+#### 1. Modular Function Structure
+- `find_latest_prompt()` - Handle prompt discovery and version detection
+- `inject_context()` - Process context engineering and RAG sources
+- `validate_input()` - Input validation and error checking
+- `parse_arguments()` - Handle command-line arguments and flags
+- `output_result()` - Manage output methods (clipboard, file, stdout)
+- `resolve_alias()` - Resolve configured aliases
+- `substitute_variables()` - Process dynamic variables
 
-1. **Open Settings**: Press `Cmd + ,` or use the gear icon in the lower left.
-2. **Search for File Watcher**:
-   - Set `files.watcherExclude` to exclude large folders (e.g., node_modules, build, .git, Dropbox sync folders).
-   - Example:
-     ```json
-     "files.watcherExclude": {
-       "**/node_modules/*": true,
-       "**/build/*": true,
-       "**/.git/objects/**": true,
-       "**/.dropbox/**": true
-     }
-     ```
-3. **Increase TypeScript Server Memory**:
-   - Add or update:
-     ```json
-     "typescript.tsserver.maxTsServerMemory": 2048
-     ```
-   - (You may lower this if you have 8GB RAM, e.g., 1024)
-4. **Optimize for Large Files**:
-   - Set:
-     ```json
-     "files.maxMemoryForLargeFilesMB": 64,
-     "editor.largeFileOptimizations": true
-     ```
-5. **Disable Unused Extensions**:
-   - Go to Extensions (`Cmd+Shift+X`), right-click and disable any you don't use.
-6. **Restart Cursor IDE** after making changes.
+#### 2. Context Engineering
+- **Include Syntax:** `{{include:path/to/file}}`
+- **Variable Substitution:** `{{date}}`, `{{user}}`, `{{project}}`, `{{pwd}}`
+- **RAG Integration:** Structured context injection from configuration
 
-For a ready-to-use settings.json snippet, see `templates/cursor-settings-performance.json`.
+#### 3. Chain Processing
+Execute multiple prompts in sequence:
+```bash
+./ops/run-prompt-v2.sh --chain diagnose-ci git-commit-push
+```
 
-## System Monitoring Setup
+#### 4. Error Handling
+- Ambiguous alias resolution
+- Missing context file warnings
+- Graceful fallbacks for failed operations
+- Comprehensive logging system
 
-> **Monitoring orchestration** - Comprehensive system monitoring and health tracking
+#### 5. Output Methods
+- **Clipboard:** Default method (macOS `pbcopy`)
+- **File:** Save to specified file
+- **Stdout:** Print to terminal
+- **Dry-run:** Preview without execution
 
-### Installed Tools
-> **Tool integration** - Essential monitoring tools for system health
+### Standards Compliance
 
-- **Stats** (v2.11.48) — Menu bar system monitor
-- **htop** (v3.4.1) — Advanced process monitoring
-- **smartmontools** (v7.5) — SSD health monitoring
+The Prompt Router follows DgtlEnv standards:
+- **Naming:** kebab-case for all files and functions
+- **Formatting:** ASCII style for output and logging
+- **Documentation:** Clear, actionable documentation
+- **Error Handling:** Comprehensive error recovery
+- **Testing:** Full test coverage with automated validation
 
-### Health Monitoring
-- Run weekly: `./monitoring/swap-ssd-health.sh`
-- Check menu bar: Stats app for real-time metrics
-- Process monitoring: `sudo htop`
+### Integration Points
 
-### Output Locations
-- Health logs: `~/Library/Logs/swap-ssd-health.log`
-- Docker logs: `~/Library/Logs/docker-optimize.log`
+- **Prompts System:** `prompts/categories/`
+- **Configuration:** `config/prompt-router-config.json`
+- **Logging:** `logs/prompt-router.log`
+- **Testing:** `tests/prompt-router-tests.sh`
+- **Documentation:** This README and inline comments
 
-## Docker/Colima Optimization
+### Troubleshooting
 
-> **Resource orchestration** - Advanced Docker optimization and resource management
+#### Common Issues
 
-### Resource Management
-> **Performance optimization** - Sophisticated resource limits and cleanup procedures
+1. **Prompt Not Found**
+   ```bash
+   # Check available prompts
+   ./ops/run-prompt-v2.sh --list
 
-- Container limits: 2 CPU, 2GB RAM per container
-- Regular cleanup: `./docker/docker-optimize.sh`
-- Colima setup: Lighter alternative to Docker Desktop
+   # Search for similar prompts
+   ./ops/run-prompt-v2.sh --search <term>
+   ```
 
-### Migration Options
-- Keep Docker Desktop with optimized settings
-- Switch to Colima for lighter footprint
-- Hybrid approach for specific workflows
+2. **Context Injection Fails**
+   ```bash
+   # Enable verbose mode for debugging
+   ./ops/run-prompt-v2.sh --verbose --dry-run <prompt>
+   ```
 
-See `docker/README.md` for complete setup and optimization guide.
+3. **Configuration Issues**
+   - Verify `config/prompt-router-config.json` exists and is valid JSON
+   - Check file permissions for configuration and log directories
 
-## Maintenance Schedule
+4. **Performance Issues**
+   - Use dry-run mode for testing: `--dry-run`
+   - Check log files for detailed information: `logs/prompt-router.log`
 
-### Weekly
-- System health check: `./monitoring/swap-ssd-health.sh`
-- Review Stats menu bar for trends
-- Check htop for resource hogs: `sudo htop`
+#### Log Files
+- **Router Logs:** `logs/prompt-router.log`
+- **Test Logs:** `logs/prompt-router-test.log`
 
-### Monthly
-- Docker optimization: `./docker/docker-optimize.sh`
-- System cleanup: `./cleanup/brew-cleanup.sh` and `./cleanup/docker-cleanup.sh`
-- Project backup: `./backup/create-digitalenv-backup.sh`
-- Review log files in `~/Library/Logs/`
+### Development
 
-### Pre-Release
-- Security sanitization: `./scripts/pre-release-sanitizer.sh --fix`
-- Verify sanitization: `./scripts/pre-release-sanitizer.sh --dry-run`
-- Review generated report: `cat logs/sanitization-report-*.md`
-- Organization standards check: `./scripts/enforce-organization-standards.sh`
-- Todo quality control validation: `./scripts/enforce-organization-standards.sh` (with smart migration detection)
+#### Adding New Features
+1. Follow the modular function structure
+2. Add comprehensive error handling
+3. Include verbose logging
+4. Update tests in `tests/prompt-router-tests.sh`
+5. Update documentation
 
-### Quarterly
-- Review and update optimization scripts
-- Check for new versions of monitoring tools
-- Assess SSD health trends
-- Adjust resource limits based on usage patterns
-- Update security patterns in sanitizer
+#### Testing
+```bash
+# Run test suite
+./tests/prompt-router-tests.sh --verbose
+
+# Manual testing
+./ops/run-prompt-v2.sh --dry-run <prompt>
+```
+
+### Performance
+
+The enhanced Prompt Router is optimized for:
+- **Speed:** Fast prompt discovery and processing
+- **Memory:** Efficient context injection
+- **Reliability:** Comprehensive error handling
+- **Maintainability:** Modular design with clear separation of concerns
+
+### Future Enhancements
+
+Planned features for future versions:
+- **Advanced RAG:** Structured context parsing from YAML frontmatter
+- **Plugin System:** Extensible prompt processing
+- **Remote Context:** Support for remote context sources
+- **Advanced Chaining:** Conditional prompt execution
+- **Performance Monitoring:** Detailed performance metrics

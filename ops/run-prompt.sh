@@ -1,141 +1,480 @@
 #!/bin/bash
 
 # ##############################################################################
-# DgtlEnv Prompt Router v1.0.0
+# DgtlEnv Prompt Router v2.0.0
 #
-# Takes a prompt alias, finds the latest version of that prompt, injects
-# context from specified files, and copies the final result to the clipboard.
+# Enhanced prompt routing with modular functions, dry-run mode, and improved
+# error handling. Follows DgtlEnv standards for maintainability and robustness.
 #
 # Usage:
-#   ./ops/run-prompt.sh <prompt-alias>
+#   ./ops/run-prompt-v2.sh [-d|--dry-run] <prompt-alias>
+#   ./ops/run-prompt-v2.sh --list
+#   ./ops/run-prompt-v2.sh --search <term>
+#
+# Options:
+#   -d, --dry-run   Print the final prompt to terminal instead of copying
+#   --list          List all available prompts
+#   --search <term> Search prompts by term
 #
 # Example:
-#   ./ops/run-prompt.sh diagnose-ci
+#   ./ops/run-prompt-v2.sh diagnose-ci
+#   ./ops/run-prompt-v2.sh --dry-run readme-shortening
 # ##############################################################################
 
+set -eo pipefail
+
 # --- Configuration ---
-PROMPT_ALIAS=$1
-PROMPTS_DIR="prompts/categories"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+PROMPTS_DIR="${PROJECT_ROOT}/prompts/categories"
+LOG_FILE="${PROJECT_ROOT}/logs/prompt-router.log"
+CONFIG_FILE="${PROJECT_ROOT}/config/prompt-router-config.json"
 
-# --- Input Validation ---
-if [[ -z "$PROMPT_ALIAS" ]]; then
-  echo "❌ Error: No prompt alias provided."
-  echo "Usage: $0 <prompt-alias>"
-  echo ""
-  echo "Available commands:"
-  echo "  $0 --list          # List all available prompts"
-  echo "  $0 --search <term> # Search prompts by term"
-  exit 1
-fi
+# --- Global Variables ---
+DRY_RUN=0
+VERBOSE=0
+PROMPT_ALIAS=""
 
-# --- Handle Special Commands ---
-if [[ "$PROMPT_ALIAS" == "--list" ]]; then
-  echo "📋 Available Prompts:"
-  find "$PROMPTS_DIR" -name "*.md" | grep -v README | sort | while read -r file; do
-    basename=$(basename "$file" .md)
-    echo "  • $basename"
-  done
-  exit 0
-fi
+# --- Logging Functions ---
+log() {
+    local level=$1
+    shift
+    local message="$*"
+    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
-if [[ "$PROMPT_ALIAS" == "--search" ]]; then
-  SEARCH_TERM=$2
-  if [[ -z "$SEARCH_TERM" ]]; then
-    echo "❌ Error: No search term provided."
-    echo "Usage: $0 --search <term>"
-    exit 1
-  fi
-  echo "🔍 Searching for prompts containing: '$SEARCH_TERM'"
-  find "$PROMPTS_DIR" -name "*.md" | grep -v README | grep -i "$SEARCH_TERM" | while read -r file; do
-    basename=$(basename "$file" .md)
-    echo "  • $basename"
-  done
-  exit 0
-fi
+    # Create log directory if it doesn't exist
+    mkdir -p "$(dirname "$LOG_FILE")"
 
-# --- 1. Search and Route ---
-echo "🔎 Searching for prompts matching alias: '$PROMPT_ALIAS'..."
+    # Write to log file
+    echo "[$timestamp] [$level] $message" >> "$LOG_FILE"
 
-# Normalize the alias: convert spaces to hyphens and lowercase
-NORMALIZED_ALIAS=$(echo "$PROMPT_ALIAS" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+    # Output to stderr for errors and warnings
+    if [[ "$level" == "error" ]] || [[ "$level" == "warn" ]]; then
+        echo "$message" >&2
+    elif [[ "$VERBOSE" -eq 1 ]]; then
+        echo "$message"
+    fi
+}
 
-# Try exact match first
-LATEST_PROMPT_FILE=$(find "$PROMPTS_DIR" -type f -name "${NORMALIZED_ALIAS}-*.md" | sort -V | tail -n 1)
+# --- Input Validation Functions ---
+validate_input() {
+    local alias="$1"
 
-# If no exact match, try fuzzy matching
-if [[ -z "$LATEST_PROMPT_FILE" ]]; then
-  echo "🔍 No exact match found, trying fuzzy search..."
+    if [[ -z "$alias" ]]; then
+        log "error" "No prompt alias provided"
+        return 1
+    fi
 
-  # Create a pattern that matches the alias with any separators
-  FUZZY_PATTERN=$(echo "$PROMPT_ALIAS" | sed 's/[[:space:]]/.*/g' | sed 's/./[&]/g')
+    # Check for valid characters (alphanumeric, hyphens, spaces)
+    if [[ ! "$alias" =~ ^[a-zA-Z0-9\ \-_]+$ ]]; then
+        log "error" "Invalid characters in alias: $alias"
+        return 1
+    fi
 
-  # Find files that contain the alias words in any order
-  LATEST_PROMPT_FILE=$(find "$PROMPTS_DIR" -name "*.md" | grep -v README | while read -r file; do
-    basename=$(basename "$file" .md)
-    # Check if all words in the alias are present in the filename
-    MATCH=true
-    for word in $PROMPT_ALIAS; do
-      # Convert word to lowercase for comparison
-      word_lower=$(echo "$word" | tr '[:upper:]' '[:lower:]')
-      if [[ ! "$basename" =~ $word_lower ]]; then
-        MATCH=false
-        break
-      fi
+    return 0
+}
+
+# --- Argument Parsing Functions ---
+parse_arguments() {
+    local args=("$@")
+
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -d|--dry-run)
+                DRY_RUN=1
+                log "info" "Dry-run mode enabled"
+                shift
+                ;;
+            -v|--verbose)
+                VERBOSE=1
+                log "info" "Verbose mode enabled"
+                shift
+                ;;
+            --list)
+                list_available_prompts
+                exit 0
+                ;;
+            --search)
+                if [[ -z "$2" ]]; then
+                    log "error" "No search term provided for --search"
+                    exit 1
+                fi
+                search_prompts "$2"
+                exit 0
+                ;;
+            --chain)
+                shift
+                if [[ $# -lt 2 ]]; then
+                    log "error" "Chain mode requires at least 2 prompts"
+                    exit 1
+                fi
+                local chain_result
+                chain_result=$(process_chain "$@")
+                if [[ $? -eq 0 ]]; then
+                    output_result "$chain_result" "chain-result"
+                    log "info" "Chain processing completed successfully"
+                else
+                    log "error" "Chain processing failed"
+                    exit 1
+                fi
+                exit 0
+                ;;
+            --help|-h)
+                show_help
+                exit 0
+                ;;
+            -*)
+                log "error" "Unknown option: $1"
+                show_help
+                exit 1
+                ;;
+            *)
+                PROMPT_ALIAS="$1"
+                shift
+                ;;
+        esac
     done
-    if [[ "$MATCH" == "true" ]]; then
-      echo "$file"
+
+    if [[ -z "$PROMPT_ALIAS" ]]; then
+        log "error" "No prompt alias provided"
+        show_help
+        exit 1
     fi
-  done | sort -V | tail -n 1)
-fi
+}
 
-if [[ -z "$LATEST_PROMPT_FILE" ]]; then
-  echo "❌ Error: No prompt files found for alias '$PROMPT_ALIAS'."
-  echo ""
-  echo "💡 Try these alternatives:"
-  find "$PROMPTS_DIR" -name "*.md" | grep -v README | while read -r file; do
-    basename=$(basename "$file" .md)
-      # Show files that contain any of the words in the alias
-  for word in $PROMPT_ALIAS; do
-    # Convert word to lowercase for comparison
-    word_lower=$(echo "$word" | tr '[:upper:]' '[:lower:]')
-    if [[ "$basename" =~ $word_lower ]]; then
-      echo "  • $basename"
-      break
+# --- Prompt Discovery Functions ---
+resolve_alias() {
+    local input="$1"
+
+    # Check if input is a configured alias
+    if [[ -f "$CONFIG_FILE" ]]; then
+        # Check if jq is available
+        if command -v jq >/dev/null 2>&1; then
+            local resolved
+            resolved=$(jq -r --arg input "$input" '.aliases | to_entries[] | select(.key == $input) | .value[0]' "$CONFIG_FILE" 2>/dev/null)
+            if [[ -n "$resolved" && "$resolved" != "null" ]]; then
+                log "debug" "Resolved alias: $input -> $resolved"
+                echo "$resolved"
+                return 0
+            fi
+        else
+            log "debug" "jq not available, skipping alias resolution"
+        fi
     fi
-  done
-  done
-  exit 1
-fi
 
-echo "✅ Latest version found: $LATEST_PROMPT_FILE"
+    # Fallback to input as-is
+    echo "$input"
+}
 
-# --- 2. Perform Context Engineering ---
-echo "⚙️  Processing context for the prompt..."
-PROMPT_BODY=$(cat "$LATEST_PROMPT_FILE")
+find_latest_prompt() {
+    local alias="$1"
+    local search_dir="$2"
 
-# Find all 'include' placeholders, e.g., {{include:path/to/file.log}}
-# Using a while loop to handle multiple placeholders in the same file
-while IFS= read -r line; do
-  if [[ "$line" == *"{{include:"* ]]; then
-    # Extract the file path from the placeholder
-    FILE_TO_INCLUDE=$(echo "$line" | sed -n 's/.*{{include:\([^}]*\)}}.*/\1/p')
+    log "info" "Searching for prompts matching alias: '$alias'"
 
-    if [[ -f "$FILE_TO_INCLUDE" ]]; then
-      # Read the content of the file to be included
-      INCLUDED_CONTENT=$(cat "$FILE_TO_INCLUDE")
-      # Replace the placeholder with the actual file content
-      PROMPT_BODY=$(echo "$PROMPT_BODY" | sed "s|{{include:${FILE_TO_INCLUDE}}}|${INCLUDED_CONTENT}|")
-      echo "   → Injected context from: $FILE_TO_INCLUDE"
+    # Resolve alias first
+    local resolved_alias
+    resolved_alias=$(resolve_alias "$alias")
+    log "debug" "Resolved alias: $alias -> $resolved_alias"
+
+    # Normalize the alias
+    local normalized_alias=$(echo "$resolved_alias" | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+
+    # Try exact match first
+    local matches
+    matches=$(find "$search_dir" -type f -name "${normalized_alias}-*.md" 2>/dev/null)
+
+    if [[ -z "$matches" ]]; then
+        log "debug" "No exact match found, trying fuzzy search"
+
+        # Fuzzy matching
+        matches=$(find "$search_dir" -name "*.md" | grep -v README | while read -r file; do
+            basename=$(basename "$file" .md)
+            match=true
+            for word in $resolved_alias; do
+                word_lower=$(echo "$word" | tr '[:upper:]' '[:lower:]')
+                if [[ ! "$basename" =~ $word_lower ]]; then
+                    match=false
+                    break
+                fi
+            done
+            if [[ "$match" == "true" ]]; then
+                echo "$file"
+            fi
+        done)
+    fi
+
+    if [[ -z "$matches" ]]; then
+        log "error" "No prompt files found for alias '$alias'"
+        suggest_alternatives "$alias" "$search_dir"
+        return 1
+    fi
+
+    # Use 'sort -V' for natural version sorting and get the latest one
+    local latest_file
+    latest_file=$(echo "$matches" | sort -V | tail -n 1)
+
+    log "info" "Latest version found: $latest_file"
+    echo "$latest_file"
+}
+
+suggest_alternatives() {
+    local alias="$1"
+    local search_dir="$2"
+
+    log "info" "Suggesting alternatives for: $alias"
+    echo "💡 Try these alternatives:"
+
+    find "$search_dir" -name "*.md" | grep -v README | while read -r file; do
+        basename=$(basename "$file" .md)
+        # Show files that contain any of the words in the alias
+        for word in $alias; do
+            word_lower=$(echo "$word" | tr '[:upper:]' '[:lower:]')
+            if [[ "$basename" =~ $word_lower ]]; then
+                echo "  • $basename"
+                break
+            fi
+        done
+    done
+}
+
+# --- Context Engineering Functions ---
+inject_context() {
+    local prompt_body="$1"
+
+    log "info" "Processing context for the prompt"
+
+    # Parse YAML frontmatter for RAG sources
+    local rag_sources
+    rag_sources=$(parse_rag_sources "$prompt_body")
+
+    # Process {{include:path}} placeholders
+    local final_body
+    final_body=$(echo "$prompt_body" | awk '
+    {
+        while(match($0, /{{include:([^}]+)}}/)) {
+            file=substr($0, RSTART+10, RLENGTH-11);
+            if ((getline content < file) > 0) {
+                gsub("{{include:" file "}}", content);
+                print "   → Injected context from: " file > "/dev/stderr";
+            } else {
+                print "   ⚠️  Warning: Could not find file to include: " file > "/dev/stderr";
+                gsub("{{include:" file "}}", "[CONTEXT NOT FOUND: " file "]");
+            }
+            close(file);
+        }
+        print;
+    }
+    ')
+
+    # Inject RAG sources if available
+    if [[ -n "$rag_sources" ]]; then
+        final_body=$(inject_rag_sources "$final_body" "$rag_sources")
+    fi
+
+    # Substitute variables
+    final_body=$(substitute_variables "$final_body")
+
+    echo "$final_body"
+}
+
+# --- RAG Source Parsing Functions ---
+parse_rag_sources() {
+    local prompt_body="$1"
+
+    # Extract YAML frontmatter
+    local frontmatter
+    frontmatter=$(echo "$prompt_body" | awk '
+    /^---$/ { in_frontmatter = !in_frontmatter; next }
+    in_frontmatter { print }
+    /^---$/ { exit }
+    ')
+
+    # Parse rag_sources from frontmatter
+    if [[ -n "$frontmatter" ]]; then
+        echo "$frontmatter" | grep "rag_sources:" | sed 's/.*rag_sources:\s*\[\([^]]*\)\].*/\1/' | tr ',' '\n' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//'
+    fi
+}
+
+# --- RAG Source Injection Functions ---
+inject_rag_sources() {
+    local prompt_body="$1"
+    local rag_sources="$2"
+
+    log "info" "Injecting RAG sources: $rag_sources"
+
+    # Create context section if it doesn't exist
+    if ! echo "$prompt_body" | grep -q "## Context Engineering"; then
+        prompt_body=$(echo "$prompt_body" | sed '/## Instructions/a\
+\
+## Context Engineering\
+- **RAG Sources**: '"$rag_sources"'\
+')
     else
-      echo "   ⚠️  Warning: Could not find file to include: $FILE_TO_INCLUDE"
+        # Add RAG sources to existing context section
+        prompt_body=$(echo "$prompt_body" | sed '/## Context Engineering/a\
+- **RAG Sources**: '"$rag_sources"'\
+')
     fi
-  fi
-done <<< "$PROMPT_BODY"
 
-# --- 3. Deliver Final Output ---
-echo "$PROMPT_BODY" | pbcopy
+    echo "$prompt_body"
+}
 
-echo "🚀 Prompt Router: Successfully prepared '$LATEST_PROMPT_FILE' with live context."
-echo "📋 The final prompt has been copied to your clipboard."
-echo ""
-echo "💡 Tip: You can now paste the prompt directly into your AI assistant."
+# --- Variable Substitution Functions ---
+substitute_variables() {
+    local content="$1"
+
+    # Date variables
+    content=$(echo "$content" | sed "s/{{date}}/$(date +%Y-%m-%d)/g")
+    content=$(echo "$content" | sed "s/{{time}}/$(date +%H:%M:%S)/g")
+    content=$(echo "$content" | sed "s/{{timestamp}}/$(date +%Y%m%d-%H%M%S)/g")
+
+    # Project variables
+    content=$(echo "$content" | sed "s/{{project}}/DgtlEnv/g")
+    content=$(echo "$content" | sed "s/{{user}}/$(whoami)/g")
+
+    # Environment variables
+    content=$(echo "$content" | sed "s|{{pwd}}|$(pwd)|g")
+
+    echo "$content"
+}
+
+# --- Output Functions ---
+output_result() {
+    local content="$1"
+    local prompt_name="$2"
+
+    if [[ $DRY_RUN -eq 1 ]]; then
+        echo "--- 📋 Dry Run: Final Prompt Output ---"
+        echo "$content"
+        echo "------------------------------------"
+        echo "✨ Dry run complete. Nothing copied to clipboard."
+        log "info" "Dry run completed for: $prompt_name"
+    else
+        echo "$content" | pbcopy
+        echo "🚀 Prompt Router: Successfully prepared '$prompt_name'."
+        echo "📋 The final prompt has been copied to your clipboard."
+        log "info" "Prompt copied to clipboard: $prompt_name"
+    fi
+}
+
+# --- Utility Functions ---
+list_available_prompts() {
+    echo "📋 Available Prompts:"
+    find "$PROMPTS_DIR" -name "*.md" | grep -v README | sort | while read -r file; do
+        basename=$(basename "$file" .md)
+        echo "  • $basename"
+    done
+}
+
+search_prompts() {
+    local search_term="$1"
+    echo "🔍 Searching for prompts containing: '$search_term'"
+    find "$PROMPTS_DIR" -name "*.md" | grep -v README | grep -i "$search_term" | while read -r file; do
+        basename=$(basename "$file" .md)
+        echo "  • $basename"
+    done
+}
+
+show_help() {
+    echo "DgtlEnv Prompt Router v2.0.0"
+    echo ""
+    echo "Usage:"
+    echo "  $0 [-d|--dry-run] <prompt-alias>"
+    echo "  $0 --list"
+    echo "  $0 --search <term>"
+    echo "  $0 --chain <prompt1> <prompt2> [prompt3...]"
+    echo "  $0 --help"
+    echo ""
+    echo "Options:"
+    echo "  -d, --dry-run   Print the final prompt to terminal instead of copying"
+    echo "  -v, --verbose   Enable verbose logging"
+    echo "  --list          List all available prompts"
+    echo "  --search <term> Search prompts by term"
+    echo "  --chain <prompts> Execute multiple prompts in sequence"
+    echo "  --help, -h      Show this help message"
+    echo ""
+    echo "Examples:"
+    echo "  $0 diagnose-ci"
+    echo "  $0 --dry-run readme-shortening"
+    echo "  $0 --search docker"
+    echo "  $0 --chain diagnose-ci git-commit-push"
+}
+
+# --- Main Processing Function ---
+process_prompt() {
+    local alias="$1"
+    local mode="${2:-single}"
+
+    log "info" "Processing prompt: $alias (mode: $mode)"
+
+    # Validate input
+    if ! validate_input "$alias"; then
+        return 1
+    fi
+
+    # Find the latest prompt file
+    local latest_prompt_file
+    latest_prompt_file=$(find_latest_prompt "$alias" "$PROMPTS_DIR")
+    if [[ $? -ne 0 ]]; then
+        return 1
+    fi
+
+    # Read the prompt content
+    local prompt_body
+    prompt_body=$(cat "$latest_prompt_file")
+
+    # Inject context
+    local final_prompt
+    final_prompt=$(inject_context "$prompt_body")
+
+    # Output the result based on mode
+    if [[ "$mode" == "single" ]]; then
+        local prompt_name
+        prompt_name=$(basename "$latest_prompt_file" .md)
+        output_result "$final_prompt" "$prompt_name"
+    else
+        echo "$final_prompt"
+    fi
+
+    return 0
+}
+
+# --- Chain Processing Function ---
+process_chain() {
+    local prompts=("$@")
+    local chain_result=""
+
+    log "info" "Processing prompt chain: ${prompts[*]}"
+
+    for prompt in "${prompts[@]}"; do
+        log "info" "Processing chain prompt: $prompt"
+        local result
+        result=$(process_prompt "$prompt" "chain")
+        if [[ $? -eq 0 ]]; then
+            chain_result="${chain_result}${result}\n\n---\n\n"
+        else
+            log "error" "Failed to process prompt in chain: $prompt"
+            return 1
+        fi
+    done
+
+    echo "$chain_result"
+}
+
+# --- Main Function ---
+main() {
+    # Parse arguments
+    parse_arguments "$@"
+
+    # Process the prompt
+    if process_prompt "$PROMPT_ALIAS"; then
+        log "info" "Prompt processing completed successfully"
+    else
+        log "error" "Prompt processing failed"
+        exit 1
+    fi
+}
+
+# --- Script Execution ---
+main "$@"
