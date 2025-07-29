@@ -120,11 +120,11 @@ check_todo_metrics() {
             ((WARNINGS++))
         fi
 
-        # Check for ASCII progress bars
+        # Check for progress bars
         if grep -q "████" "$master_todo"; then
-            echo -e "${GREEN}✅ PASS: Master todo contains ASCII progress charts${NC}"
+            echo -e "${GREEN}✅ PASS: Master todo contains progress charts${NC}"
         else
-            echo -e "${YELLOW}⚠️  WARNING: Master todo missing ASCII progress charts${NC}"
+            echo -e "${YELLOW}⚠️  WARNING: Master todo missing progress charts${NC}"
             ((WARNINGS++))
         fi
     else
@@ -138,9 +138,9 @@ check_todo_metrics() {
 
         # Check for ASCII charts in dashboard
         if grep -q "████" "$todo_dashboard"; then
-            echo -e "${GREEN}✅ PASS: Todo dashboard contains ASCII progress charts${NC}"
+            echo -e "${GREEN}✅ PASS: Todo dashboard contains progress charts${NC}"
         else
-            echo -e "${YELLOW}⚠️  WARNING: Todo dashboard missing ASCII progress charts${NC}"
+            echo -e "${YELLOW}⚠️  WARNING: Todo dashboard missing progress charts${NC}"
             ((WARNINGS++))
         fi
 

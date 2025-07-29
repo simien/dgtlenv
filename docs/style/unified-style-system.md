@@ -224,7 +224,7 @@ Always use consistent status indicators:
 - 🔄 for in-progress operations
 
 ### 2. Progress Visualization
-Use ASCII progress bars for:
+Use progress bars for:
 - System resource usage
 - Task completion percentages
 - File conversion progress

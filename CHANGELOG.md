@@ -76,7 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### **Advanced Todo Management System**
 - **Automated Migration:** Smart detection of already-migrated items vs items needing migration
 - **Quality Control:** Comprehensive validation and organization standards enforcement
-- **Metrics Dashboard:** ASCII progress charts and completion tracking
+- **Metrics Dashboard:** progress charts and completion tracking
 - **Workflow Integration:** Seamless integration with pre-release and maintenance workflows
 
 #### **Comprehensive Quality Control**

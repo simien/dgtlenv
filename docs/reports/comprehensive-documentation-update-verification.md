@@ -144,7 +144,7 @@ All tests passed! 🎉
 📊 Checking Todo Metrics and Dashboard
 ----------------------------------------
 ✅ PASS: Todo metrics dashboard exists
-✅ PASS: Todo dashboard contains ASCII progress charts
+✅ PASS: Todo dashboard contains progress charts
 ✅ PASS: Active todos directory exists with 15 todo files
 
 📋 Checking Todo Quality Standards

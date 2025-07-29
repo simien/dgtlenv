@@ -87,11 +87,11 @@ check_todo_metrics() {
             print_warning "Master todo may be outdated (last updated: $last_updated)"
         fi
 
-        # Check for ASCII progress bars
+        # Check for progress bars
         if grep -q "████" "$master_todo"; then
-            print_success "Master todo contains ASCII progress charts"
+            print_success "Master todo contains progress charts"
         else
-            print_warning "Master todo missing ASCII progress charts"
+            print_warning "Master todo missing progress charts"
         fi
     else
         print_error "Master todo file missing"
@@ -104,9 +104,9 @@ check_todo_metrics() {
 
         # Check for ASCII charts in dashboard
         if grep -q "████" "$todo_dashboard"; then
-            print_success "Todo dashboard contains ASCII progress charts"
+            print_success "Todo dashboard contains progress charts"
         else
-            print_warning "Todo dashboard missing ASCII progress charts"
+            print_warning "Todo dashboard missing progress charts"
         fi
 
         # Check dashboard is current
