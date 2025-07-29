@@ -2,6 +2,8 @@
 
 ## Introduction
 
+> **Contextual orchestration** - A sophisticated prompt management solution for semantic routing and quality control
+
 The DgtlEnv Prompt System is a sophisticated contextual prompt management solution that provides semantic routing, quality control, and analytics for structured prompts across the project. This system enables efficient contextual workflows with natural language access and comprehensive validation.
 
 ## System Architecture
@@ -46,6 +48,8 @@ The DgtlEnv Prompt System is a sophisticated contextual prompt management soluti
 ## Current System Status (July 28, 2025)
 
 ### Quality Control Results
+> **Performance insights** - Comprehensive quality control and validation metrics
+
 - **Validation Status**: ✅ All prompts passed validation (24/24)
 - **Template Compliance**: 100% ✅
 - **Metadata Completeness**: 100% ✅
@@ -53,6 +57,8 @@ The DgtlEnv Prompt System is a sophisticated contextual prompt management soluti
 - **File Naming Standards**: 100% ✅
 
 ### System Metrics
+> **Performance tracking** - Real-time system metrics and analytics
+
 - **Total Prompts**: 24
 - **Categories**: 5
 - **Average Lines per Prompt**: 79
@@ -60,13 +66,16 @@ The DgtlEnv Prompt System is a sophisticated contextual prompt management soluti
 - **Success Rate**: 100%
 
 ### Category Distribution
-```
-code-analysis               5 (20%)
-documentation-generation    5 (20%)
-meta-prompts                3 (12%)
-system-optimization         5 (20%)
-workflow-management         6 (25%)
-```
+> **Analytics insights** - Prompt distribution across categories
+>
+> ### 📊 Distribution Overview
+> ```
+> code-analysis               5 (20%)
+> documentation-generation    5 (20%)
+> meta-prompts                3 (12%)
+> system-optimization         5 (20%)
+> workflow-management         6 (25%)
+> ```
 
 ## Usage Examples
 
@@ -86,16 +95,18 @@ workflow-management         6 (25%)
 
 ### Enhanced Router Features
 > **Advanced orchestration** - Sophisticated features for complex workflows
-```bash
-# Enhanced router with logging
-./ops/run-prompt-enhanced.sh diagnose-ci
-
-# Prompt chaining
-./ops/run-prompt-enhanced.sh --chain diagnose-ci generate-report
-
-# Custom configuration
-./ops/run-prompt-enhanced.sh --config custom-config.json diagnose-ci
-```
+>
+> ### 🔧 Advanced Usage Examples
+> ```bash
+> # Enhanced router with logging
+> ./ops/run-prompt-enhanced.sh diagnose-ci
+>
+> # Prompt chaining
+> ./ops/run-prompt-enhanced.sh --chain diagnose-ci generate-report
+>
+> # Custom configuration
+> ./ops/run-prompt-enhanced.sh --config custom-config.json diagnose-ci
+> ```
 
 ### Analytics and Validation
 > **Quality assurance** - Comprehensive validation and performance insights

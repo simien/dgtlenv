@@ -53,35 +53,35 @@ docs/
 > **Refined categorization** - Sophisticated organization for optimal navigation
 
 ### 🎯 Guides (`guides/`)
-Step-by-step tutorials and practical guides for environment optimization and development workflows:
+> **Performance refinement** - Step-by-step tutorials and practical guides for environment optimization
 
 - **Environment Optimization** - Comprehensive optimization strategies for your Mac
 - **Cursor/VS Code Settings** - IDE configuration and sync
 - **Development Workflows** - Best practices and procedures
 
 ### ⚙️ Setup (`setup/`)
-Installation, configuration, and hardware documentation for proper environment setup:
+> **Configuration management** - Installation, configuration, and hardware documentation for proper environment setup
 
 - **GitHub Setup** - Repository configuration and management
 - **Hardware Specifications** - System specs and capabilities
 - **Installation Guides** - Setup procedures and requirements
 
 ### 🎨 Style (`style/`)
-Visual design, branding, and formatting standards for consistent project presentation:
+> **Visual sophistication** - Visual design, branding, and formatting standards for consistent project presentation
 
 - **ASCII Style Guide** - Visual elements and art
 - **Naming Guidelines** - File and directory conventions
 - **Unified Style System** - Comprehensive design standards
 
 ### 📊 Reports (`reports/`)
-Project assessments, analysis, and performance tracking for informed decision-making:
+> **Performance insights** - Project assessments, analysis, and performance tracking for informed decision-making
 
 - **Structure Assessments** - Directory organization analysis
 - **Optimization Reports** - Performance improvement tracking
 - **Quality Control** - Standards and compliance reports
 
 ### 🔄 Workflows (`workflows/`)
-Process documentation and operational procedures for efficient environment management:
+> **Environment orchestration** - Process documentation and operational procedures for efficient environment management
 
 - **PDF Management** - Conversion and processing workflows
 - **Release Management** - Version control and distribution
@@ -91,14 +91,14 @@ Process documentation and operational procedures for efficient environment manag
 - **Prompt Management** - Contextual prompt routing and quality control
 
 ### 📚 Development History (`development-history/`)
-Project evolution and decision tracking for maintaining context and knowledge:
+> **Knowledge preservation** - Project evolution and decision tracking for maintaining context and knowledge
 
 - **Chat Transcripts** - Development conversations
 - **Decision Log** - Key decisions and rationale
 - **Project Evolution** - Development timeline and milestones
 
 ### 🧠 Contextual Systems (`prompt-system-overview.md`)
-Advanced contextual prompt management and automation:
+> **Sophisticated orchestration** - Advanced contextual prompt management and automation
 
 - **Prompt System Overview** - Comprehensive prompt management documentation
 - **Router Architecture** - Semantic prompt routing and discovery
@@ -129,6 +129,8 @@ Advanced contextual prompt management and automation:
 > **Practical orchestration** - Sophisticated workflows for common tasks
 
 ### PDF Conversion Workflow
+> **Document orchestration** - Automated PDF processing and conversion workflow
+
 ```bash
 # Add PDF to incoming directory
 cp document.pdf docs/incoming/
@@ -141,6 +143,8 @@ cp document.pdf docs/incoming/
 ```
 
 ### System Optimization
+> **Performance refinement** - Comprehensive system optimization and health monitoring
+
 ```bash
 # Apply optimization settings
 ./scripts/sync-cursor-settings.sh
@@ -153,6 +157,8 @@ cp document.pdf docs/incoming/
 ```
 
 ### Documentation Updates
+> **Knowledge management** - Automated documentation generation and maintenance
+
 ```bash
 # Update optimization documentation
 ./metrics/system-metrics-tracker.sh compare
@@ -165,6 +171,8 @@ find docs/ -name "*.md" -type f
 ```
 
 ### Prompt System Management
+> **Contextual orchestration** - Advanced prompt management and analytics
+
 ```bash
 # Run prompt analytics
 ./scripts/prompt-analytics.sh

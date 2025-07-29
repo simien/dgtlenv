@@ -8,13 +8,19 @@
 
 ## 🎯 **Core Principles**
 
+> **Organization sophistication** - Systematic standards for consistent project structure
+
 ### **1. Directory Organization Standards**
+> **Structural refinement** - Logical organization principles for optimal navigation
+
 - **No files in root directories** unless they are README files or essential configuration
 - **Logical grouping** by content type and purpose
 - **Consistent naming** conventions across all directories
 - **README files** in every directory explaining purpose and contents
 
 ### **2. File Placement Rules**
+> **Logical organization** - Systematic file placement for optimal structure
+
 - **Documentation files** → `docs/` with appropriate subdirectories
 - **Reports and assessments** → `docs/reports/`
 - **Process documentation** → `docs/workflows/`
@@ -24,6 +30,8 @@
 - **Development history** → `docs/development-history/`
 
 ### **3. Cleanup Process Standards**
+> **Maintenance orchestration** - Systematic cleanup procedures for optimal performance
+
 - **Backup files** → `config/backups/` or remove entirely
 - **System files** (`.DS_Store`) → Remove completely
 - **Temporary files** → Remove completely
@@ -33,7 +41,11 @@
 
 ## 📋 **Process Checklist**
 
+> **Quality assurance** - Systematic process for safe and effective reorganization
+
 ### **Before Starting Any Reorganization**
+> **Preparation phase** - Essential steps before beginning reorganization
+
 - [ ] **Create backup** of current state
 - [ ] **Commit current state** to git
 - [ ] **Document the plan** in a todo file
@@ -41,6 +53,8 @@
 - [ ] **Identify target directories** for moved files
 
 ### **During Reorganization**
+> **Execution phase** - Systematic approach to reorganization
+
 - [ ] **Create new directories** first
 - [ ] **Add README files** to new directories
 - [ ] **Move files by logical groups** (not one by one)
@@ -49,6 +63,8 @@
 - [ ] **Remove backup files** and system files
 
 ### **After Reorganization**
+> **Validation phase** - Quality assurance and documentation updates
+
 - [ ] **Verify all functionality** works correctly
 - [ ] **Update main README** files with new structure
 - [ ] **Test all scripts** and workflows
@@ -60,36 +76,39 @@
 ## 📁 **Directory Structure Standards**
 
 ### **Required Directories**
-```
-docs/
-├── README.md                                    # Main docs index
-├── guides/                                      # Step-by-step tutorials
-│   ├── README.md                               # Guides overview
-│   └── [tutorial files]
-├── setup/                                       # Installation & configuration
-│   ├── README.md                               # Setup overview
-│   ├── github-setup.md                         # GitHub setup
-│   └── hardware-specs/                         # Hardware documentation
-│       ├── README.md                           # Hardware overview
-│       └── [hardware spec files]
-├── style/                                       # Style guides and branding
-│   ├── README.md                               # Style overview
-│   └── [style guide files]
-├── reports/                                     # Project reports and assessments
-│   ├── README.md                               # Reports overview
-│   └── [report files]
-├── workflows/                                   # Process documentation
-│   ├── README.md                               # Workflows overview
-│   └── [workflow files]
-├── development-history/                         # Development tracking
-│   ├── README.md                               # Development history overview
-│   ├── chat-transcripts/                       # Exported conversations
-│   ├── decision-log/                           # Key decisions
-│   └── project-evolution/                      # Development timeline
-└── incoming/                                    # PDF drop zone
-    ├── README.md                               # Incoming workflow
-    └── [PDF files]
-```
+> **Structural organization** - Comprehensive directory structure for optimal organization
+>
+> ### 📁 Directory Architecture
+> ```
+> docs/
+> ├── README.md                                    # Main docs index
+> ├── guides/                                      # Step-by-step tutorials
+> │   ├── README.md                               # Guides overview
+> │   └── [tutorial files]
+> ├── setup/                                       # Installation & configuration
+> │   ├── README.md                               # Setup overview
+> │   ├── github-setup.md                         # GitHub setup
+> │   └── hardware-specs/                         # Hardware documentation
+> │       ├── README.md                           # Hardware overview
+> │       └── [hardware spec files]
+> ├── style/                                       # Style guides and branding
+> │   ├── README.md                               # Style overview
+> │   └── [style guide files]
+> ├── reports/                                     # Project reports and assessments
+> │   ├── README.md                               # Reports overview
+> │   └── [report files]
+> ├── workflows/                                   # Process documentation
+> │   ├── README.md                               # Workflows overview
+> │   └── [workflow files]
+> ├── development-history/                         # Development tracking
+> │   ├── README.md                               # Development history overview
+> │   ├── chat-transcripts/                       # Exported conversations
+> │   ├── decision-log/                           # Key decisions
+> │   └── project-evolution/                      # Development timeline
+> └── incoming/                                    # PDF drop zone
+>     ├── README.md                               # Incoming workflow
+>     └── [PDF files]
+> ```
 
 ### **Prohibited in Root Directories**
 - ❌ **Backup files** (`.bak`, `.backup`)

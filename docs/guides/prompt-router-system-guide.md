@@ -2,6 +2,8 @@
 
 ## Overview
 
+> **Contextual orchestration** - A comprehensive prompt management system for semantic routing and context injection
+
 The DgtlEnv Prompt Router is a comprehensive prompt management system that provides semantic routing, context injection, and extensible features for managing structured prompts across the project.
 
 ## System Architecture
@@ -45,6 +47,7 @@ The DgtlEnv Prompt Router is a comprehensive prompt management system that provi
 > **Contextual patterns** - Natural language access to sophisticated prompt orchestration
 
 ### Basic Usage
+> **Natural language access** - Simple and intuitive prompt routing
 
 ```bash
 # Simple prompt routing

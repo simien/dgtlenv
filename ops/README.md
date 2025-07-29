@@ -58,25 +58,36 @@ The `ops/` directory is the **primary environment optimization area** of DgtlEnv
 
 ## 📊 Performance Improvement Metrics
 
+> **Performance insights** - Comprehensive metrics showing optimization effectiveness
+
 ### Before Optimization (Typical MacBook Pro 2015)
-- **Memory Usage:** 85% (High swap activity)
-- **CPU Usage:** 65% (System lag during development)
-- **Disk Usage:** 78% (Limited free space)
-- **Docker Performance:** Resource hogging, slow containers
-- **IDE Performance:** Cursor IDE lag, high memory usage
+> **Baseline metrics** - System performance before optimization
+>
+> ### 📊 Pre-Optimization Status
+> - **Memory Usage:** 85% (High swap activity)
+> - **CPU Usage:** 65% (System lag during development)
+> - **Disk Usage:** 78% (Limited free space)
+> - **Docker Performance:** Resource hogging, slow containers
+> - **IDE Performance:** Cursor IDE lag, high memory usage
 
 ### After Optimization (With DgtlEnv Tools)
-- **Memory Usage:** 34% ✅ (Target: < 80%)
-- **CPU Usage:** 14% ✅ (Target: < 70%)
-- **Disk Usage:** 21% ✅ (Target: < 85%)
-- **Docker Performance:** Optimized resource limits, faster containers
-- **IDE Performance:** Cursor IDE optimized, reduced memory usage
+> **Optimization results** - System performance after comprehensive optimization
+>
+> ### 📈 Post-Optimization Status
+> - **Memory Usage:** 34% ✅ (Target: < 80%)
+> - **CPU Usage:** 14% ✅ (Target: < 70%)
+> - **Disk Usage:** 21% ✅ (Target: < 85%)
+> - **Docker Performance:** Optimized resource limits, faster containers
+> - **IDE Performance:** Cursor IDE optimized, reduced memory usage
 
 ### Key Performance Improvements
-- **Memory Reduction:** 51% improvement (85% → 34%)
-- **CPU Optimization:** 51% improvement (65% → 14%)
-- **Disk Space:** 57% improvement (78% → 21%)
-- **System Response:** 65% faster (2.3s → 0.8s)
+> **Quantified results** - Measurable performance improvements achieved
+>
+> ### 📊 Improvement Metrics
+> - **Memory Reduction:** 51% improvement (85% → 34%)
+> - **CPU Optimization:** 51% improvement (65% → 14%)
+> - **Disk Space:** 57% improvement (78% → 21%)
+> - **System Response:** 65% faster (2.3s → 0.8s)
 
 ## Optimization Summary
 
@@ -85,6 +96,8 @@ For comprehensive documentation of optimization results, use:
 - `docs/optimization-summary.md` — Completed optimization summary (example)
 
 ## Cursor IDE Performance Optimization (macOS)
+
+> **Performance refinement** - Comprehensive IDE optimization for enhanced development experience
 
 To optimize Cursor IDE for your MacBook Pro 2015 (macOS 12.7.6 Monterey):
 
@@ -120,7 +133,11 @@ For a ready-to-use settings.json snippet, see `templates/cursor-settings-perform
 
 ## System Monitoring Setup
 
+> **Monitoring orchestration** - Comprehensive system monitoring and health tracking
+
 ### Installed Tools
+> **Tool integration** - Essential monitoring tools for system health
+
 - **Stats** (v2.11.48) — Menu bar system monitor
 - **htop** (v3.4.1) — Advanced process monitoring
 - **smartmontools** (v7.5) — SSD health monitoring
@@ -136,7 +153,11 @@ For a ready-to-use settings.json snippet, see `templates/cursor-settings-perform
 
 ## Docker/Colima Optimization
 
+> **Resource orchestration** - Advanced Docker optimization and resource management
+
 ### Resource Management
+> **Performance optimization** - Sophisticated resource limits and cleanup procedures
+
 - Container limits: 2 CPU, 2GB RAM per container
 - Regular cleanup: `./docker/docker-optimize.sh`
 - Colima setup: Lighter alternative to Docker Desktop

@@ -103,20 +103,29 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 ## 📊 Current System Status
 
 > **Performance metrics** - Real-time system optimization status
-
-```
-Memory Usage: 40% ✅ (Target: < 80%)
-██████████░░░░░░░░░░░░░░░░░░░░
-✅ Memory Status: Excellent
-
-CPU Usage: 22% ✅ (Target: < 70%)
-████████░░░░░░░░░░░░░░░░░░░░░░
-✅ CPU Status: Optimal
-
-Disk Usage: 21% ✅ (Target: < 85%)
-██████░░░░░░░░░░░░░░░░░░░░░░░░
-✅ Disk Status: Healthy
-```
+>
+> ### 📊 System Health Dashboard
+> ```
+> 📊 System Health Dashboard
+> ==========================
+> Memory Usage: 40% ✅ (Target: < 80%)
+> ██████████░░░░░░░░░░░░░░░░░░░░
+> ✅ Memory Status: Excellent
+>
+> CPU Usage: 22% ✅ (Target: < 70%)
+> ████████░░░░░░░░░░░░░░░░░░░░░░
+> ✅ CPU Status: Optimal
+>
+> Disk Usage: 21% ✅ (Target: < 85%)
+> ██████░░░░░░░░░░░░░░░░░░░░░░░░
+> ✅ Disk Status: Healthy
+>
+> 📈 Performance Summary
+> ======================
+> ✅ All systems operating within optimal ranges
+> ✅ No performance bottlenecks detected
+> ✅ System optimization targets achieved
+> ```
 
 **📖 See [docs/guides/computer-optimization-quick-reference.md](docs/guides/computer-optimization-quick-reference.md) for detailed environment optimization guide**
 
@@ -124,28 +133,32 @@ Disk Usage: 21% ✅ (Target: < 85%)
 
 ## 📁 Project Structure
 
-```
-DgtlEnv/
-├── 🖥️ ops/                        # 🎯 COMPUTER OPTIMIZATION (Main focus)
-│   ├── monitoring/                # System health & performance monitoring
-│   ├── cleanup/                   # System cleanup & maintenance
-│   ├── docker/                    # Docker resource optimization
-│   └── backup/                    # Backup and conversion tools
-├── 📊 metrics/                    # Performance tracking & dashboards
-│   ├── dashboards/                # Visual performance dashboards
-│   ├── data/                      # Raw metrics storage
-│   └── reports/                   # Generated performance reports
-├── 📁 scripts/                    # 📋 PROJECT MANAGEMENT (Secondary)
-│   ├── sync-cursor-settings.sh   # IDE optimization (computer tool)
-│   └── [other project tools]     # Environment management tools
-├── 📚 docs/                       # Documentation
-├── 🔒 security/                   # Security policies
-├── ⚙️ config/                     # Configuration files
-├── 📋 todos/                      # Task management & quality control
-└── 📝 logs/                       # Application logs
-```
+> **Sophisticated organization** - A refined structure for comprehensive environment optimization
+>
+> ### 📁 Directory Architecture
+> ```
+> DgtlEnv/
+> ├── 🖥️ ops/                        # 🎯 COMPUTER OPTIMIZATION (Main focus)
+> │   ├── monitoring/                # System health & performance monitoring
+> │   ├── cleanup/                   # System cleanup & maintenance
+> │   ├── docker/                    # Docker resource optimization
+> │   └── backup/                    # Backup and conversion tools
+> ├── 📊 metrics/                    # Performance tracking & dashboards
+> │   ├── dashboards/                # Visual performance dashboards
+> │   ├── data/                      # Raw metrics storage
+> │   └── reports/                   # Generated performance reports
+> ├── 📁 scripts/                    # 📋 PROJECT MANAGEMENT (Secondary)
+> │   ├── sync-cursor-settings.sh   # IDE optimization (computer tool)
+> │   └── [other project tools]     # Environment management tools
+> ├── 📚 docs/                       # Documentation
+> ├── 🔒 security/                   # Security policies
+> ├── ⚙️ config/                     # Configuration files
+> ├── 📋 todos/                      # Task management & quality control
+> └── 📝 logs/                       # Application logs
+> ```
 
-**🎯 Focus Areas:**
+> **Focus areas** - Clear distinction between optimization and management tools
+
 - **🖥️ Environment Optimization:** `ops/` and `metrics/` directories contain tools that directly improve your Mac's performance
 - **📁 Environment Management:** `scripts/` directory contains tools that help manage the development environment
 
@@ -153,8 +166,10 @@ DgtlEnv/
 
 ## 📋 Available Scripts
 
+> **Comprehensive tooling** - Sophisticated scripts for environment optimization and management
+
 ### 🖥️ Environment Optimization (System Performance)
-**Tools that directly improve your Mac's performance:**
+> **Performance refinement** - Tools that directly improve your Mac's performance
 
 #### System Health & Monitoring
 - **`./ops/monitoring/swap-ssd-health.sh`** - 🏥 System health check (Prevents slowdowns & data loss)
@@ -175,7 +190,7 @@ DgtlEnv/
 - **`./metrics/comprehensive-dashboard.sh`** - 📈 Visual dashboards (Real-time system status)
 
 ### 📁 Environment Management (Project Tools)
-**Tools that help manage the development environment:**
+> **Environment orchestration** - Tools that help manage the development environment
 
 #### PDF Management
 - **`./ops/backup/simple-pdf-converter.sh`** - 📄 PDF to markdown conversion
@@ -208,6 +223,8 @@ DgtlEnv/
 - **Automated Version Management** - Outdated version detection and archiving
 
 ### 📊 Current Prompt Analytics (July 28, 2025)
+> **Performance insights** - Comprehensive analytics for prompt system optimization
+
 ```
 📊 Prompt Structure Analysis
 ==========================
@@ -240,6 +257,8 @@ Archive system: 100% operational
 ```
 
 ### 🚀 Quick Prompt Usage
+> **Contextual routing** - Natural language access to structured prompts
+
 ```bash
 # Basic prompt routing
 ./ops/run-prompt.sh "diagnose ci"
@@ -296,23 +315,33 @@ Archive system: 100% operational
 
 ## 📚 Documentation
 
+> **Comprehensive knowledge base** - Sophisticated documentation for all aspects of environment optimization
+
 ### 🖥️ Environment Optimization
+> **Performance refinement** - Complete guides for system optimization and performance tuning
+
 - **[Environment Optimization Quick Reference](docs/guides/computer-optimization-quick-reference.md)** - Complete environment optimization guide with cards and workflows
 - **[System Optimization Summary](docs/reports/readme-optimization-summary.md)** - Detailed optimization results and improvements
 - **[Cursor IDE Optimization](ops/README.md#cursor-ide-performance-optimization-macos)** - IDE performance tuning guide
 
 ### 📁 Environment Management
+> **Environment orchestration** - Tools and workflows for development environment management
+
 - **[PDF Conversion System](docs/workflows/pdf-conversion-and-metrics-system.md)** - Document management workflow
 - **[Todo Migration Workflow](docs/workflows/todo-migration-workflow.md)** - Quality control and organization
 - **[Release Management Guide](docs/workflows/release-management-guide.md)** - Security and release processes
 
 ### 📊 Performance & Metrics
+> **Performance insights** - Comprehensive monitoring and analytics systems
+
 - **[Metrics & Monitoring](metrics/README.md)** - Performance tracking and dashboards
 - **[Operations Documentation](ops/README.md)** - Environment optimization tools
 - **[Scripts Documentation](scripts/README.md)** - Environment management tools
 - **[Test Suite](tests/README.md)** - Comprehensive validation and testing with interactive and automated modes
 
 ### 🧠 Contextual Workflows
+> **Sophisticated orchestration** - Advanced prompt management and workflow automation
+
 - **[Prompts System](prompts/README.md)** - Structured AI prompts for system optimization, documentation, and workflow management
 - **[System Optimization Prompts](prompts/categories/system-optimization/)** - Performance tuning and resource management
 - **[Documentation Generation](prompts/categories/documentation-generation/)** - Content creation and visual enhancements
@@ -321,6 +350,8 @@ Archive system: 100% operational
 - **[Meta-Prompts](prompts/categories/meta-prompts/)** - Conversation management and utilities
 
 ### 🔧 Setup & Configuration
+> **Configuration management** - Setup guides and development standards
+
 - **[GitHub Setup Guide](docs/setup/github-setup.md)** - Repository configuration
 - **[Contributing Guidelines](CONTRIBUTING.md)** - Development standards
 - **[Security Policies](security/README.md)** - Security and audit information
