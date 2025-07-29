@@ -116,6 +116,67 @@ validate_filename() {
     echo "${errors[@]}"
 }
 
+# Function to compare versions
+compare_versions() {
+    local version1="$1"
+    local version2="$2"
+
+    # Split versions into arrays
+    IFS='.' read -ra v1_parts <<< "$version1"
+    IFS='.' read -ra v2_parts <<< "$version2"
+
+    # Compare major, minor, patch
+    for i in {0..2}; do
+        local v1_part=${v1_parts[$i]:-0}
+        local v2_part=${v2_parts[$i]:-0}
+
+        if [[ $v1_part -gt $v2_part ]]; then
+            echo "greater"
+            return
+        elif [[ $v1_part -lt $v2_part ]]; then
+            echo "less"
+            return
+        fi
+    done
+
+    echo "equal"
+}
+
+# Function to check for outdated versions
+check_outdated_versions() {
+    local file="$1"
+    local filename=$(basename "$file")
+    local warnings=()
+
+    # Extract base name and version
+    local base_name=$(echo "$filename" | sed 's/-v[0-9]\+\.[0-9]\+\.[0-9]\+\.md$//')
+    local current_version=$(echo "$filename" | sed -n 's/.*-v\([0-9]\+\.[0-9]\+\.[0-9]\+\)\.md/\1/p')
+
+    # Find all versions of this prompt
+    local all_versions=($(find "$PROMPTS_DIR" -name "${base_name}-v*.md" -type f))
+
+    if [[ ${#all_versions[@]} -gt 1 ]]; then
+        local latest_version="$current_version"
+
+        # Find the latest version
+        for version_file in "${all_versions[@]}"; do
+            local version_filename=$(basename "$version_file")
+            local version=$(echo "$version_filename" | sed -n 's/.*-v\([0-9]\+\.[0-9]\+\.[0-9]\+\)\.md/\1/p')
+
+            if [[ "$(compare_versions "$version" "$latest_version")" == "greater" ]]; then
+                latest_version="$version"
+            fi
+        done
+
+        # Check if current file is outdated
+        if [[ "$current_version" != "$latest_version" ]]; then
+            warnings+=("Outdated version: current=v$current_version, latest=v$latest_version")
+        fi
+    fi
+
+    echo "${warnings[@]}"
+}
+
 # --- Main Validation Function ---
 validate_prompt() {
     local file="$1"
@@ -130,6 +191,7 @@ validate_prompt() {
     local structure_errors=($(validate_structure "$file"))
     local content_errors=($(validate_content "$file"))
     local filename_errors=($(validate_filename "$file"))
+    local outdated_warnings=($(check_outdated_versions "$file"))
 
     # Collect all errors
     errors+=("${metadata_errors[@]}")
@@ -137,15 +199,30 @@ validate_prompt() {
     errors+=("${content_errors[@]}")
     errors+=("${filename_errors[@]}")
 
+    # Collect warnings
+    warnings+=("${outdated_warnings[@]}")
+
     # Report results
     if [[ ${#errors[@]} -eq 0 ]]; then
         echo "✅ $filename: PASSED"
+        # Show warnings if any
+        if [[ ${#warnings[@]} -gt 0 ]]; then
+            for warning in "${warnings[@]}"; do
+                echo "   ⚠️  $warning"
+            done
+        fi
         return 0
     else
         echo "❌ $filename: FAILED"
         for error in "${errors[@]}"; do
             echo "   - $error"
         done
+        # Show warnings even for failed files
+        if [[ ${#warnings[@]} -gt 0 ]]; then
+            for warning in "${warnings[@]}"; do
+                echo "   ⚠️  $warning"
+            done
+        fi
         return 1
     fi
 }
