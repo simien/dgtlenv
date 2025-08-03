@@ -2,7 +2,7 @@
   "project": {
     "name": "DgtlEnv",
     "fullName": "DgtlEnv - Digital Environment Management",
-    "description": "A sophisticated macOS development environment optimization toolkit that transforms your MacBook into a high-performance development machine.",
+    "description": "A personal experimental project focused on improving my environment to run modern products. Contains explorations for internal management and personal interests in design, development, context systems, and processes.",
     "version": "1.0.0",
     "repository": "simien/DgtlEnv",
     "license": "MIT",

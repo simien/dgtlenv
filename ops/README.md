@@ -247,3 +247,25 @@ Planned features for future versions:
 - **Remote Context:** Support for remote context sources
 - **Advanced Chaining:** Conditional prompt execution
 - **Performance Monitoring:** Detailed performance metrics
+
+## 📁 Contents
+
+### **Files**
+- `run-prompt-legacy.sh` - [Description of purpose]
+- `run-prompt-enhanced-legacy.sh` - [Description of purpose]
+- `run-prompt.sh` - [Description of purpose]
+
+### **Subdirectories**
+- `docker/` - [Description of contents]
+- `cleanup/` - [Description of contents]
+- `templates/` - [Description of contents]
+- `monitoring/` - [Description of contents]
+- `backup/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

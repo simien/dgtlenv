@@ -141,3 +141,22 @@ Planned automation for streamlined history management:
 **Last Updated**: 2025-07-26
 **Maintainer**: Simien Antonis-Parr
 **Status**: Active documentation preservation
+
+## 📁 Contents
+
+### **Files**
+- `migration-implementation-checklist.md` - [Description of purpose]
+- `migration-plan-prompt-router-standalone.md` - [Description of purpose]
+
+### **Subdirectories**
+- `decision-log/` - [Description of contents]
+- `chat-transcripts/` - [Description of contents]
+- `project-evolution/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

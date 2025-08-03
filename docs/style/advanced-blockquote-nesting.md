@@ -184,9 +184,9 @@ PDFs: 0/0 converted ✅
 ```markdown
 ## 🎯 What is DgtlEnv?
 
-> **Digital Environment Optimization** - A refined toolkit that transforms your MacBook into a high-performance development machine
+> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products
 
-**DgtlEnv** is a **digital environment optimization toolkit** that transforms your MacBook into a high-performance development machine. Built as a shell script toolkit for maximum simplicity and extensibility.
+**DgtlEnv** is a **personal experimental project** focused on improving my environment to run modern products. Contains explorations for internal management and personal interests in design, development, context systems, and processes. Built as a shell script toolkit for maximum simplicity and extensibility.
 
 ### 🖥️ **Primary Focus: Environment Optimization**
 > **Performance refinement** - Tools that directly improve your Mac's performance

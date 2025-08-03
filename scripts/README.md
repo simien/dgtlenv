@@ -229,3 +229,28 @@ Regular maintenance to ensure clean organization:
 
 **Last Updated:** 2025-07-27 (Migration Script Fixed)
 **Maintainer:** Simien Antonis-Parr
+
+## 📁 Contents
+
+### **Files**
+- `validate-readme-files.sh` - [Description of purpose]
+- `get-prompt-content.sh` - [Description of purpose]
+- `check-outdated-prompts.sh` - [Description of purpose]
+- `create-missing-readmes.sh` - [Description of purpose]
+- `start-promptrouter-migration.sh` - [Description of purpose]
+- `ascii-style-converter.sh` - [Description of purpose]
+- `prompt-analytics.sh` - [Description of purpose]
+- `validate-prompts.sh` - [Description of purpose]
+- `create-directory-readme.sh` - [Description of purpose]
+- `pre-release-sanitizer.sh` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

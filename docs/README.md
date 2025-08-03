@@ -9,43 +9,26 @@ This directory contains comprehensive documentation for the DgtlEnv project, org
 ```
 docs/
 ├── README.md                                    # This file - main documentation index
-├── guides/                                      # Step-by-step tutorials and guides
-│   ├── README.md                               # Guides overview
-│   ├── cursor-vscode-settings-sync.md          # Cursor/VS Code settings sync
-│   └── system-optimization.md                   # Comprehensive system optimization
-├── setup/                                       # Installation and configuration
-│   ├── README.md                               # Setup overview
-│   ├── github-setup.md                         # GitHub repository setup
-│   └── hardware-specs/                         # Hardware specifications
-│       ├── README.md                           # Hardware overview
-│       ├── macbook-pro-2015-specs.md          # MacBook Pro 2015 specs
-│       ├── sap-mbp-hardware.md                 # Hardware details
-│       └── sap-mbp-systemsoftware.md           # System software specs
-├── style/                                       # Style guides and branding
-│   ├── README.md                               # Style overview
-│   ├── ascii-style-guide.md                    # ASCII art and visual elements
-│   ├── naming-guidelines.md                    # File naming conventions
-│   ├── unified-style-system.md                 # Comprehensive style system
-│   └── style-system-implementation-summary.md  # Implementation status
-├── reports/                                     # Project reports and assessments
-│   ├── README.md                               # Reports overview
-│   ├── digitalenv-folder-structure-assessment.md
-│   ├── folder-structure-improvements-summary.md
-│   ├── readme-optimization-summary.md
-│   └── root-directory-cleanup-report.md
-├── workflows/                                   # Process documentation
-│   ├── README.md                               # Workflows overview
-│   ├── pdf-conversion-and-metrics-system.md    # PDF conversion system
-│   ├── pdf-incoming-workflow.md                # PDF processing workflow
-│   └── release-management-guide.md             # Release process
-├── development-history/                         # Development tracking
+├── development-history/                         # Development tracking and history
 │   ├── README.md                               # Development history overview
 │   ├── chat-transcripts/                       # Exported chat conversations
 │   ├── decision-log/                           # Key decisions and rationale
 │   └── project-evolution/                      # Project development timeline
-└── incoming/                                    # PDF drop zone and conversion
-    ├── README.md                               # Incoming workflow
-    └── [PDF files]                             # PDFs awaiting conversion
+├── guides/                                      # Step-by-step tutorials and guides
+│   └── README.md                               # Guides overview
+├── incoming/                                    # PDF drop zone and conversion
+│   └── README.md                               # Incoming workflow
+├── reports/                                     # Project reports and assessments
+│   └── README.md                               # Reports overview
+├── setup/                                       # Installation and configuration
+│   ├── README.md                               # Setup overview
+│   ├── github-setup.md                         # GitHub repository setup
+│   └── hardware-specs/                         # Hardware specifications
+│       └── README.md                           # Hardware overview
+├── style/                                       # Style guides and branding
+│   └── README.md                               # Style overview
+└── workflows/                                   # Process documentation
+    └── README.md                               # Workflows overview
 ```
 
 ## 📋 Documentation Categories
@@ -248,3 +231,24 @@ git diff docs/
 **Last Updated:** 2025-07-27
 **Maintainer:** Simien Antonis-Parr
 **Status:** ✅ Reorganized and optimized
+
+## 📁 Contents
+
+### **Files**
+
+### **Subdirectories**
+- `development-history/` - [Description of contents]
+- `setup/` - [Description of contents]
+- `workflows/` - [Description of contents]
+- `style/` - [Description of contents]
+- `guides/` - [Description of contents]
+- `incoming/` - [Description of contents]
+- `reports/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

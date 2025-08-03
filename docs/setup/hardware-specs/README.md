@@ -80,3 +80,11 @@ Important factors for maintaining optimal performance:
 
 **Last Updated:** 2025-07-27
 **Maintainer:** Simien Antonis-Parr
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

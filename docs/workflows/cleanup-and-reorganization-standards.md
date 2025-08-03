@@ -203,6 +203,55 @@ git add . && git commit -m "Reorganize docs: move files to new-category"
 - **Links:** Cross-references to related directories
 - **Maintainer:** Include maintainer information
 
+### **Directory Documentation Standards**
+> **Documentation sophistication** - Comprehensive standards for directory README files
+
+#### **Required for All Directories**
+- ✅ **README.md file** in every directory explaining purpose and contents
+- ✅ **Consistent structure** following DgtlEnv documentation patterns
+- ✅ **Cross-references** to related directories and files
+- ✅ **Usage examples** for practical implementation
+- ✅ **Maintainer information** for ongoing support
+
+#### **README File Structure**
+```markdown
+# [Directory Name] Overview
+
+**Purpose:** Brief description of directory purpose
+**Contents:** List of main files and subdirectories
+**Usage:** How to use files in this directory
+**Related:** Links to related directories and documentation
+
+## 📁 Contents
+
+### **Files**
+- `file1.md` - Description of purpose
+- `file2.sh` - Description of functionality
+
+### **Subdirectories**
+- `subdir1/` - Description of contents
+- `subdir2/` - Description of contents
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+command1
+command2
+```
+
+## 🔗 Related Documentation
+
+- `../related-dir/README.md` - Related functionality
+- `../../docs/guides/` - Setup and usage guides
+```
+
+#### **Documentation Procedure Integration**
+- ✅ **New directory creation** must include README file
+- ✅ **Directory reorganization** must update all affected README files
+- ✅ **Documentation updates** must include directory README validation
+- ✅ **Quality control** must verify README file completeness
+
 ---
 
 ## 🚨 **Quality Control**

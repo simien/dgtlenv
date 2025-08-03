@@ -31,3 +31,22 @@ All categories maintain consistent:
 - File organization patterns
 - Documentation standards
 - Integration with project components
+
+## 📁 Contents
+
+### **Files**
+
+### **Subdirectories**
+- `documentation-generation/` - [Description of contents]
+- `code-analysis/` - [Description of contents]
+- `system-optimization/` - [Description of contents]
+- `meta-prompts/` - [Description of contents]
+- `workflow-management/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

@@ -52,3 +52,21 @@ source config/environment.sh
 - `../ops/templates/` - Operation script templates
 - `../docs/` - Configuration documentation
 - `../examples/` - Usage examples
+
+## 📁 Contents
+
+### **Files**
+- `cursor-settings.json` - [Description of purpose]
+- `prompt-router-config.json` - [Description of purpose]
+- `project-config.json` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

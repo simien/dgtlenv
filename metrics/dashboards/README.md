@@ -140,3 +140,21 @@ cat ../data/*.json
 **Last Updated:** 2025-07-27
 **Maintainer:** Metrics System
 **Status:** ✅ Active
+
+## 📁 Contents
+
+### **Files**
+- `comprehensive-dashboard.md` - [Description of purpose]
+- `.!10140!comprehensive-dashboard.md` - [Description of purpose]
+- `.!10141!README.md` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

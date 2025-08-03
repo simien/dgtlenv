@@ -139,3 +139,27 @@ The metrics system works with the pre-release sanitizer to ensure:
 
 **Last Updated:** 2025-07-25
 **Maintainer:** Simien Antonis-Parr
+
+## 📁 Contents
+
+### **Files**
+- `current-metrics.json` - [Description of purpose]
+- `comprehensive-dashboard.sh` - [Description of purpose]
+- `pdf-processing-dashboard.md` - [Description of purpose]
+- `pdf-conversion-metrics.json` - [Description of purpose]
+- `system-metrics-tracker.sh` - [Description of purpose]
+- `baseline-metrics.json` - [Description of purpose]
+
+### **Subdirectories**
+- `prompt-analytics/` - [Description of contents]
+- `dashboards/` - [Description of contents]
+- `data/` - [Description of contents]
+- `reports/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

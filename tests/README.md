@@ -98,3 +98,21 @@ tests/
 - `../scripts/` - Environment management scripts being tested
 - `../metrics/` - Performance tracking and dashboard tools
 - `../docs/` - Documentation being validated
+
+## 📁 Contents
+
+### **Files**
+- `interactive-cursor-sync.sh` - [Description of purpose]
+- `prompt-router-tests.sh` - [Description of purpose]
+- `quick-test.sh` - [Description of purpose]
+
+### **Subdirectories**
+- `validation/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

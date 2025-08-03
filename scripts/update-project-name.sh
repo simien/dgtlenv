@@ -64,7 +64,7 @@ update_readme_header() {
 
 ## 🎯 Project Overview
 
-🚀 **$project_name** is a sophisticated macOS development environment optimization toolkit that transforms your MacBook into a high-performance development machine. Features automated system monitoring, PDF document management, performance metrics tracking, and semantic resource optimization.
+🚀 **$project_name** is a personal experimental project focused on improving my environment to run modern products. Contains explorations for internal management and personal interests in design, development, context systems, and processes. Features automated system monitoring, PDF document management, performance metrics tracking, and semantic resource optimization.
 EOF
 
     # Backup original README

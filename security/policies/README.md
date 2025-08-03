@@ -139,3 +139,19 @@ cat security.md
 **Last Updated:** 2025-07-27
 **Maintainer:** Security Team
 **Status:** ✅ Active
+
+## 📁 Contents
+
+### **Files**
+- `security.md` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

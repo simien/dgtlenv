@@ -162,7 +162,7 @@ The project uses `config/project-config.json` as the centralized configuration:
   "project": {
     "name": "DgtlEnv",
     "fullName": "DgtlEnv - Digital Environment Management",
-    "description": "A sophisticated macOS development environment optimization toolkit...",
+    "description": "A personal experimental project focused on improving my environment to run modern products...",
     "version": "1.0.0"
   },
   "ascii": {

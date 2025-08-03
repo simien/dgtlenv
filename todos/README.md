@@ -191,3 +191,22 @@ grep -r "\[ \]" todos/active/
 **Last Updated:** 2025-07-27 (Migration Script Fixed)
 **Maintainer:** Simien Antonis-Parr
 **Status:** ✅ Organized and maintained with automated migration
+
+## 📁 Contents
+
+### **Files**
+- `todo-priority-analysis.md` - [Description of purpose]
+
+### **Subdirectories**
+- `completed/` - [Description of contents]
+- `planning/` - [Description of contents]
+- `templates/` - [Description of contents]
+- `active/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

@@ -104,7 +104,7 @@ Create a Homebrew formula for easy installation:
 ```ruby
 # Formula: dgtlenv.rb
 class Dgtlenv < Formula
-  desc "macOS development environment optimization toolkit"
+  desc "Personal experimental project for improving environment to run modern products"
   homepage "https://github.com/simien/DgtlEnv"
   url "https://github.com/simien/DgtlEnv/archive/v1.0.0.tar.gz"
   sha256 "..." # Calculate this
@@ -127,7 +127,7 @@ end
 {
   "name": "dgtlenv",
   "version": "1.0.0",
-  "description": "macOS development environment optimization toolkit",
+  "description": "Personal experimental project for improving environment to run modern products",
   "bin": {
     "dgtlenv": "./bin/dgtlenv.js"
   },

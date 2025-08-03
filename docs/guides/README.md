@@ -45,3 +45,23 @@ When creating new guides, follow these guidelines to ensure consistency and qual
 - See `../setup/` for installation and configuration
 - See `../troubleshooting/` for common issues
 - See `../../ops/` for automation scripts
+
+## 📁 Contents
+
+### **Files**
+- `prompt-router-system-guide.md` - [Description of purpose]
+- `computer-optimization-quick-reference.md` - [Description of purpose]
+- `cursor-vscode-settings-sync.md` - [Description of purpose]
+- `prompt-system-overview.md` - [Description of purpose]
+- `system-optimization.md` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

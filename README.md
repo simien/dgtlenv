@@ -1,6 +1,8 @@
 # **DgtlEnv** - Digital Environment Optimization
 
-> **Make your Mac run better** - A comprehensive macOS development environment optimization toolkit
+> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products
+
+**⚠️ EXPERIMENTAL PROJECT** - This repository contains experimental explorations and personal interests in design, development, context systems, and processes. Use at your own risk.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
@@ -17,9 +19,11 @@
 
 ## 🎯 What is DgtlEnv?
 
-> **Digital Environment Optimization** - A refined toolkit that transforms your MacBook into a high-performance development machine
+> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products
 
-**DgtlEnv** is a **digital environment optimization toolkit** that transforms your MacBook into a high-performance development machine. Built as a shell script toolkit for maximum simplicity and extensibility.
+**DgtlEnv** is a **personal experimental project** focused on improving my environment to run modern products. It contains explorations to manage this internally and my own personal interests in design, development, context systems, and processes. Built as a shell script toolkit for maximum simplicity and extensibility.
+
+**💡 Leverage what works well, share how you implement it, and please contribute if you would like to.**
 
 ### 🖥️ **Primary Focus: Environment Optimization**
 > **Performance refinement** - Tools that directly improve your Mac's performance
@@ -356,7 +360,9 @@ Archive system: 100% operational
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+**💡 Leverage what works well, share how you implement it, and please contribute if you would like to.**
+
+This is an experimental personal project, but I welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ## 🔒 Security
 
@@ -374,3 +380,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Email:** simienap@gmail.com
 **Website:** [simienap.com](https://www.simienap.com/)
 **GitHub:** [simien](https://github.com/simien)
+
+## 📁 Contents
+
+### **Files**
+- `CHANGELOG.md` - [Description of purpose]
+- `CONTRIBUTING.md` - [Description of purpose]
+- `SECURITY.md` - [Description of purpose]
+
+### **Subdirectories**
+- `metrics/` - [Description of contents]
+- `.cursor/` - [Description of contents]
+- `config/` - [Description of contents]
+- `security/` - [Description of contents]
+- `tests/` - [Description of contents]
+- `docs/` - [Description of contents]
+- `logs/` - [Description of contents]
+- `examples/` - [Description of contents]
+- `scripts/` - [Description of contents]
+- `.github/` - [Description of contents]

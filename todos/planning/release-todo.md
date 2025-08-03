@@ -18,7 +18,7 @@
 ### Release Tasks
 - [ ] **Create release tag**
   ```bash
-  git tag -a v1.0.0 -m "Initial release: Complete macOS development environment optimization toolkit"
+  git tag -a v1.0.0 -m "Initial release: Personal experimental project for improving environment to run modern products"
   git push origin v1.0.0
   ```
 
@@ -40,7 +40,7 @@
 # DgtlEnv v1.0.0 - Initial Release
 
 ## 🎉 What's New
-Complete macOS development environment optimization toolkit for MacBook Pro 2015.
+Personal experimental project for improving environment to run modern products.
 
 ## ✨ Key Features
 - **System Optimization**: Cursor IDE, Docker, and system performance tuning

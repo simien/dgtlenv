@@ -23,3 +23,18 @@ Important considerations for the PDF conversion process:
 - PDFs that already have newer `.md` files will be skipped
 - The watcher runs via `ops/backup/pdf-watcher.sh`
 - Conversion logs are stored in `logs/pdf-watcher.log`
+
+## 📁 Contents
+
+### **Files**
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

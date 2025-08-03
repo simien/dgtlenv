@@ -47,7 +47,7 @@ jobs:
           ## 🎉 DgtlEnv ${{ github.ref_name }} Release
 
           ### ✨ What's New
-          Complete macOS development environment optimization toolkit for MacBook Pro 2015.
+          Personal experimental project for improving environment to run modern products.
 
           ### 🚀 Key Features
           - **System Optimization**: Cursor IDE, Docker, and system performance tuning

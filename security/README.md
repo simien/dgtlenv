@@ -73,3 +73,19 @@ grep -r "sap\|@gmail\|@yahoo" . --exclude-dir=.git
 
 ---
 *Last Updated: 2025-07-27*
+
+## 📁 Contents
+
+### **Files**
+
+### **Subdirectories**
+- `policies/` - [Description of contents]
+- `audit-reports/` - [Description of contents]
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

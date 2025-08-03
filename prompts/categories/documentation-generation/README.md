@@ -43,3 +43,23 @@ Documentation generation prompts focus on producing clear, consistent, and well-
 - Maintains clear, actionable content structure
 - Ensures proper internal linking and navigation
 - Creates consistent visual language and formatting
+
+## 📁 Contents
+
+### **Files**
+- `create-technical-tutorial-v1.0.0.md` - [Description of purpose]
+- `update-documentation-ascii-visuals-v1.0.0.md` - [Description of purpose]
+- `update-documentation-comprehensive-v1.0.0.md` - [Description of purpose]
+- `refactor-readme-concise-v1.0.0.md` - [Description of purpose]
+- `generate-function-docstring-v1.0.0.md` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```

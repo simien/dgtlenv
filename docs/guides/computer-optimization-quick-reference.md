@@ -1,6 +1,6 @@
 # Environment Optimization Quick Reference
 
-**DgtlEnv Environment Optimization Tools** - Make your Mac run better
+**DgtlEnv Environment Optimization Tools** - Personal experimental project for improving environment to run modern products
 
 ## 🧪 Test Your Environment
 

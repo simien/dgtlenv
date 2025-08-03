@@ -123,3 +123,20 @@ services:
 - **Monitor impact**: Use monitoring tools to measure improvements
 - **Document changes**: Track what works for future reference
 - **Regular updates**: Keep templates current with tool updates 
+## 📁 Contents
+
+### **Files**
+- `optimization-summary-template.md` - [Description of purpose]
+- `docker-compose-resource-limits-example.yml` - [Description of purpose]
+- `cursor-settings-performance.json` - [Description of purpose]
+
+### **Subdirectories**
+- No subdirectories found
+
+## 🚀 Quick Start
+
+```bash
+# Example commands for this directory
+# command1
+# command2
+```
