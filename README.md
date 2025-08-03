@@ -381,21 +381,26 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Website:** [simienap.com](https://www.simienap.com/)
 **GitHub:** [simien](https://github.com/simien)
 
-## 📁 Contents
+## 📁 Project Structure
 
-### **Files**
-- `CHANGELOG.md` - [Description of purpose]
-- `CONTRIBUTING.md` - [Description of purpose]
-- `SECURITY.md` - [Description of purpose]
+### **Core Files**
+- `CHANGELOG.md` - Project version history and release notes
+- `CONTRIBUTING.md` - Development standards and contribution guidelines
+- `SECURITY.md` - Security policies and vulnerability reporting
 
-### **Subdirectories**
-- `metrics/` - [Description of contents]
-- `.cursor/` - [Description of contents]
-- `config/` - [Description of contents]
-- `security/` - [Description of contents]
-- `tests/` - [Description of contents]
-- `docs/` - [Description of contents]
-- `logs/` - [Description of contents]
-- `examples/` - [Description of contents]
-- `scripts/` - [Description of contents]
-- `.github/` - [Description of contents]
+### **Key Directories**
+- `ops/` - Environment optimization tools (monitoring, cleanup, Docker)
+- `metrics/` - Performance tracking and analytics dashboards
+- `scripts/` - Environment management and automation tools
+- `docs/` - Comprehensive documentation and guides
+- `prompts/` - Structured AI prompts for system optimization
+- `todos/` - Task management and quality control system
+- `tests/` - Validation and testing suite
+- `config/` - Project configuration and settings
+- `security/` - Security policies and audit reports
+
+### **Support Directories**
+- `logs/` - Application and system logs
+- `examples/` - Usage examples and demonstrations
+- `.github/` - GitHub workflows and templates
+- `.cursor/` - Cursor IDE configuration files
