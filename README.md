@@ -1,6 +1,6 @@
 # **DgtlEnv** - Digital Environment Optimization
 
-> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products. This repository contains experimental explorations and personal interests in design, development, context systems, and processes. Use at your own risk.
+> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
@@ -11,8 +11,6 @@
 ---
 
 ## 🎯 What is DgtlEnv?
-
-> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products
 
 **DgtlEnv** is a **personal experimental project** focused on improving my environment to run modern products. It contains explorations to manage this internally and my own personal interests in design, development, context systems, and processes. Built as a shell script toolkit for maximum simplicity and extensibility.
 
