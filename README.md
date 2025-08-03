@@ -6,7 +6,7 @@
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
 [![System Status](https://img.shields.io/badge/System%20Status-Optimized-brightgreen.svg)](https://github.com/simien/DgtlEnv)
 
-**Device:** MacBook Pro (Retina, 15-inch, Mid 2015) | **OS:** macOS 12.7.6 Monterey | **Status:** ✅ **OPTIMIZED & MONITORED**
+**Device:** MacBook Pro (Retina, 15-inch, Mid 2015) | **OS:** macOS 12.7.6 Monterey | **Status:** OPTIMIZED & MONITORED
 
 ---
 
