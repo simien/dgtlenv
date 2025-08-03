@@ -1,19 +1,12 @@
 # **DgtlEnv** - Digital Environment Optimization
 
-> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products
-
-**⚠️ EXPERIMENTAL PROJECT** - This repository contains experimental explorations and personal interests in design, development, context systems, and processes. Use at your own risk.
+> **Personal Experimental Project** - A personal toolkit for improving my environment to run modern products. This repository contains experimental explorations and personal interests in design, development, context systems, and processes. Use at your own risk.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![macOS](https://img.shields.io/badge/macOS-12.7.6%20Monterey-blue.svg)](https://www.apple.com/macos/)
 [![System Status](https://img.shields.io/badge/System%20Status-Optimized-brightgreen.svg)](https://github.com/simien/DgtlEnv)
-[![Memory Usage](https://img.shields.io/badge/Memory%20Usage-40%25-green.svg)](https://github.com/simien/DgtlEnv)
-[![CPU Usage](https://img.shields.io/badge/CPU%20Usage-22%25-green.svg)](https://github.com/simien/DgtlEnv)
 
-**Device:** MacBook Pro (Retina, 15-inch, Mid 2015)
-**OS:** macOS 12.7.6 Monterey
-**Status:** ✅ **OPTIMIZED & MONITORED**
-**Last Updated:** July 27, 2025
+**Device:** MacBook Pro (Retina, 15-inch, Mid 2015) | **OS:** macOS 12.7.6 Monterey | **Status:** ✅ **OPTIMIZED & MONITORED**
 
 ---
 
@@ -25,23 +18,23 @@
 
 **💡 Leverage what works well, share how you implement it, and please contribute if you would like to.**
 
-### 🖥️ **Primary Focus: Environment Optimization**
+### **Primary Focus: Environment Optimization**
 > **Performance refinement** - Tools that directly improve your Mac's performance
 
-- 🏥 **System Health Monitoring** - Prevents slowdowns and data loss
-- 🧹 **System Cleanup** - Frees up disk space and memory
-- 🐳 **Docker Optimization** - Prevents resource hogging
-- 💻 **IDE Performance** - Optimizes Cursor IDE for faster development
-- 📊 **Performance Tracking** - Shows real-time improvements
+- **System Health Monitoring** - Prevents slowdowns and data loss
+- **System Cleanup** - Frees up disk space and memory
+- **Docker Optimization** - Prevents resource hogging
+- **IDE Performance** - Optimizes Cursor IDE for faster development
+- **Performance Tracking** - Shows real-time improvements
 
-### 📁 **Secondary Focus: Environment Management**
+### **Secondary Focus: Environment Management**
 > **Environment orchestration** - Tools that help manage the development environment
 
-- 📄 **PDF Management** - Automated document conversion
-- 🔒 **Security & Release** - Pre-release sanitization
-- 📋 **Todo Management** - Quality control and organization
-- 🧠 **Contextual Workflows** - Structured prompts for optimization and automation
-- 🧪 **Comprehensive Testing** - Interactive and automated validation suite
+- **PDF Management** - Automated document conversion
+- **Security & Release** - Pre-release sanitization
+- **Todo Management** - Quality control and organization
+- **Contextual Workflows** - Structured prompts for optimization and automation
+- **Comprehensive Testing** - Interactive and automated validation suite
 
 ---
 
@@ -55,49 +48,49 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 ./ops/monitoring/swap-ssd-health.sh
 ```
 
-### 🖥️ Essential Environment Optimization Commands
+### Essential Environment Optimization Commands
 > **Performance enhancement** - Start here to improve your Mac's performance
 
 ```bash
-# 🏥 System Health Check (Prevents slowdowns & data loss)
+# System Health Check (Prevents slowdowns & data loss)
 ./ops/monitoring/swap-ssd-health.sh
 
-# 🧹 System Cleanup (Frees up disk space)
+# System Cleanup (Frees up disk space)
 ./ops/cleanup/brew-cleanup.sh
 ./ops/cleanup/docker-cleanup.sh
 
-# 🐳 Docker Optimization (Prevents resource hogging)
+# Docker Optimization (Prevents resource hogging)
 ./ops/docker/docker-optimize.sh
 
-# 💻 Cursor IDE Optimization (Faster performance)
+# Cursor IDE Optimization (Faster performance)
 ./scripts/sync-cursor-settings.sh
 
-# 📊 Performance Tracking (Shows improvements)
+# Performance Tracking (Shows improvements)
 ./metrics/system-metrics-tracker.sh baseline
 ./metrics/system-metrics-tracker.sh current
 ./metrics/system-metrics-tracker.sh compare
 
-# 📈 Real-time System Dashboard
+# Real-time System Dashboard
 ./metrics/comprehensive-dashboard.sh dashboard
 ```
 
-### 📁 Environment Management Commands
+### Environment Management Commands
 > **Environment orchestration** - For managing the development environment
 
 ```bash
-# 📄 PDF Management
+# PDF Management
 ./ops/backup/simple-pdf-converter.sh all
 ./ops/backup/pdf-watcher.sh watch
 
-# 🔒 Security & Release Management
+# Security & Release Management
 ./scripts/pre-release-sanitizer.sh --dry-run
 ./scripts/create-release.sh
 
-# 📋 Todo Management & Quality Control
+# Todo Management & Quality Control
 ./scripts/enforce-organization-standards.sh
 ./scripts/migrate-todo-items.sh
 
-# 🧪 Comprehensive Testing
+# Comprehensive Testing
 ./tests/quick-test.sh
 ./tests/quick-test.sh --non-interactive
 ```
@@ -107,60 +100,30 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 ## 📊 Current System Status
 
 > **System Health Dashboard** - Real-time performance metrics
-> ```
-> 📊 System Health Dashboard
-> ==========================
-> Memory Usage: 40% ✅ (Target: < 80%)
-> ██████████░░░░░░░░░░░░░░░░░░░░
-> ✅ Memory Status: Excellent
->
-> CPU Usage: 22% ✅ (Target: < 70%)
-> ████████░░░░░░░░░░░░░░░░░░░░░░
-> ✅ CPU Status: Optimal
->
-> Disk Usage: 21% ✅ (Target: < 85%)
-> ██████░░░░░░░░░░░░░░░░░░░░░░░░
-> ✅ Disk Status: Healthy
->
-> 📈 Performance Summary
-> ======================
-> ✅ All systems operating within optimal ranges
-> ✅ No performance bottlenecks detected
-> ✅ System optimization targets achieved
-> ```
+
+```
+📊 System Health Dashboard
+==========================
+Memory Usage: 40% ✅ (Target: < 80%)
+██████████░░░░░░░░░░░░░░░░░░░░
+✅ Memory Status: Excellent
+
+CPU Usage: 22% ✅ (Target: < 70%)
+████████░░░░░░░░░░░░░░░░░░░░░░
+✅ CPU Status: Optimal
+
+Disk Usage: 21% ✅ (Target: < 85%)
+██████░░░░░░░░░░░░░░░░░░░░░░░░
+✅ Disk Status: Healthy
+
+📈 Performance Summary
+=====================
+✅ All systems operating within optimal ranges
+✅ No performance bottlenecks detected
+✅ System optimization targets achieved
+```
 
 **📖 See [docs/guides/computer-optimization-quick-reference.md](docs/guides/computer-optimization-quick-reference.md) for detailed environment optimization guide**
-
----
-
-## 📁 Project Structure
-
-> **Directory Architecture** - Comprehensive project organization
-> ```
-> DgtlEnv/
-> ├── 🖥️ ops/                        # 🎯 COMPUTER OPTIMIZATION (Main focus)
-> │   ├── monitoring/                # System health & performance monitoring
-> │   ├── cleanup/                   # System cleanup & maintenance
-> │   ├── docker/                    # Docker resource optimization
-> │   └── backup/                    # Backup and conversion tools
-> ├── 📊 metrics/                    # Performance tracking & dashboards
-> │   ├── dashboards/                # Visual performance dashboards
-> │   ├── data/                      # Raw metrics storage
-> │   └── reports/                   # Generated performance reports
-> ├── 📁 scripts/                    # 📋 PROJECT MANAGEMENT (Secondary)
-> │   ├── sync-cursor-settings.sh   # IDE optimization (computer tool)
-> │   └── [other project tools]     # Environment management tools
-> ├── 📚 docs/                       # Documentation
-> ├── 🔒 security/                   # Security policies
-> ├── ⚙️ config/                     # Configuration files
-> ├── 📋 todos/                      # Task management & quality control
-> └── 📝 logs/                       # Application logs
-> ```
-
-> **Focus areas** - Clear distinction between optimization and management tools
-
-- **🖥️ Environment Optimization:** `ops/` and `metrics/` directories contain tools that directly improve your Mac's performance
-- **📁 Environment Management:** `scripts/` directory contains tools that help manage the development environment
 
 ---
 
@@ -168,43 +131,43 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 
 > **Comprehensive tooling** - Sophisticated scripts for environment optimization and management
 
-### 🖥️ Environment Optimization (System Performance)
+### Environment Optimization (System Performance)
 > **Performance refinement** - Tools that directly improve your Mac's performance
 
 #### System Health & Monitoring
-- **`./ops/monitoring/swap-ssd-health.sh`** - 🏥 System health check (Prevents slowdowns & data loss)
-- **`./ops/monitoring/top-hogs.sh`** - 📊 Resource monitoring (Identifies performance bottlenecks)
+- **`./ops/monitoring/swap-ssd-health.sh`** - System health check (Prevents slowdowns & data loss)
+- **`./ops/monitoring/top-hogs.sh`** - Resource monitoring (Identifies performance bottlenecks)
 
 #### System Cleanup & Maintenance
-- **`./ops/cleanup/brew-cleanup.sh`** - 🧹 Homebrew cleanup (Frees up disk space)
-- **`./ops/cleanup/docker-cleanup.sh`** - 🐳 Docker cleanup (Reduces memory & disk usage)
+- **`./ops/cleanup/brew-cleanup.sh`** - Homebrew cleanup (Frees up disk space)
+- **`./ops/cleanup/docker-cleanup.sh`** - Docker cleanup (Reduces memory & disk usage)
 
 #### Docker Optimization
-- **`./ops/docker/docker-optimize.sh`** - 🐳 Docker resource management (Prevents resource hogging)
+- **`./ops/docker/docker-optimize.sh`** - Docker resource management (Prevents resource hogging)
 
 #### IDE Performance
-- **`./scripts/sync-cursor-settings.sh`** - 💻 Cursor IDE optimization (Faster performance, reduced memory usage)
+- **`./scripts/sync-cursor-settings.sh`** - Cursor IDE optimization (Faster performance, reduced memory usage)
 
 #### Performance Tracking
-- **`./metrics/system-metrics-tracker.sh`** - 📊 Performance tracking (Shows before/after improvements)
-- **`./metrics/comprehensive-dashboard.sh`** - 📈 Visual dashboards (Real-time system status)
+- **`./metrics/system-metrics-tracker.sh`** - Performance tracking (Shows before/after improvements)
+- **`./metrics/comprehensive-dashboard.sh`** - Visual dashboards (Real-time system status)
 
-### 📁 Environment Management (Project Tools)
+### Environment Management (Project Tools)
 > **Environment orchestration** - Tools that help manage the development environment
 
 #### PDF Management
-- **`./ops/backup/simple-pdf-converter.sh`** - 📄 PDF to markdown conversion
-- **`./ops/backup/pdf-watcher.sh`** - 👁️ Automatic file watching
-- **`./ops/backup/create-digitalenv-backup.sh`** - 💾 Project backup
+- **`./ops/backup/simple-pdf-converter.sh`** - PDF to markdown conversion
+- **`./ops/backup/pdf-watcher.sh`** - Automatic file watching
+- **`./ops/backup/create-digitalenv-backup.sh`** - Project backup
 
 #### Security & Release Management
-- **`./scripts/pre-release-sanitizer.sh`** - 🔒 Security sanitization
-- **`./scripts/create-release.sh`** - 🚀 Release management
-- **`./scripts/setup-github.sh`** - 📦 GitHub repository setup
+- **`./scripts/pre-release-sanitizer.sh`** - Security sanitization
+- **`./scripts/create-release.sh`** - Release management
+- **`./scripts/setup-github.sh`** - GitHub repository setup
 
 #### Todo Management & Quality Control
 - **`./scripts/migrate-todo-items.sh`** - ✅ **FIXED** - Automated todo migration with comprehensive reporting
-- **`./scripts/enforce-organization-standards.sh`** - 📋 Organization standards enforcement
+- **`./scripts/enforce-organization-standards.sh`** - Organization standards enforcement
 
 **📖 See [ops/README.md](ops/README.md) for detailed operations documentation**
 
@@ -214,7 +177,7 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 
 > **Sophisticated prompt orchestration** - A refined system for contextual routing and quality control
 
-### 🎯 Prompt Router Features
+### Prompt Router Features
 - **Natural Language Support** - Type `"diagnose ci"` instead of remembering exact filenames
 - **Fuzzy Matching** - Contextual prompt discovery with semantic suggestions
 - **Context Injection** - Dynamic file inclusion with `{{include:path/to/file}}`
@@ -222,7 +185,7 @@ chmod +x ops/monitoring/swap-ssd-health.sh
 - **Quality Control** - Comprehensive validation and analytics
 - **Automated Version Management** - Outdated version detection and archiving
 
-### 📊 Current Prompt Analytics (July 28, 2025)
+### Current Prompt Analytics (July 28, 2025)
 > **Performance insights** - Comprehensive analytics for prompt system optimization
 
 ```
@@ -256,7 +219,7 @@ Outdated versions: 0 (all handled)
 Archive system: 100% operational
 ```
 
-### 🚀 Quick Prompt Usage
+### Quick Prompt Usage
 > **Contextual routing** - Natural language access to structured prompts
 
 ```bash
@@ -317,21 +280,21 @@ Archive system: 100% operational
 
 > **Comprehensive knowledge base** - Sophisticated documentation for all aspects of environment optimization
 
-### 🖥️ Environment Optimization
+### Environment Optimization
 > **Performance refinement** - Complete guides for system optimization and performance tuning
 
 - **[Environment Optimization Quick Reference](docs/guides/computer-optimization-quick-reference.md)** - Complete environment optimization guide with cards and workflows
 - **[System Optimization Summary](docs/reports/readme-optimization-summary.md)** - Detailed optimization results and improvements
 - **[Cursor IDE Optimization](ops/README.md#cursor-ide-performance-optimization-macos)** - IDE performance tuning guide
 
-### 📁 Environment Management
+### Environment Management
 > **Environment orchestration** - Tools and workflows for development environment management
 
 - **[PDF Conversion System](docs/workflows/pdf-conversion-and-metrics-system.md)** - Document management workflow
 - **[Todo Migration Workflow](docs/workflows/todo-migration-workflow.md)** - Quality control and organization
 - **[Release Management Guide](docs/workflows/release-management-guide.md)** - Security and release processes
 
-### 📊 Performance & Metrics
+### Performance & Metrics
 > **Performance insights** - Comprehensive monitoring and analytics systems
 
 - **[Metrics & Monitoring](metrics/README.md)** - Performance tracking and dashboards
@@ -339,7 +302,7 @@ Archive system: 100% operational
 - **[Scripts Documentation](scripts/README.md)** - Environment management tools
 - **[Test Suite](tests/README.md)** - Comprehensive validation and testing with interactive and automated modes
 
-### 🧠 Contextual Workflows
+### Contextual Workflows
 > **Sophisticated orchestration** - Advanced prompt management and workflow automation
 
 - **[Prompts System](prompts/README.md)** - Structured AI prompts for system optimization, documentation, and workflow management
@@ -349,7 +312,7 @@ Archive system: 100% operational
 - **[Code Analysis](prompts/categories/code-analysis/)** - Script execution and verification
 - **[Meta-Prompts](prompts/categories/meta-prompts/)** - Conversation management and utilities
 
-### 🔧 Setup & Configuration
+### Setup & Configuration
 > **Configuration management** - Setup guides and development standards
 
 - **[GitHub Setup Guide](docs/setup/github-setup.md)** - Repository configuration
