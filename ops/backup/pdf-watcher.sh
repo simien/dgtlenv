@@ -9,7 +9,7 @@ set -e
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 DOCS_DIR="$PROJECT_ROOT/docs"
 INCOMING_DIR="$DOCS_DIR/incoming"
-CONVERTER_SCRIPT="$(dirname "$0")/pdf-to-markdown-converter.sh"
+CONVERTER_SCRIPT="$(dirname "$0")/simple-pdf-converter.sh"
 LOG_FILE="$PROJECT_ROOT/logs/pdf-watcher.log"
 
 # Colors for output
@@ -41,9 +41,9 @@ check_fswatch() {
 convert_single_pdf() {
     local pdf_file="$1"
     local pdf_name=$(basename "$pdf_file")
-    
+
     log_message "🔄 Detected change in: $pdf_name"
-    
+
     # Run the converter script
     if "$CONVERTER_SCRIPT" convert "$pdf_file"; then
         log_message "✅ Successfully converted: $pdf_name"
@@ -59,9 +59,9 @@ start_watcher() {
     echo -e "Log file: ${GREEN}$LOG_FILE${NC}"
     echo -e "Press Ctrl+C to stop watching"
     echo ""
-    
+
     log_message "🚀 Starting PDF file watcher"
-    
+
     # Use fswatch to monitor the incoming directory
     fswatch -o "$INCOMING_DIR" | while read f; do
         # Check for PDF files that have been modified
@@ -71,7 +71,7 @@ start_watcher() {
                 local file_time=$(stat -f "%m" "$pdf_file")
                 local current_time=$(date +%s)
                 local time_diff=$((current_time - file_time))
-                
+
                 if [ $time_diff -le 5 ]; then
                     convert_single_pdf "$pdf_file"
                 fi
@@ -94,7 +94,7 @@ show_status() {
     echo -e "Converter script: $CONVERTER_SCRIPT"
     echo -e "Log file: $LOG_FILE"
     echo ""
-    
+
     # Show recent log entries
     if [ -f "$LOG_FILE" ]; then
         echo -e "${YELLOW}Recent activity:${NC}"
@@ -134,4 +134,4 @@ case "${1:-watch}" in
         echo "  stop    - Stop the file watcher"
         exit 1
         ;;
-esac 
+esac

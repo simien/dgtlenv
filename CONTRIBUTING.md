@@ -122,8 +122,7 @@ DgtlEnv/
 │   └── README.md                 # Metrics documentation
 ├── ops/                          # Operations scripts
 │   ├── backup/                   # Backup and conversion
-│   │   ├── create-digitalenv-backup.sh
-│   │   ├── pdf-to-markdown-converter.sh
+│   │   ├── create-dgtlenv-backup.sh
 │   │   ├── pdf-watcher.sh
 │   │   ├── simple-pdf-converter.sh
 │   │   └── README.md
