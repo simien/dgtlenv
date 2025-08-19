@@ -41,7 +41,11 @@ This task involves updating project documentation to reflect the current state o
 
 ## 🚀 **Quick Start Commands**
 
-N/A
+```bash
+# Find all markdown documentation files to review
+find . -type f -name "*.md" -not -path "./.git/*" -not -path "./.cursor/*" -not -path "./.vscode/*"
+
+```
 
 ---
 
@@ -73,9 +77,9 @@ N/A
 
 ### **Current Status**
 - **Phase:** 1
-- **Progress:** 2% complete
-- **Blockers:** Finding documentation files to start.
-- **Next Steps:** Start reviewing documentation files.
+- **Progress:** 5% complete
+- **Blockers:** None
+- **Next Steps:** Begin reviewing documentation files in the `docs/` directory using the quick start command.
 
 ### **Timeline**
 - **Start Date:** 2025-08-03
@@ -90,5 +94,5 @@ N/A
 ---
 
 **Status:** 🔄 IN PROGRESS
-**Next Action:** Start reviewing documentation files
-**Maintainer:** [Name]
+**Next Action:** Begin reviewing documentation files in the `docs/` directory.
+**Maintainer:** Simien Antonis-Parr

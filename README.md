@@ -156,7 +156,7 @@ Disk Usage: 21% ✅ (Target: < 85%)
 #### PDF Management
 - **`./ops/backup/simple-pdf-converter.sh`** - PDF to markdown conversion
 - **`./ops/backup/pdf-watcher.sh`** - Automatic file watching
-- **`./ops/backup/create-digitalenv-backup.sh`** - Project backup
+- **`./ops/backup/create-dgtlenv-backup.sh`** - Project backup
 
 #### Security & Release Management
 - **`./scripts/pre-release-sanitizer.sh`** - Security sanitization
